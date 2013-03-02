@@ -1,0 +1,157 @@
+ 0000                   cpu LMM
+                        .module main.c
+                        .area text(rom, con, rel)
+ 0000                   .dbfile ./main.c
+ 0000                   .dbfile G:\Dropbox\Hobby\PROGRA~1\PSOCPR~1\Test\Test\main.c
+ 0000                   .dbfunc e main _main fV
+ 0000           _main::
+ 0000                   .dbline -1
+ 0000                   .dbline 16
+ 0000           ; //----------------------------------------------------------------------------
+ 0000           ; // C main line
+ 0000           ; //----------------------------------------------------------------------------
+ 0000           ; 
+ 0000           ; #include <m8c.h>       
+ 0000           ; #include "PSoCAPI.h"
+ 0000           ; 
+ 0000           ; struct I2C_Regs 
+ 0000           ; {
+ 0000           ;       int ADC;     
+ 0000           ;       int PWM_Freq;
+ 0000           ;       int PWM_Pulse;
+ 0000           ; }I2C;
+ 0000           ; 
+ 0000           ; void main(void)
+ 0000           ; {
+ 0000                   .dbline 17
+ 0000           ;       EzI2Cs_SetRamBuffer(10, 10, (char *)&I2C);      
+ 0000 10                push X
+ 0001 5000              mov A,>_I2C
+ 0003 08                push A
+ 0004 5000              mov A,<_I2C
+ 0006 08                push A
+ 0007 500A              mov A,10
+ 0009 08                push A
+ 000A 08                push A
+ 000B 7C0000            xcall _EzI2Cs_SetRamBuffer
+ 000E 38FC              add SP,-4
+ 0010 20                pop X
+ 0011                   .dbline 19
+ 0011           ; 
+ 0011           ;       M8C_EnableGInt;
+ 0011 7101                      or  F, 01h
+ 0013           
+ 0013                   .dbline 20
+ 0013           ;       EzI2Cs_Start();                                                                                                                                 // I²C Modul starten
+ 0013 10                push X
+ 0014 7C0000            xcall _EzI2Cs_Start
+ 0017                   .dbline 21
+ 0017           ;       EzI2Cs_EnableInt();                                                                                                                             // I²C Interrupts aktivieren
+ 0017 7C0000            xcall _EzI2Cs_EnableInt
+ 001A                   .dbline 22
+ 001A           ;       LCD_Start();
+ 001A 7C0000            xcall _LCD_Start
+ 001D                   .dbline 23
+ 001D           ;       PWM16_Start();
+ 001D 7C0000            xcall _PWM16_Start
+ 0020 20                pop X
+ 0021                   .dbline 25
+ 0021           ;               
+ 0021           ;       I2C.ADC = 0x0800;
+ 0021 62D000            mov REG[0xd0],>_I2C
+ 0024 550100            mov [_I2C+1],0
+ 0027 550008            mov [_I2C],8
+ 002A                   .dbline 26
+ 002A           ;       I2C.PWM_Freq = 0x1650;
+ 002A 550350            mov [_I2C+2+1],80
+ 002D 550216            mov [_I2C+2],22
+ 0030                   .dbline 27
+ 0030           ;       I2C.PWM_Pulse = 0x1000;
+ 0030 550500            mov [_I2C+4+1],0
+ 0033 550410            mov [_I2C+4],16
+ 0036 8054              xjmp L5
+ 0038           L4:
+ 0038                   .dbline 30
+ 0038           ;       
+ 0038           ;       while(1)
+ 0038           ;       {
+ 0038                   .dbline 31
+ 0038           ;               LCD_Position(0,0);
+ 0038 10                push X
+ 0039 5000              mov A,0
+ 003B 5700              mov X,0
+ 003D 7C0000            xcall _LCD_Position
+ 0040                   .dbline 32
+ 0040           ;               LCD_PrHexInt(I2C.ADC);
+ 0040 62D000            mov REG[0xd0],>_I2C
+ 0043 5100              mov A,[_I2C]
+ 0045 08                push A
+ 0046 5101              mov A,[_I2C+1]
+ 0048 20                pop X
+ 0049 7C0000            xcall _LCD_PrHexInt
+ 004C                   .dbline 33
+ 004C           ;               LCD_Position(1,0);
+ 004C 5700              mov X,0
+ 004E 5001              mov A,1
+ 0050 7C0000            xcall _LCD_Position
+ 0053                   .dbline 34
+ 0053           ;               LCD_PrHexInt(I2C.PWM_Freq);
+ 0053 62D000            mov REG[0xd0],>_I2C
+ 0056 5102              mov A,[_I2C+2]
+ 0058 08                push A
+ 0059 5103              mov A,[_I2C+2+1]
+ 005B 20                pop X
+ 005C 7C0000            xcall _LCD_PrHexInt
+ 005F                   .dbline 35
+ 005F           ;               LCD_Position(2,0);
+ 005F 5700              mov X,0
+ 0061 5002              mov A,2
+ 0063 7C0000            xcall _LCD_Position
+ 0066                   .dbline 36
+ 0066           ;               LCD_PrHexInt(I2C.PWM_Pulse);
+ 0066 62D000            mov REG[0xd0],>_I2C
+ 0069 5104              mov A,[_I2C+4]
+ 006B 08                push A
+ 006C 5105              mov A,[_I2C+4+1]
+ 006E 20                pop X
+ 006F 7C0000            xcall _LCD_PrHexInt
+ 0072                   .dbline 38
+ 0072           ;               
+ 0072           ;               PWM16_WritePeriod(I2C.PWM_Freq);
+ 0072 62D000            mov REG[0xd0],>_I2C
+ 0075 5102              mov A,[_I2C+2]
+ 0077 08                push A
+ 0078 5103              mov A,[_I2C+2+1]
+ 007A 20                pop X
+ 007B 7C0000            xcall _PWM16_WritePeriod
+ 007E                   .dbline 39
+ 007E           ;       PWM16_WritePulseWidth(I2C.PWM_Pulse);
+ 007E 62D000            mov REG[0xd0],>_I2C
+ 0081 5104              mov A,[_I2C+4]
+ 0083 08                push A
+ 0084 5105              mov A,[_I2C+4+1]
+ 0086 20                pop X
+ 0087 7C0000            xcall _PWM16_WritePulseWidth
+ 008A 20                pop X
+ 008B                   .dbline 41
+ 008B           ; 
+ 008B           ;       }
+ 008B           L5:
+ 008B                   .dbline 29
+ 008B 8FAC              xjmp L4
+ 008D           X0:
+ 008D                   .dbline -2
+ 008D           L1:
+ 008D                   .dbline 0 ; func end
+ 008D 8FFF              jmp .
+ 008F                   .dbend
+                        .area data(ram, con, rel)
+ 0000                   .dbfile G:\Dropbox\Hobby\PROGRA~1\PSOCPR~1\Test\Test\main.c
+ 0000           _I2C::
+ 0000 000000000000      .byte 0,0,0,0,0,0
+ 0006                   .dbstruct 0 6 I2C_Regs
+ 0006                   .dbfield 0 ADC I
+ 0006                   .dbfield 2 PWM_Freq I
+ 0006                   .dbfield 4 PWM_Pulse I
+ 0006                   .dbend
+ 0006                   .dbsym e I2C _I2C S[I2C_Regs]

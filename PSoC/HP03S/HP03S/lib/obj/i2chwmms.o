@@ -1,0 +1,234 @@
+XH
+H 2 areas 3F global symbols
+M i2chwmms.asm
+S I2CHW_MasterRead_Count Ref0000
+S I2CHW_SlaveWrite_Count Ref0000
+S pI2CHW_MasterRead_BufLO Ref0000
+S I2CHW_SlaveStatus Ref0000
+S pI2CHW_SlaveWrite_BufLO Ref0000
+S I2CHW_SlaveRead_Count Ref0000
+S I2CHW_MasterWrite_Count Ref0000
+S I2CHW_bStatus Ref0000
+S I2CHW_MasterStatus Ref0000
+S pI2CHW_SlaveRead_BufLO Ref0000
+S pI2CHW_MasterWrite_BufLO Ref0000
+A text size 0 flags 0
+dbfile lib/i2chwmms.asm
+dbfunc 0 ? 0 I
+dbfile ./lib/I2CHWMstr.inc
+dbfunc 0 ? 0 I
+dbfile lib/i2chwmms.asm
+dbfunc 0 ? 0 I
+dbfile ./lib/I2CHWMMS.inc
+dbfunc 0 ? 0 I
+dbfile lib/i2chwmms.asm
+dbfunc 0 ? 0 I
+dbfile ./lib/I2CHWCommon.inc
+dbfunc 0 ? 0 I
+dbfile lib/i2chwmms.asm
+dbfunc 0 ? 0 I
+dbfile memory.inc
+dbfunc 0 ? 0 I
+dbfile lib/i2chwmms.asm
+dbfunc 0 ? 0 I
+dbfile G:/PSOCDE~1/5.3/Common/CY110F~1/tools/include/CY8C21~2/m8c.inc
+dbfunc 0 ? 0 I
+A UserModules size C5 flags 0
+dbfile lib/i2chwmms.asm
+dbfunc 0 ? 0 I
+dbline 76 0
+dbline 77 1
+dbline 78 2
+dbline 79 3
+dbline 7A 4
+dbline 7B 6
+dbline 2 7
+dbline 7F A
+dbline 84 D
+dbline 85 F
+dbline 86 11
+dbline 87 13
+dbline 88 15
+dbline 89 17
+dbline 8A 19
+dbline 8B 1B
+dbline 8C 1E
+dbline 8F 20
+dbline 90 23
+dbline 91 26
+dbline 94 28
+dbline 95 29
+dbline 96 2B
+dbline 2 2D
+dbline 98 30
+dbline 99 31
+dbline 9D 32
+dbline C7 33
+dbline C8 34
+dbline C9 35
+dbline CA 36
+dbline CB 37
+dbline CC 39
+dbline 2 3A
+dbline D3 3D
+dbline D4 3F
+dbline D5 41
+dbline D6 43
+dbline D7 45
+dbline D8 47
+dbline DA 4A
+dbline DB 4B
+dbline DC 4D
+dbline 2 4F
+dbline DE 52
+dbline DF 53
+dbline E3 54
+dbline 130 55
+dbline 15A 56
+dbline 15C 58
+dbline 186 59
+dbline 188 5B
+dbline 1A6 5C
+dbline 1A8 5F
+dbline 1C5 60
+dbline 1C7 63
+dbline 1F8 64
+dbline 1F9 65
+dbline 1FA 66
+dbline 1FB 67
+dbline 1FC 68
+dbline 1FD 6A
+dbline 2 6B
+dbline 201 6E
+dbline 206 71
+dbline 207 73
+dbline 208 75
+dbline 209 77
+dbline 20A 79
+dbline 20B 7B
+dbline 20C 7D
+dbline 20D 7F
+dbline 20E 82
+dbline 211 84
+dbline 212 87
+dbline 213 8A
+dbline 216 8C
+dbline 217 8D
+dbline 218 8F
+dbline 2 91
+dbline 21A 94
+dbline 21B 95
+dbline 21E 96
+dbline 248 97
+dbline 249 98
+dbline 24A 99
+dbline 24B 9A
+dbline 24C 9B
+dbline 24D 9D
+dbline 2 9E
+dbline 254 A1
+dbline 255 A3
+dbline 256 A5
+dbline 257 A7
+dbline 258 A9
+dbline 259 AB
+dbline 25B AE
+dbline 25C AF
+dbline 25D B1
+dbline 2 B3
+dbline 25F B6
+dbline 260 B7
+dbline 264 B8
+dbline 2B6 B9
+dbline 2DF BA
+dbline 2E1 BC
+dbline 2FE BD
+dbline 300 C0
+dbline 31D C1
+dbline 31F C4
+S $sb$I2CHW_InitSlaveRamRead Def0097
+S $se$I2CHW_InitSlaveRamRead Def00B9
+S I2CHW_ClrSlaveRdStatus Def00BD
+S _I2CHW_InitSlaveFlashRead Def00B9
+S I2CHW_bReadSlaveStatus Def00BA
+S I2CHW_ClrSlaveWrStatus Def00C1
+S I2CHW_InitMasterFlashRead Def0055
+S _I2CHW_InitMasterWrite Def0000
+S $sb$I2CHW_ClrSlaveRdStatus Def00BD
+S $se$I2CHW_ClrSlaveRdStatus Def00C1
+S $sb$I2CHW_bReadSlaveStatus Def00BA
+S $se$I2CHW_bReadSlaveStatus Def00BD
+S $sb$I2CHW_ClrSlaveWrStatus Def00C1
+S $sb$I2CHW_InitMasterFlashRead Def0055
+S $se$I2CHW_ClrSlaveWrStatus Def00C5
+S $se$I2CHW_InitMasterFlashRead Def0056
+S _I2CHW_InitSlaveRamRead Def0097
+S I2CHW_bReadBusStatus Def0056
+S I2CHW_InitSlaveWrite Def0064
+S I2CHW_InitMasterRamRead Def0033
+S $sb$I2CHW_bReadBusStatus Def0056
+S $se$I2CHW_bReadBusStatus Def0059
+S _I2CHW_ClrSlaveRdStatus Def00BD
+S $sb$I2CHW_InitSlaveWrite Def0064
+S $sb$I2CHW_InitMasterRamRead Def0033
+S $se$I2CHW_InitSlaveWrite Def0097
+S $se$I2CHW_InitMasterRamRead Def0055
+S _I2CHW_bReadSlaveStatus Def00BA
+S I2CHW_ClrMasterRdStatus Def005C
+S _I2CHW_ClrSlaveWrStatus Def00C1
+S _I2CHW_InitMasterFlashRead Def0055
+S I2CHW_bReadMasterStatus Def0059
+S I2CHW_ClrMasterWrStatus Def0060
+S $sb$I2CHW_ClrMasterRdStatus Def005C
+S $se$I2CHW_ClrMasterRdStatus Def0060
+S $sb$I2CHW_bReadMasterStatus Def0059
+S _I2CHW_bReadBusStatus Def0056
+S $se$I2CHW_bReadMasterStatus Def005C
+S $sb$I2CHW_ClrMasterWrStatus Def0060
+S I2CHW_InitSlaveFlashRead Def00B9
+S _I2CHW_InitSlaveWrite Def0064
+S $se$I2CHW_ClrMasterWrStatus Def0064
+S _I2CHW_InitMasterRamRead Def0033
+S I2CHW_InitMasterWrite Def0000
+S $sb$I2CHW_InitSlaveFlashRead Def00B9
+S $se$I2CHW_InitSlaveFlashRead Def00BA
+S _I2CHW_ClrMasterRdStatus Def005C
+S $sb$I2CHW_InitMasterWrite Def0000
+S $se$I2CHW_InitMasterWrite Def0033
+S I2CHW_InitSlaveRamRead Def0097
+S _I2CHW_bReadMasterStatus Def0059
+S _I2CHW_ClrMasterWrStatus Def0060
+T 00 00 10 4F 79 08 5D DE 08 41 DE FE 26 00 00 7F
+R 00 00 00 01 03 0D 00 08
+T 00 0D 52 FD 53 00 00 52 FB 53 00 00 39 01 A0 08
+R 00 00 00 01 03 05 00 0A 03 0A 00 06
+T 00 19 C0 06 26 00 00 8F 80 09 2E 00 00 80 26
+R 00 00 00 01 03 05 00 08 03 0B 00 08
+T 00 24 00 00 8F 80 01 18 21 01 A0 04 43 DE 01 18
+R 00 00 00 01 03 02 00 08
+T 00 31 20 7F 10 4F 79 08 5D DE 08 41 DE FE 52 FD
+R 00 00 00 01
+T 00 3F 53 00 00 52 FB 53 00 00 7A 00 00 26
+R 00 00 00 01 03 03 00 02 03 08 00 00 03 0B 00 00
+T 00 48 00 00 70 18 21 01 A0 04 43 DE 01 18 20 7F
+R 00 00 00 01 03 02 00 08
+T 00 55 7F 51 00 00 7F 51 00 00 7F 26 00 00 78 7F
+R 00 00 00 01 03 04 00 07 03 08 00 08 03 0C 00 08
+T 00 60 26 00 00 8F 7F 10 4F 79 08 5D DE 08 41 DE
+R 00 00 00 01 03 03 00 08
+T 00 6D FE 26 00 00 7F 52 FD 53 00 00 52 FB 53
+R 00 00 00 01 03 04 00 03 03 0A 00 04
+T 00 78 00 00 39 01 A0 08 C0 06 26 00 00 8F 8F A5
+R 00 00 00 01 03 02 00 01 03 0B 00 03
+T 00 84 2E 00 00 80 26 00 00 8F 80 01 18 21 01 A0
+R 00 00 00 01 03 03 00 03 03 07 00 03
+T 00 90 04 43 DE 01 18 20 7F 10 4F 79 08 5D DE 08
+R 00 00 00 01
+T 00 9E 41 DE FE 52 FD 53 00 00 52 FB 53 00 00 7A
+R 00 00 00 01 03 08 00 09 03 0D 00 05
+T 00 AA 00 00 26 00 00 F0 18 21 01 A0 04 43 DE 01
+R 00 00 00 01 03 02 00 05 03 05 00 03
+T 00 B6 18 20 7F 7F 51 00 00 7F 26 00 00 F8 7F 26
+R 00 00 00 01 03 07 00 03 03 0B 00 03
+T 00 C2 00 00 8F 7F
+R 00 00 00 01 03 02 00 03

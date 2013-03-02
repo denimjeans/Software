@@ -1,0 +1,211 @@
+XH
+H 2 areas 32 global symbols
+M dualadc.asm
+S DUALADC_cCounter1U Ref0000
+S DUALADC_cCounter2U Ref0000
+S DUALADC_iResult1 Ref0000
+S DUALADC_iResult2 Ref0000
+S DUALADC_bSampC Ref0000
+S DUALADC_bfStatus Ref0000
+A text size 0 flags 0
+dbfile lib/dualadc.asm
+dbfunc 0 ? 0 I
+dbfile memory.inc
+dbfunc 0 ? 0 I
+dbfile lib/dualadc.asm
+dbfunc 0 ? 0 I
+dbfile G:/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/include/CY8C27~1/m8c.inc
+dbfunc 0 ? 0 I
+dbfile lib/dualadc.asm
+dbfunc 0 ? 0 I
+dbfile ./lib/DUALADC.inc
+dbfunc 0 ? 0 I
+A UserModules size DE flags 0
+dbfile lib/dualadc.asm
+dbfunc 0 ? 0 I
+dbline 68 0
+dbline 69 2
+dbline 6A 3
+dbline 6D 4
+dbline 6E 6
+dbline 6F 8
+dbline 70 A
+dbline 71 C
+dbline 74 E
+dbline 75 10
+dbline 76 12
+dbline 77 14
+dbline 78 16
+dbline 7A 18
+dbline 7B 1B
+dbline 7C 1D
+dbline 7D 1F
+dbline 80 21
+dbline 83 22
+dbline 9E 23
+dbline 9F 26
+dbline A1 29
+dbline C2 2A
+dbline C4 2C
+dbline C5 2E
+dbline C6 30
+dbline C7 32
+dbline CD 34
+dbline CE 36
+dbline CF 38
+dbline D0 3A
+dbline D1 3C
+dbline D6 3D
+dbline D7 40
+dbline D9 43
+dbline DA 45
+dbline DB 48
+dbline DD 4B
+dbline DE 4E
+dbline E0 51
+dbline E1 54
+dbline E4 57
+dbline E5 5A
+dbline E6 5D
+dbline E7 60
+dbline E8 63
+dbline E9 66
+dbline EB 69
+dbline 107 6A
+dbline 109 6D
+dbline 10A 70
+dbline 10D 73
+dbline 10E 76
+dbline 111 79
+dbline 112 7C
+dbline 114 7F
+dbline 2 80
+dbline 2 83
+dbline 2 86
+dbline 118 89
+dbline 11B 8A
+dbline 13F 8B
+dbline 140 8D
+dbline 142 8F
+dbline 164 90
+dbline 165 93
+dbline 166 95
+dbline 168 97
+dbline 16E 98
+dbline 16F 9A
+dbline 171 9C
+dbline 193 9D
+dbline 194 A0
+dbline 195 A2
+dbline 197 A4
+dbline 19D A5
+dbline 19E A7
+dbline 1A0 A9
+dbline 1BE AA
+dbline 1C0 AD
+dbline 1E5 AE
+dbline 1E7 B1
+dbline 1E8 B3
+dbline 1EB B6
+dbline 1EC B8
+dbline 1ED BA
+dbline 1EE BC
+dbline 1F1 BE
+dbline 1F2 C0
+dbline 1F3 C2
+dbline 1F8 C4
+dbline 1F9 C6
+dbline 1FC C8
+dbline 1FD CA
+dbline 1FE CB
+dbline 201 CD
+dbline 202 CE
+dbline 203 CF
+dbline 207 D1
+dbline 208 D4
+dbline 20B D6
+dbline 20C D9
+dbline 20D DB
+dbline 20F DD
+S $sb$DUALADC_iGetData2ClearFlag Def009D
+S $se$DUALADC_iGetData1ClearFlag Def009D
+S $se$DUALADC_iGetData2ClearFlag Def00AA
+S $sb$DUALADC_fIsData Def008B
+S $se$DUALADC_fIsData Def0090
+S _DUALADC_SetResolution Def00AE
+S _DUALADC_ClearFlag Def00AA
+S $sb$DUALADC_Stop Def0023
+S $se$DUALADC_Stop Def002A
+S _DUALADC_iGetData1ClearFlag Def0090
+S _DUALADC_iGetData2ClearFlag Def009D
+S DUALADC_GetSamples Def002A
+S _DUALADC_fIsData Def008B
+S _DUALADC_Stop Def0023
+S DUALADC_Start Def0000
+S $sb$DUALADC_GetSamples Def002A
+S $se$DUALADC_GetSamples Def006A
+S DUALADC_fIsDataAvailable Def008B
+S $sb$DUALADC_Start Def0000
+S DUALADC_StopAD Def006A
+S $se$DUALADC_Start Def0023
+S DUALADC_iGetData1 Def0098
+S DUALADC_iGetData2 Def00A5
+S DUALADC_SetPower Def0000
+S $sb$DUALADC_StopAD Def006A
+S $se$DUALADC_StopAD Def008B
+S _DUALADC_GetSamples Def002A
+S DUALADC_SetResolution Def00AE
+S DUALADC_ClearFlag Def00AA
+S _DUALADC_Start Def0000
+S _DUALADC_fIsDataAvailable Def008B
+S $sb$DUALADC_SetResolution Def00AE
+S $sb$DUALADC_ClearFlag Def00AA
+S $se$DUALADC_SetResolution Def00DE
+S $se$DUALADC_ClearFlag Def00AE
+S _DUALADC_StopAD Def006A
+S _DUALADC_iGetData1 Def0098
+S _DUALADC_iGetData2 Def00A5
+S DUALADC_iGetData1ClearFlag Def0090
+S DUALADC_iGetData2ClearFlag Def009D
+S _DUALADC_SetPower Def0000
+S DUALADC_fIsData Def008B
+S DUALADC_Stop Def0023
+S $sb$DUALADC_iGetData1ClearFlag Def0090
+T 00 00 21 03 4F 08 5D 83 21 FC 2B 00 29 F0 60 83
+R 00 00 00 01
+T 00 0E 5D 87 21 FC 2B 00 29 F0 60 87 49 82 01 A0
+R 00 00 00 01
+T 00 1C 05 50 05 53 00 00 18 7F 41 83 FC 41 87 FC
+R 00 00 00 01 03 06 00 05
+T 00 29 7F 53 00 00 51 00 00 21 0F 01 07 90 7A 5D
+R 00 00 00 01 03 04 00 04 03 07 00 05
+T 00 35 2A 53 00 00 50 00 12 00 00 67 55 00 00 00
+R 00 00 00 01 03 04 00 00 03 09 00 00 03 0D 00 00
+T 00 40 55 00 00 00 5D 26 62 21 FF 62 2D FF 41 83
+R 00 00 00 01 03 03 00 01
+T 00 4D EF 41 87 EF 41 82 DF 41 86 DF 43 23 05 43
+R 00 00 00 01
+T 00 5B 2F 05 43 27 01 43 E1 04 43 E1 01 43 E1 08
+R 00 00 00 01
+T 00 69 7F 41 27 FE 41 23 FE 41 2F FE 43 82 20 43
+R 00 00 00 01
+T 00 77 86 20 43 83 10 43 87 10 08 41 E1 FB 41 E1
+R 00 00 00 01
+T 00 85 FE 41 E1 FE 18 7F 51 00 00 21 10 7F 26
+R 00 00 00 01 03 09 00 05
+T 00 91 00 00 EF 58 00 00 51 00 01 7F 58
+R 00 00 00 01 03 02 00 05 03 06 00 02 03 09 00 02
+T 00 99 00 00 51 00 01 7F 26 00 00 EF 58
+R 00 00 00 01 03 02 00 02 03 05 00 02 03 09 00 05
+T 00 A1 00 00 51 00 01 7F 58 00 00 51
+R 00 00 00 01 03 02 00 03 03 05 00 03 03 09 00 03
+T 00 A8 00 01 7F 26 00 00 EF 7F 41 82 FE 9F B7 55
+R 00 00 00 01 03 02 00 03 03 06 00 05
+T 00 B4 00 00 00 39 07 D0 05 50 07 80 07 39 0D C0
+R 00 00 00 01 03 02 00 05
+T 00 C1 03 50 0D 11 07 2C 00 00 01 01 5C 50 01 64
+R 00 00 00 01 03 08 00 05
+T 00 CE 79 BF FD 62 26 00 60 2A 62 25 01 01 00 60
+R 00 00 00 01
+T 00 DC 29 7F
+R 00 00 00 01

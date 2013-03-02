@@ -1,0 +1,285 @@
+                        .module main.c
+                        .area text(rom, con, rel)
+ 0000                   .dbfile ./main.c
+                        .area data(ram, con, rel)
+ 0000                   .dbfile ./main.c
+ 0000           _Zeiger::
+ 0000                   .blkb 1
+                        .area idata(rom,lit)
+ 0000 00                .byte 0
+                        .area data(ram, con, rel)
+ 0001                   .dbfile ./main.c
+ 0001                   .dbfile H:\Hobby\PROGRA~1\PSOCPR~1\I2C_MA~1\I2C_MA~1\main.c
+ 0001                   .dbsym e Zeiger _Zeiger c
+ 0001           _Timer::
+ 0001                   .blkb 1
+                        .area idata(rom,lit)
+ 0001 00                .byte 0
+                        .area data(ram, con, rel)
+ 0002                   .dbfile H:\Hobby\PROGRA~1\PSOCPR~1\I2C_MA~1\I2C_MA~1\main.c
+ 0002                   .dbsym e Timer _Timer c
+ 0002           _Button::
+ 0002                   .blkb 1
+                        .area idata(rom,lit)
+ 0002 00                .byte 0
+                        .area data(ram, con, rel)
+ 0003                   .dbfile H:\Hobby\PROGRA~1\PSOCPR~1\I2C_MA~1\I2C_MA~1\main.c
+ 0003                   .dbsym e Button _Button c
+                        .area text(rom, con, rel)
+ 0000                   .dbfile H:\Hobby\PROGRA~1\PSOCPR~1\I2C_MA~1\I2C_MA~1\main.c
+ 0000                   .dbfunc e main _main fV
+ 0000           _main::
+ 0000                   .dbline -1
+ 0000                   .dbline 19
+ 0000           ; //----------------------------------------------------------------------------
+ 0000           ; // C main line
+ 0000           ; //----------------------------------------------------------------------------
+ 0000           ; 
+ 0000           ; #include <m8c.h>                                                                                                              // Part specific constants and macros
+ 0000           ; #include "PSoCAPI.h"                                                                                                          // PSoC API definitions for all User Modules
+ 0000           ; #pragma interrupt_handler Timer16
+ 0000           ; 
+ 0000           ; void I2C_Init(void);
+ 0000           ; void Read_PSoCSlave(char *Button);
+ 0000           ; 
+ 0000           ; char Zeiger = 0x00;
+ 0000           ; BYTE Timer = 0x00;
+ 0000           ; char Button = 0x00;
+ 0000           ; 
+ 0000           ; #define PSoC_Addr 0x40
+ 0000           ; 
+ 0000           ; void main(void)
+ 0000           ; {
+ 0000                   .dbline 20
+ 0000           ;       M8C_EnableGInt; 
+ 0000 7101                      or  F, 01h
+ 0002           
+ 0002                   .dbline 21
+ 0002           ;       LCD_Start();    
+ 0002 10                push X
+ 0003 7C0000            xcall _LCD_Start
+ 0006                   .dbline 22
+ 0006           ;       Timer16_EnableInt();  
+ 0006 7C0000            xcall _Timer16_EnableInt
+ 0009                   .dbline 23
+ 0009           ;     Timer16_Start();          
+ 0009 7C0000            xcall _Timer16_Start
+ 000C 20                pop X
+ 000D                   .dbline 25
+ 000D           ;       
+ 000D           ;       I2C_Init();
+ 000D 9098              xcall _I2C_Init
+ 000F 8020              xjmp L3
+ 0011           L2:
+ 0011                   .dbline 28
+ 0011           ; 
+ 0011           ;       while (1)
+ 0011           ;       {
+ 0011                   .dbline 29
+ 0011           ;               Read_PSoCSlave(&Zeiger);
+ 0011 5000              mov A,>_Zeiger
+ 0013 08                push A
+ 0014 5000              mov A,<_Zeiger
+ 0016 08                push A
+ 0017 909A              xcall _Read_PSoCSlave
+ 0019 38FE              add SP,-2
+ 001B                   .dbline 30
+ 001B           ;               LCD_Position(0,0);
+ 001B 10                push X
+ 001C 5000              mov A,0
+ 001E 5700              mov X,0
+ 0020 7C0000            xcall _LCD_Position
+ 0023 20                pop X
+ 0024                   .dbline 31
+ 0024           ;               LCD_PrHexInt(Zeiger);
+ 0024 5F0000            mov [__r1],[_Zeiger]
+ 0027 10                push X
+ 0028 5700              mov X,0
+ 002A 5100              mov A,[__r1]
+ 002C 7C0000            xcall _LCD_PrHexInt
+ 002F 20                pop X
+ 0030                   .dbline 38
+ 0030           ;               //LCD_Position(Zeiger,15);
+ 0030           ;               //LCD_WriteData(0x3C);
+ 0030           ;               //LCD_Position((Zeiger+1),15);
+ 0030           ;               //LCD_WriteData(0x20);
+ 0030           ;               //LCD_Position((Zeiger-1),15);
+ 0030           ;               //LCD_WriteData(0x20);
+ 0030           ;       }
+ 0030           L3:
+ 0030                   .dbline 27
+ 0030 8FE0              xjmp L2
+ 0032           X0:
+ 0032                   .dbline -2
+ 0032           L1:
+ 0032                   .dbline 0 ; func end
+ 0032 8FFF              jmp .
+ 0034                   .dbend
+ 0034                   .dbfunc e Timer16 _Timer16 fV
+ 0034           _Timer16::
+ 0034                   .dbline -1
+ 0034 08                push A
+ 0035 5100              mov A,[__r0]
+ 0037 08                push A
+ 0038 5100              mov A,[__r1]
+ 003A 08                push A
+ 003B 5100              mov A,[__r2]
+ 003D 08                push A
+ 003E 5100              mov A,[__r3]
+ 0040 08                push A
+ 0041 5100              mov A,[__r4]
+ 0043 08                push A
+ 0044 5100              mov A,[__r5]
+ 0046 08                push A
+ 0047 5100              mov A,[__r6]
+ 0049 08                push A
+ 004A 5100              mov A,[__r7]
+ 004C 08                push A
+ 004D 5100              mov A,[__r8]
+ 004F 08                push A
+ 0050 5100              mov A,[__r9]
+ 0052 08                push A
+ 0053 5100              mov A,[__r10]
+ 0055 08                push A
+ 0056 5100              mov A,[__r11]
+ 0058 08                push A
+ 0059 5100              mov A,[__rX]
+ 005B 08                push A
+ 005C 5100              mov A,[__rY]
+ 005E 08                push A
+ 005F 5100              mov A,[__rZ]
+ 0061 08                push A
+ 0062                   .dbline 43
+ 0062           ; 
+ 0062           ; }
+ 0062           ; 
+ 0062           ; void Timer16(void)
+ 0062           ; {     
+ 0062                   .dbline 44
+ 0062           ;       Read_PSoCSlave(&Zeiger);
+ 0062 5000              mov A,>_Zeiger
+ 0064 08                push A
+ 0065 5000              mov A,<_Zeiger
+ 0067 08                push A
+ 0068 9049              xcall _Read_PSoCSlave
+ 006A 38FE              add SP,-2
+ 006C                   .dbline 45
+ 006C           ;       Timer16_WritePeriod(3277);
+ 006C 10                push X
+ 006D 570C              mov X,12
+ 006F 50CD              mov A,-51
+ 0071 7C0000            xcall _Timer16_WritePeriod
+ 0074 20                pop X
+ 0075                   .dbline 46
+ 0075           ;       PRT2DR ^= 0x01;                                                                                                                 //LED_Timer togglen
+ 0075 450801            xor REG[0x8],1
+ 0078                   .dbline -2
+ 0078           L5:
+ 0078 18                pop A
+ 0079 5300              mov [__rZ],A
+ 007B 18                pop A
+ 007C 5300              mov [__rY],A
+ 007E 18                pop A
+ 007F 5300              mov [__rX],A
+ 0081 18                pop A
+ 0082 5300              mov [__r11],A
+ 0084 18                pop A
+ 0085 5300              mov [__r10],A
+ 0087 18                pop A
+ 0088 5300              mov [__r9],A
+ 008A 18                pop A
+ 008B 5300              mov [__r8],A
+ 008D 18                pop A
+ 008E 5300              mov [__r7],A
+ 0090 18                pop A
+ 0091 5300              mov [__r6],A
+ 0093 18                pop A
+ 0094 5300              mov [__r5],A
+ 0096 18                pop A
+ 0097 5300              mov [__r4],A
+ 0099 18                pop A
+ 009A 5300              mov [__r3],A
+ 009C 18                pop A
+ 009D 5300              mov [__r2],A
+ 009F 18                pop A
+ 00A0 5300              mov [__r1],A
+ 00A2 18                pop A
+ 00A3 5300              mov [__r0],A
+ 00A5 18                pop A
+ 00A6                   .dbline 0 ; func end
+ 00A6 7E                reti
+ 00A7                   .dbend
+ 00A7                   .dbfunc e I2C_Init _I2C_Init fV
+ 00A7           _I2C_Init::
+ 00A7                   .dbline -1
+ 00A7                   .dbline 50
+ 00A7           ; }
+ 00A7           ; 
+ 00A7           ; void I2C_Init(void)
+ 00A7           ; {
+ 00A7                   .dbline 51
+ 00A7           ;       I2CHW_Start();                                                                                                                                  // I²C Modul starten
+ 00A7 10                push X
+ 00A8 7C0000            xcall _I2CHW_Start
+ 00AB                   .dbline 52
+ 00AB           ;       I2CHW_EnableInt();                                                                                                                              // I²C Interrupts aktivieren
+ 00AB 7C0000            xcall _I2CHW_EnableInt
+ 00AE                   .dbline 53
+ 00AE           ;       I2CHW_EnableMstr();                                                                                                                             // Modul auf "Master" stellen
+ 00AE 7C0000            xcall _I2CHW_EnableMstr
+ 00B1 20                pop X
+ 00B2                   .dbline -2
+ 00B2           L6:
+ 00B2                   .dbline 0 ; func end
+ 00B2 7F                ret
+ 00B3                   .dbend
+ 00B3                   .dbfunc e Read_PSoCSlave _Read_PSoCSlave fV
+ 00B3           ;         Button -> X-5
+ 00B3           _Read_PSoCSlave::
+ 00B3                   .dbline -1
+ 00B3 10                push X
+ 00B4 4F                mov X,SP
+ 00B5                   .dbline 57
+ 00B5           ; }
+ 00B5           ; 
+ 00B5           ; void Read_PSoCSlave(char *Button)
+ 00B5           ; {
+ 00B5                   .dbline 58
+ 00B5           ;       I2CHW_fReadBytes(PSoC_Addr, Button, 1, I2CHW_CompleteXfer);     
+ 00B5 10                push X
+ 00B6 5000              mov A,0
+ 00B8 08                push A
+ 00B9 5001              mov A,1
+ 00BB 08                push A
+ 00BC 52FB              mov A,[X-5]
+ 00BE 08                push A
+ 00BF 52FC              mov A,[X-4]
+ 00C1 08                push A
+ 00C2 5040              mov A,64
+ 00C4 08                push A
+ 00C5 7C0000            xcall _I2CHW_fReadBytes
+ 00C8 38FB              add SP,-5
+ 00CA 20                pop X
+ 00CB           L8:
+ 00CB                   .dbline 59
+ 00CB           ;       while(!(I2CHW_bReadI2CStatus() & I2CHW_RD_COMPLETE));                                                   // Warten bis der Lesevorgang abgeschlossen ist
+ 00CB           L9:
+ 00CB                   .dbline 59
+ 00CB 10                push X
+ 00CC 7C0000            xcall _I2CHW_bReadI2CStatus
+ 00CF 20                pop X
+ 00D0 5300              mov [__r0],A
+ 00D2 470004            tst [__r0],4
+ 00D5 AFF5              jz L8
+ 00D7                   .dbline 60
+ 00D7           ;       I2CHW_ClrRdStatus();
+ 00D7 10                push X
+ 00D8 7C0000            xcall _I2CHW_ClrRdStatus
+ 00DB 20                pop X
+ 00DC                   .dbline -2
+ 00DC           L7:
+ 00DC 20                pop X
+ 00DD                   .dbline 0 ; func end
+ 00DD 7F                ret
+ 00DE                   .dbsym l Button -5 pc
+ 00DE                   .dbend

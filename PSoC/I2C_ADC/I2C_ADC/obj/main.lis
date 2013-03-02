@@ -1,0 +1,229 @@
+ 0000                   cpu LMM
+                        .module main.c
+                        .area text(rom, con, rel)
+ 0000                   .dbfile ./main.c
+                        .area data(ram, con, rel)
+ 0000                   .dbfile ./main.c
+ 0000           _Wert::
+ 0000 0000              .word 0
+ 0002                   .dbfile G:\Dropbox\Hobby\PROGRA~1\PSOCPR~1\I2C_ADC\I2C_ADC\main.c
+ 0002                   .dbsym e Wert _Wert I
+                        .area data(ram, con, rel)
+ 0000                   .dbfile G:\Dropbox\Hobby\PROGRA~1\PSOCPR~1\I2C_ADC\I2C_ADC\main.c
+                        .area data(ram, con, rel)
+ 0000                   .dbfile G:\Dropbox\Hobby\PROGRA~1\PSOCPR~1\I2C_ADC\I2C_ADC\main.c
+ 0000           _Adresse::
+ 0000 00                .byte 0
+ 0001                   .dbsym e Adresse _Adresse c
+                        .area data(ram, con, rel)
+ 0000                   .dbfile G:\Dropbox\Hobby\PROGRA~1\PSOCPR~1\I2C_ADC\I2C_ADC\main.c
+                        .area text(rom, con, rel)
+ 0000                   .dbfile G:\Dropbox\Hobby\PROGRA~1\PSOCPR~1\I2C_ADC\I2C_ADC\main.c
+ 0000                   .dbfunc e main _main fV
+ 0000           _main::
+ 0000                   .dbline -1
+ 0000                   .dbline 16
+ 0000           ; //----------------------------------------------------------------------------
+ 0000           ; // C main line
+ 0000           ; //----------------------------------------------------------------------------
+ 0000           ; 
+ 0000           ; #include <m8c.h>                                                                                                                              // Part specific constants and macros
+ 0000           ; #include "PSoCAPI.h"                                                                                                                          // PSoC API definitions for all User Modules
+ 0000           ; 
+ 0000           ; // Variablen
+ 0000           ; int Wert = 0;
+ 0000           ; char Adresse = 0;
+ 0000           ; 
+ 0000           ; // Funktionen
+ 0000           ; void I2C_Init(void);
+ 0000           ; 
+ 0000           ; void main(void)
+ 0000           ; {
+ 0000                   .dbline 17
+ 0000           ;       M8C_EnableGInt; 
+ 0000 7101                      or  F, 01h
+ 0002           
+ 0002                   .dbline 18
+ 0002           ;       LCD_Start();                                                                                                                                    // LCD Modul aktivieren
+ 0002 10                push X
+ 0003 7C0000            xcall _LCD_Start
+ 0006                   .dbline 19
+ 0006           ;       PGA_Start(PGA_LOWPOWER);                                                                                                                // PGA aktivieren
+ 0006 5001              mov A,1
+ 0008 7C0000            xcall _PGA_Start
+ 000B                   .dbline 20
+ 000B           ;       ADCINC_Start(ADCINC_HIGHPOWER);                                                                                         // ADC aktivieren 
+ 000B 5003              mov A,3
+ 000D 7C0000            xcall _ADCINC_Start
+ 0010                   .dbline 21
+ 0010           ;       ADCINC_GetSamples(0);                                                                                                   // Free-Run Modus aktivieren 
+ 0010 5000              mov A,0
+ 0012 7C0000            xcall _ADCINC_GetSamples
+ 0015                   .dbline 24
+ 0015           ; 
+ 0015           ;       
+ 0015           ;       LCD_Position(0,0); 
+ 0015 5000              mov A,0
+ 0017 5700              mov X,0
+ 0019 7C0000            xcall _LCD_Position
+ 001C                   .dbline 25
+ 001C           ;       LCD_PrCString("PSoC I2C Slave");
+ 001C 500E              mov A,>L2
+ 001E 08                push A
+ 001F 500E              mov A,<L2
+ 0021 5C                mov X,A
+ 0022 18                pop A
+ 0023 7C0000            xcall _LCD_PrCString
+ 0026                   .dbline 27
+ 0026           ;       
+ 0026           ;       EzI2Cs_SetRamBuffer(10, 10, (char *)&Wert);                                                                             // I²C Buffer setzen, 10 Byte Größe, 10 Byte Schreib/Lesbar
+ 0026 5000              mov A,>_Wert
+ 0028 08                push A
+ 0029 5000              mov A,<_Wert
+ 002B 08                push A
+ 002C 500A              mov A,10
+ 002E 08                push A
+ 002F 08                push A
+ 0030 7C0000            xcall _EzI2Cs_SetRamBuffer
+ 0033 38FC              add SP,-4
+ 0035 20                pop X
+ 0036                   .dbline 29
+ 0036           ;       
+ 0036           ;       I2C_Init();
+ 0036 9084              xcall _I2C_Init
+ 0038                   .dbline 31
+ 0038           ;       
+ 0038           ;       Adresse = EzI2Cs_GetAddr();
+ 0038 10                push X
+ 0039 7C0000            xcall _EzI2Cs_GetAddr
+ 003C 20                pop X
+ 003D 62D000            mov REG[0xd0],>_Adresse
+ 0040 5300              mov [_Adresse],A
+ 0042 8075              xjmp L4
+ 0044           L6:
+ 0044                   .dbline 36
+ 0044           ; 
+ 0044           ;       
+ 0044           ;       while(1)
+ 0044           ;       {
+ 0044           ;               while(ADCINC_fIsDataAvailable() == 0);    
+ 0044           L7:
+ 0044                   .dbline 36
+ 0044 10                push X
+ 0045 7C0000            xcall _ADCINC_fIsDataAvailable
+ 0048 20                pop X
+ 0049 62D000            mov REG[0xd0],>__r0
+ 004C 3900              cmp A,0
+ 004E AFF5              jz L6
+ 0050                   .dbline 37
+ 0050           ;               Wert = ADCINC_iClearFlagGetData();              
+ 0050 10                push X
+ 0051 7C0000            xcall _ADCINC_iClearFlagGetData
+ 0054 62D000            mov REG[0xd0],>__r0
+ 0057 5A00              mov [__r0],X
+ 0059 20                pop X
+ 005A 08                push A
+ 005B 5100              mov A,[__r0]
+ 005D 62D000            mov REG[0xd0],>_Wert
+ 0060 5300              mov [_Wert],A
+ 0062 18                pop A
+ 0063 5301              mov [_Wert+1],A
+ 0065                   .dbline 39
+ 0065           ; 
+ 0065           ;               LCD_Position(1,0); 
+ 0065 10                push X
+ 0066 5700              mov X,0
+ 0068 5001              mov A,1
+ 006A 7C0000            xcall _LCD_Position
+ 006D                   .dbline 40
+ 006D           ;               LCD_PrCString("ADC:");
+ 006D 5009              mov A,>L9
+ 006F 08                push A
+ 0070 5009              mov A,<L9
+ 0072 5C                mov X,A
+ 0073 18                pop A
+ 0074 7C0000            xcall _LCD_PrCString
+ 0077                   .dbline 41
+ 0077           ;               LCD_Position(1,5);
+ 0077 5705              mov X,5
+ 0079 5001              mov A,1
+ 007B 7C0000            xcall _LCD_Position
+ 007E                   .dbline 42
+ 007E           ;               LCD_PrHexInt(Wert);
+ 007E 62D000            mov REG[0xd0],>_Wert
+ 0081 5100              mov A,[_Wert]
+ 0083 08                push A
+ 0084 5101              mov A,[_Wert+1]
+ 0086 20                pop X
+ 0087 7C0000            xcall _LCD_PrHexInt
+ 008A                   .dbline 43
+ 008A           ;               LCD_Position(2,0); 
+ 008A 5700              mov X,0
+ 008C 5002              mov A,2
+ 008E 7C0000            xcall _LCD_Position
+ 0091                   .dbline 44
+ 0091           ;               LCD_PrCString("Adresse:");
+ 0091 5000              mov A,>L10
+ 0093 08                push A
+ 0094 5000              mov A,<L10
+ 0096 5C                mov X,A
+ 0097 18                pop A
+ 0098 7C0000            xcall _LCD_PrCString
+ 009B                   .dbline 45
+ 009B           ;               LCD_Position(2,9);
+ 009B 5709              mov X,9
+ 009D 5002              mov A,2
+ 009F 7C0000            xcall _LCD_Position
+ 00A2 20                pop X
+ 00A3                   .dbline 46
+ 00A3           ;               LCD_PrHexInt(Adresse);
+ 00A3 62D000            mov REG[0xd0],>_Adresse
+ 00A6 5100              mov A,[_Adresse]
+ 00A8 62D000            mov REG[0xd0],>__r0
+ 00AB 5300              mov [__r1],A
+ 00AD 10                push X
+ 00AE 5000              mov A,0
+ 00B0 08                push A
+ 00B1 5100              mov A,[__r1]
+ 00B3 20                pop X
+ 00B4 7C0000            xcall _LCD_PrHexInt
+ 00B7 20                pop X
+ 00B8                   .dbline 47
+ 00B8           ;       }
+ 00B8           L4:
+ 00B8                   .dbline 34
+ 00B8 8F8B              xjmp L7
+ 00BA           X0:
+ 00BA                   .dbline -2
+ 00BA           L1:
+ 00BA                   .dbline 0 ; func end
+ 00BA 8FFF              jmp .
+ 00BC                   .dbend
+ 00BC                   .dbfunc e I2C_Init _I2C_Init fV
+ 00BC           _I2C_Init::
+ 00BC                   .dbline -1
+ 00BC                   .dbline 51
+ 00BC           ; }
+ 00BC           ; 
+ 00BC           ; void I2C_Init(void)
+ 00BC           ; {
+ 00BC                   .dbline 52
+ 00BC           ;       EzI2Cs_Start();                                                                                                                                 // I²C Modul starten
+ 00BC 10                push X
+ 00BD 7C0000            xcall _EzI2Cs_Start
+ 00C0                   .dbline 53
+ 00C0           ;       EzI2Cs_EnableInt();                                                                                                                             // I²C Interrupts aktivieren
+ 00C0 7C0000            xcall _EzI2Cs_EnableInt
+ 00C3 20                pop X
+ 00C4                   .dbline -2
+ 00C4           L11:
+ 00C4                   .dbline 0 ; func end
+ 00C4 7F                ret
+ 00C5                   .dbend
+                        .area lit(rom, con, rel, lit)
+ 0000           L10:
+ 0000 416472657373653A00        .byte 'A,'d,'r,'e,'s,'s,'e,58,0
+ 0009           L9:
+ 0009 4144433A00        .byte 'A,'D,'C,58,0
+ 000E           L2:
+ 000E 50536F432049324320536C61766500    .byte 'P,'S,'o,'C,32,'I,50,'C,32,'S,'l,'a,'v,'e,0

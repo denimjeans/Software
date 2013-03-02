@@ -1,0 +1,14 @@
+Starting MAKE...
+creating project.mk -- no changes
+./main.c
+Linking..
+LMM info: area 'InterruptRAM' uses 11 bytes in SRAM bank 0
+LMM info: area 'virtual_registers' uses 2 bytes in SRAM page 0
+LMM info: area 'data' item of 1 bytes allocated in SRAM page 0
+idata dump at output/I2C_Slave.idata
+  ROM 5% full. 1608 out of 32768 bytes used (does not include absolute areas).
+  RAM 1% full. 14 bytes used (does not include stack usage).
+Built with ICCM8C STD V7.05.00
+ 
+I2C_Slave - 0 error(s) 0 warning(s) 21:13:10
+

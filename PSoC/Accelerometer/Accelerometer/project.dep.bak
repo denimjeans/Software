@@ -1,0 +1,31 @@
+# DO NOT DELETE
+./obj/boot.o : \
+   G:/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/include/CY8C27~1/m8c.inc\
+   G:/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/include/CY8C27~1/m8ssc.inc\
+   H:\Hobby\PROGRA~1\PSOCPR~1\ACCELE~1\ACCELE~1\lib\GLOBAL~1.INC\
+   H:\Hobby\PROGRA~1\PSOCPR~1\ACCELE~1\ACCELE~1\memory.inc
+./obj/main.o :  ./lib/DUALADC.h ./lib/LCD.h ./lib/PGA_X_~1.H\
+   ./lib/PGA_Y_~1.H ./lib/PSoCAPI.h ./lib/PSOCGP~1.H\
+   G:/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/include/CY8C27~1/M8C.h\
+   G:/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/include/CY8C27~1/m8C.h\
+   G:/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/include/CY8C27~1/m8c.h
+./lib/obj/dualadc.o :  ./lib/DUALADC.inc\
+   G:/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/include/CY8C27~1/m8c.inc\
+   H:\Hobby\PROGRA~1\PSOCPR~1\ACCELE~1\ACCELE~1\memory.inc
+./lib/obj/dualadcint.o :  ./lib/DUALADC.inc\
+   G:/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/include/CY8C27~1/m8c.inc\
+   H:\Hobby\PROGRA~1\PSOCPR~1\ACCELE~1\ACCELE~1\memory.inc
+./lib/obj/lcd.o :  ./lib/LCD.inc\
+   G:/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/include/CY8C27~1/m8c.inc\
+   H:\Hobby\PROGRA~1\PSOCPR~1\ACCELE~1\ACCELE~1\memory.inc
+./lib/obj/pga_x_achse.o :  ./lib/PGA_X_~1.INC\
+   G:/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/include/CY8C27~1/m8c.inc\
+   H:\Hobby\PROGRA~1\PSOCPR~1\ACCELE~1\ACCELE~1\memory.inc
+./lib/obj/pga_y_achse.o :  ./lib/PGA_Y_~1.INC\
+   G:/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/include/CY8C27~1/m8c.inc\
+   H:\Hobby\PROGRA~1\PSOCPR~1\ACCELE~1\ACCELE~1\memory.inc
+./lib/obj/psocconfig.o :  ./lib/GLOBAL~1.INC\
+   G:/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/include/CY8C27~1/m8c.inc\
+   H:\Hobby\PROGRA~1\PSOCPR~1\ACCELE~1\ACCELE~1\memory.inc
+./lib/obj/psocconfigtbl.o : \
+   G:/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/include/CY8C27~1/m8c.inc

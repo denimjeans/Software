@@ -1,0 +1,38 @@
+Starting MAKE...
+creating project.mk 
+lib/led7seg.asm
+lib/led7segint.asm
+lib/psocconfig.asm
+lib/psocconfigtbl.asm
+lib/timer16.asm
+lib/timer16int.asm
+./boot.asm
+./main.c
+Linking..
+LMM info: area 'InterruptRAM' uses 6 bytes in SRAM bank 0
+LMM info: area 'data' item of 31 bytes allocated in SRAM page 0
+LMM info: area 'data' item of 26 bytes allocated in SRAM page 0
+LMM info: area 'virtual_registers' uses 2 bytes in SRAM page 0
+LMM info: area 'data' item of 2 bytes allocated in SRAM page 0
+LMM info: area 'data' item of 2 bytes allocated in SRAM page 0
+LMM info: area 'data' item of 2 bytes allocated in SRAM page 0
+symbol Timer16_wReadTimerSaveCV is unused
+symbol Timer16_WritePeriod is unused
+symbol _LED7SEG_DP is unused
+symbol _LED7SEG_DispInt is unused
+symbol Timer16_wReadCompareValue is unused
+symbol Timer16_WriteCompareValue is unused
+symbol _LED7SEG_Dim is unused
+symbol _LED7SEG_Stop is unused
+symbol Timer16_Stop is unused
+symbol Timer16_DisableInt is unused
+symbol Timer16_wReadTimer is unused
+261 bytes unused code deleted
+no worthwhile duplicate found
+idata dump at output/Laufschrift.idata
+  ROM 3% full. 924 out of 32768 bytes used (does not include absolute areas).
+  RAM 4% full. 71 bytes used (does not include stack usage).
+Built with ICCM8C STD V7.05.00
+ 
+Laufschrift - 0 error(s) 0 warning(s) 21:16:21
+

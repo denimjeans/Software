@@ -1,0 +1,238 @@
+ 0000                   cpu LMM
+                        .module main.c
+                        .area text(rom, con, rel)
+ 0000                   .dbfile ./main.c
+                        .area data(ram, con, rel)
+ 0000                   .dbfile ./main.c
+ 0000           _ascii::
+ 0000 777C              .byte 'w,124
+ 0002 395E              .byte 57,94
+ 0004 7971              .byte 'y,'q
+ 0006 3D76              .byte 61,'v
+ 0008 061E              .byte 6,30
+ 000A 0038              .byte 0,56
+ 000C 0037              .byte 0,55
+ 000E 3F73              .byte 63,'s
+ 0010 0050              .byte 0,'P
+ 0012 6D78              .byte 'm,'x
+ 0014 3E00              .byte 62,0
+ 0016 0000              .byte 0,0
+ 0018 6E00              .byte 'n,0
+ 001A                   .dbfile H:\Hobby\PROGRA~1\PSOCPR~1\LAUFSC~1\LAUFSC~1\LAUFSC~1\main.c
+ 001A                   .dbsym e ascii _ascii A[26:26]c
+                        .area data(ram, con, rel)
+ 0000                   .dbfile H:\Hobby\PROGRA~1\PSOCPR~1\LAUFSC~1\LAUFSC~1\LAUFSC~1\main.c
+                        .area data(ram, con, rel)
+ 0000                   .dbfile H:\Hobby\PROGRA~1\PSOCPR~1\LAUFSC~1\LAUFSC~1\LAUFSC~1\main.c
+ 0000           _text::
+ 0000 5A5A5A5A5A5A5A5A5A5A5A48414C4C4F  .byte 'Z,'Z,'Z,'Z,'Z,'Z,'Z,'Z,'Z,'Z,'Z,'H,'A,'L,'L,'O
+ 0010 5A5A5A5A5A5A5A5A5A5A5A5A5A5A00    .byte 'Z,'Z,'Z,'Z,'Z,'Z,'Z,'Z,'Z,'Z,'Z,'Z,'Z,'Z,0
+ 001F                   .dbsym e text _text A[31:31]c
+                        .area data(ram, con, rel)
+ 0000                   .dbfile H:\Hobby\PROGRA~1\PSOCPR~1\LAUFSC~1\LAUFSC~1\LAUFSC~1\main.c
+                        .area data(ram, con, rel)
+ 0000                   .dbfile H:\Hobby\PROGRA~1\PSOCPR~1\LAUFSC~1\LAUFSC~1\LAUFSC~1\main.c
+ 0000           _Flag::
+ 0000 0001              .word 1
+ 0002                   .dbsym e Flag _Flag I
+                        .area data(ram, con, rel)
+ 0000                   .dbfile H:\Hobby\PROGRA~1\PSOCPR~1\LAUFSC~1\LAUFSC~1\LAUFSC~1\main.c
+                        .area text(rom, con, rel)
+ 0000                   .dbfile H:\Hobby\PROGRA~1\PSOCPR~1\LAUFSC~1\LAUFSC~1\LAUFSC~1\main.c
+ 0000                   .dbfunc e main _main fV
+ 0000           _main::
+ 0000                   .dbline -1
+ 0000                   .dbline 23
+ 0000           ; //------------------------------------------------------------------------------//
+ 0000           ; //                                                            Laufschrift                                                                             //
+ 0000           ; //------------------------------------------------------------------------------//
+ 0000           ; 
+ 0000           ; #include <m8c.h>                                                                                                                                                       // Part specific constants and macros
+ 0000           ; #include "PSoCAPI.h"                                                                                                                                                   // PSoC API definitions for all User Modules
+ 0000           ; #pragma interrupt_handler Timer
+ 0000           ; 
+ 0000           ; unsigned char ascii[] = {
+ 0000           ;       119,124,57,94,121,113,61,118,   // ABCDEFGH
+ 0000           ;       6,30,0,56,0,55,63,115,          // IJ_L_NOP
+ 0000           ;       0,80,109,120,62,0,0,0,          // QRSTU___
+ 0000           ;       110,0                                                   // YZ
+ 0000           ; };
+ 0000           ;                                         //123456789012345678901234567890
+ 0000           ; unsigned char text[] = "ZZZZZZZZZZZHALLOZZZZZZZZZZZZZZ";                                                                      // Satz der angezeigt werden soll. "Z" als Leerzeichen und 30 Stellen
+ 0000           ; 
+ 0000           ; volatile int Flag = 1;                                                                                                                                                // Flag für den Timer
+ 0000           ; int Segment;                                                                                                                                                          // Zähler für die Segmente
+ 0000           ; int Zaehler_Text;                                                                                                                                                     // Zähler für die Stellen im Array "text"
+ 0000           ;       
+ 0000           ; void main(void)
+ 0000           ; {
+ 0000                   .dbline 24
+ 0000           ;     M8C_EnableGInt;
+ 0000 7101                      or  F, 01h
+ 0002           
+ 0002                   .dbline 25
+ 0002           ;       LED7SEG_Start();
+ 0002 7C0000            xcall _LED7SEG_Start
+ 0005                   .dbline 26
+ 0005           ;       Timer16_Start();
+ 0005 10                push X
+ 0006 7C0000            xcall _Timer16_Start
+ 0009                   .dbline 27
+ 0009           ;       Timer16_EnableInt();
+ 0009 7C0000            xcall _Timer16_EnableInt
+ 000C 20                pop X
+ 000D 809F              xjmp L3
+ 000F           L2:
+ 000F                   .dbline 30
+ 000F           ;       
+ 000F           ;       while (1)
+ 000F           ;       {
+ 000F                   .dbline 31
+ 000F           ;               Zaehler_Text = 0;                                                                                                                                       
+ 000F 62D000            mov REG[0xd0],>_Zaehler_Text
+ 0012 550100            mov [_Zaehler_Text+1],0
+ 0015 550000            mov [_Zaehler_Text],0
+ 0018 8085              xjmp L6
+ 001A           L5:
+ 001A                   .dbline 33
+ 001A           ;               while (Zaehler_Text < 28)                                                                                                                       // Schleife bis alle Stellen des Arrays "Text" durchgelaufen sind
+ 001A           ;               {
+ 001A                   .dbline 34
+ 001A           ;                       for (Segment = 0; Segment < 4; Segment++)                                                                               // Schleife bis alle 4 Segmente durchgelaufen sind
+ 001A 62D000            mov REG[0xd0],>_Segment
+ 001D 550100            mov [_Segment+1],0
+ 0020 550000            mov [_Segment],0
+ 0023           L8:
+ 0023                   .dbline 35
+ 0023           ;                       {
+ 0023                   .dbline 36
+ 0023           ;                               LED7SEG_PutPattern(ascii[text[Zaehler_Text+Segment]-65],Segment+1);                     // Ließt das Zeichen mit der Nummer, welche sich aus dem Zähler für das Array "text"
+ 0023 62D000            mov REG[0xd0],>_Segment
+ 0026 5101              mov A,[_Segment+1]
+ 0028 0101              add A,1
+ 002A 10                push X
+ 002B 08                push A
+ 002C 62D000            mov REG[0xd0],>_Zaehler_Text
+ 002F 5101              mov A,[_Zaehler_Text+1]
+ 0031 62D000            mov REG[0xd0],>_Segment
+ 0034 0201              add A,[_Segment+1]
+ 0036 62D000            mov REG[0xd0],>__r0
+ 0039 5300              mov [__r1],A
+ 003B 62D000            mov REG[0xd0],>_Zaehler_Text
+ 003E 5100              mov A,[_Zaehler_Text]
+ 0040 62D000            mov REG[0xd0],>_Segment
+ 0043 0A00              adc A,[_Segment]
+ 0045 62D000            mov REG[0xd0],>__r0
+ 0048 5300              mov [__r0],A
+ 004A 060000            add [__r1],<_text
+ 004D 0E0000            adc [__r0],>_text
+ 0050 5100              mov A,[__r0]
+ 0052 60D4              mov REG[0xd4],A
+ 0054 3E00              mvi A,[__r1]
+ 0056 5300              mov [__r1],A
+ 0058 550000            mov [__r0],0
+ 005B 0600BF            add [__r1],<_ascii-65
+ 005E 0E00BF            adc [__r0],>_ascii-65
+ 0061 5100              mov A,[__r0]
+ 0063 60D4              mov REG[0xd4],A
+ 0065 3E00              mvi A,[__r1]
+ 0067 20                pop X
+ 0068 7C0000            xcall _LED7SEG_PutPattern
+ 006B 20                pop X
+ 006C                   .dbline 40
+ 006C           ;                                                                                                                                                                                       // und der Segmentzahl ergibt, aus dem Array "text" ein und zieht davon dann 65 ab. 
+ 006C           ;                                                                                                                                                                                       // Anschließend wird aus dem Array "ascii" das Byte mit der übereinstimmenden Nummer 
+ 006C           ;                                                                                                                                                                                       // ausgelesen und auf der 7-Segment Anzeige ausgegeben.
+ 006C           ;                       }
+ 006C           L9:
+ 006C                   .dbline 34
+ 006C 62D000            mov REG[0xd0],>_Segment
+ 006F 7601              inc [_Segment+1]
+ 0071 0E0000            adc [_Segment],0
+ 0074                   .dbline 34
+ 0074 5101              mov A,[_Segment+1]
+ 0076 1104              sub A,4
+ 0078 5100              mov A,[_Segment]
+ 007A 3180              xor A,-128
+ 007C 1980              sbb A,(0 ^ 0x80)
+ 007E CFA4              jc L8
+ 0080           X1:
+ 0080                   .dbline 41
+ 0080           ;                       Zaehler_Text++;                                                                                                                                 // Der Zähler für das Array "text" erhöhen.
+ 0080 62D000            mov REG[0xd0],>_Zaehler_Text
+ 0083 7601              inc [_Zaehler_Text+1]
+ 0085 0E0000            adc [_Zaehler_Text],0
+ 0088           L13:
+ 0088                   .dbline 42
+ 0088           ;                       while (Flag == 0);                                                                                                                              // Schleife bis das Flag für den Timer 1 ist
+ 0088           L14:
+ 0088                   .dbline 42
+ 0088 62D000            mov REG[0xd0],>_Flag
+ 008B 3C0000            cmp [_Flag],0
+ 008E B006              jnz X2
+ 0090 3C0100            cmp [_Flag+1],0
+ 0093 AFF4              jz L13
+ 0095           X2:
+ 0095                   .dbline 43
+ 0095           ;                       Flag = 0;                                                                                                                                               // Flag für den Timer auf 0 setzen
+ 0095 62D000            mov REG[0xd0],>_Flag
+ 0098 550100            mov [_Flag+1],0
+ 009B 550000            mov [_Flag],0
+ 009E                   .dbline 44
+ 009E           ;               }
+ 009E           L6:
+ 009E                   .dbline 32
+ 009E 62D000            mov REG[0xd0],>_Zaehler_Text
+ 00A1 5101              mov A,[_Zaehler_Text+1]
+ 00A3 111C              sub A,28
+ 00A5 5100              mov A,[_Zaehler_Text]
+ 00A7 3180              xor A,-128
+ 00A9 1980              sbb A,(0 ^ 0x80)
+ 00AB CF6E              jc L5
+ 00AD           X3:
+ 00AD                   .dbline 45
+ 00AD           ;       }
+ 00AD           L3:
+ 00AD                   .dbline 29
+ 00AD 8F61              xjmp L2
+ 00AF           X0:
+ 00AF                   .dbline -2
+ 00AF           L1:
+ 00AF                   .dbline 0 ; func end
+ 00AF 8FFF              jmp .
+ 00B1                   .dbend
+ 00B1                   .dbfunc e Timer _Timer fV
+ 00B1           _Timer::
+ 00B1                   .dbline -1
+ 00B1 71C0              or F,-64
+ 00B3 08                push A
+ 00B4 5DD0              mov A,REG[0xd0]
+ 00B6 08                push A
+ 00B7                   .dbline 49
+ 00B7           ; }
+ 00B7           ; 
+ 00B7           ; void Timer(void)
+ 00B7           ; {
+ 00B7                   .dbline 50
+ 00B7           ;       Flag = 1;
+ 00B7 62D000            mov REG[0xd0],>_Flag
+ 00BA 550101            mov [_Flag+1],1
+ 00BD 550000            mov [_Flag],0
+ 00C0                   .dbline -2
+ 00C0           L16:
+ 00C0 18                pop A
+ 00C1 60D0              mov REG[208],A
+ 00C3 18                pop A
+ 00C4                   .dbline 0 ; func end
+ 00C4 7E                reti
+ 00C5                   .dbend
+                        .area data(ram, con, rel)
+ 0000                   .dbfile H:\Hobby\PROGRA~1\PSOCPR~1\LAUFSC~1\LAUFSC~1\LAUFSC~1\main.c
+ 0000           _Zaehler_Text::
+ 0000 0000              .byte 0,0
+ 0002                   .dbsym e Zaehler_Text _Zaehler_Text I
+                        .area data(ram, con, rel)
+ 0000                   .dbfile H:\Hobby\PROGRA~1\PSOCPR~1\LAUFSC~1\LAUFSC~1\LAUFSC~1\main.c
+ 0000           _Segment::
+ 0000 0000              .byte 0,0
+ 0002                   .dbsym e Segment _Segment I

@@ -1,0 +1,72 @@
+XH
+H 2 areas E global symbols
+M main.c
+S _ADC10_fIsDataAvailable Ref0000
+S _EzI2Cs_EnableInt Ref0000
+S _PWM16_Start Ref0000
+S _PWM16_WritePulseWidth Ref0000
+S _ADC10_iGetDataClearFlag Ref0000
+S _EzI2Cs_SetRamBuffer Ref0000
+S __r0 Ref0000
+S _ADC10_iCal Ref0000
+S _PWM16_WritePeriod Ref0000
+S _EzI2Cs_Start Ref0000
+S _ADC10_StartADC Ref0000
+S _ADC10_Start Ref0000
+A text size 6B flags 0
+dbfile ./main.c
+dbfile G:\Dropbox\Hobby\PROGRA~1\PSOCPR~1\PSOC_S~1\PSOC_S~1\main.c
+dbfunc e main 0 fV
+dbline FFFFFFFF 0
+dbline 12 0
+dbline 13 0
+dbline 15 11
+dbline 17 13
+dbline 18 17
+dbline 19 1A
+dbline 1B 1D
+dbline 1C 22
+dbline 1D 30
+dbline 20 34
+dbline 21 3A
+dbline 24 42
+dbline 25 42
+dbline 26 4A
+dbline 28 52
+dbline 28 52
+dbline 29 5B
+dbline 2A 67
+dbline 23 67
+dbline FFFFFFFE 69
+dbline 0 69
+S _main Def0000
+A bss size 7 flags 20
+dbfile G:\Dropbox\Hobby\PROGRA~1\PSOCPR~1\PSOC_S~1\PSOC_S~1\main.c
+dbstruct 7 I2C_Regs
+dbfield 0 ADC I
+dbfield 2 PWM_Freq I
+dbfield 4 PWM_Pulse I
+dbfield 6 Temperatur c
+dbend
+dbsym e I2C 0 S[I2C_Regs]
+S _I2C Def0000
+T 00 00 10 50 00 00 08 50 00 00 08 50 0A 08 08 7C
+R 00 00 00 00 41 04 00 01 01 08 00 01
+T 00 0C 00 00 38 FC 20 71 01 10 7C 00 00 7C 00 00
+R 00 00 00 00 02 02 00 05 02 0B 00 09 02 0E 00 01
+T 00 1A 7C 00 00 50 03 7C 00 00 50 03 08 50 00 08
+R 00 00 00 00 02 03 00 02 02 08 00 0B
+T 00 28 50 77 08 7C 00 00 38 FD 7C 00 00 20 55
+R 00 00 00 00 02 06 00 07 02 0B 00 0A
+T 00 35 00 03 FF 55 00 02 7F 55 00 05 FF 55
+R 00 00 00 00 01 02 00 01 01 06 00 01 01 0A 00 01
+T 00 3E 00 04 3F 80 26 10 58 00 02 51 00 03 7C
+R 00 00 00 00 01 02 00 01 01 09 00 01 01 0C 00 01
+T 00 48 00 00 58 00 04 51 00 05 7C
+R 00 00 00 00 02 02 00 08 01 05 00 01 01 08 00 01
+T 00 4F 00 00 20 10 7C 00 00 20 39 00 AF F8 10 7C
+R 00 00 00 00 02 02 00 03 02 07 00 00
+T 00 5D 00 00 5A 00 00 20 53 00 01 5F
+R 00 00 00 00 02 02 00 04 03 05 00 06 01 09 00 01
+T 00 65 00 00 00 00 8F DA 8F FF
+R 00 00 00 00 01 02 00 01 03 04 00 06

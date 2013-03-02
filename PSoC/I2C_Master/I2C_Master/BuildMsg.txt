@@ -1,0 +1,8 @@
+Starting MAKE...
+creating project.mk -- no changes
+./main.c
+!E H:\Hobby\PROGRA~1\PSOCPR~1\I2C_MA~1\I2C_MA~1\main.c(31): type error in argument 1 to `LCD_PrHexInt'; found `pointer to char' expected `int'
+G:\Cypress\PSOCDE~1\5.2\Common\CY110F~1\tools\make: *** [obj/main.o] Error 1
+ 
+I2C_Master - 2 error(s) 0 warning(s) 21:34:08
+

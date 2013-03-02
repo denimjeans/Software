@@ -1,0 +1,30 @@
+# DO NOT DELETE
+./obj/boot.o : \
+   G:/PSoC/PSOCDE~1/5.1/Common/CY110F~1/tools/include/CY8C29~1/m8c.inc\
+   G:/PSoC/PSOCDE~1/5.1/Common/CY110F~1/tools/include/CY8C29~1/m8ssc.inc\
+   G:\PSOCPR~1\PSOC_M~1\PSOC_M~1\lib\GLOBAL~1.INC\
+   G:\PSOCPR~1\PSOC_M~1\PSOC_M~1\memory.inc
+./obj/main.o :  ./lib/LCD.h ./lib/PSoCAPI.h ./lib/PSOCGP~1.H\
+   ./lib/Timer16.h ./lib/UART.h\
+   G:/PSoC/PSOCDE~1/5.1/Common/CY110F~1/tools/include/CY8C29~1/m8c.h
+./lib/obj/lcd.o :  ./lib/LCD.inc\
+   G:/PSoC/PSOCDE~1/5.1/Common/CY110F~1/tools/include/CY8C29~1/m8c.inc\
+   G:\PSOCPR~1\PSOC_M~1\PSOC_M~1\memory.inc
+./lib/obj/psocconfig.o :  ./lib/GLOBAL~1.INC\
+   G:/PSoC/PSOCDE~1/5.1/Common/CY110F~1/tools/include/CY8C29~1/m8c.inc\
+   G:\PSOCPR~1\PSOC_M~1\PSOC_M~1\memory.inc
+./lib/obj/psocconfigtbl.o : \
+   G:/PSoC/PSOCDE~1/5.1/Common/CY110F~1/tools/include/CY8C29~1/m8c.inc
+./lib/obj/timer16.o :  ./lib/Timer16.inc\
+   G:/PSoC/PSOCDE~1/5.1/Common/CY110F~1/tools/include/CY8C29~1/m8c.inc\
+   G:\PSOCPR~1\PSOC_M~1\PSOC_M~1\memory.inc
+./lib/obj/timer16int.o :  ./lib/Timer16.inc\
+   G:/PSoC/PSOCDE~1/5.1/Common/CY110F~1/tools/include/CY8C29~1/m8c.inc\
+   G:\PSOCPR~1\PSOC_M~1\PSOC_M~1\memory.inc
+./lib/obj/uart.o :  ./lib/UART.inc\
+   G:/PSoC/PSOCDE~1/5.1/Common/CY110F~1/tools/include/CY8C29~1/m8c.inc\
+   G:\PSOCPR~1\PSOC_M~1\PSOC_M~1\memory.inc
+./lib/obj/uartint.o :  ./lib/UART.inc\
+   G:/PSoC/PSOCDE~1/5.1/Common/CY110F~1/tools/include/CY8C29~1/m8c.inc\
+   G:\PSOCPR~1\PSOC_M~1\PSOC_M~1\memory.inc
+./lib/obj/uartplus.o : 

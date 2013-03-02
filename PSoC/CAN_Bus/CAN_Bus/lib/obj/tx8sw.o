@@ -1,0 +1,258 @@
+XH
+H 3 areas 2D global symbols
+M tx8sw.asm
+S Port_0_Data_SHADE Ref0000
+A text size 0 flags 0
+dbfile lib/tx8sw.asm
+dbfunc 0 ? 0 I
+dbfile TX8SW.inc
+dbfunc 0 ? 0 I
+dbfile ./lib/GlobalParams.inc
+dbfunc 0 ? 0 I
+dbfile TX8SW.inc
+dbfunc 0 ? 0 I
+dbfile G:/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/include/CY8C29~1/m8c.inc
+dbfunc 0 ? 0 I
+dbfile ./lib/TX8SW.inc
+dbfunc 0 ? 0 I
+dbfile lib/tx8sw.asm
+dbfunc 0 ? 0 I
+dbfile memory.inc
+dbfunc 0 ? 0 I
+dbfile lib/tx8sw.asm
+dbfunc 0 ? 0 I
+dbfile G:/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/include/CY8C29~1/m8c.inc
+dbfunc 0 ? 0 I
+A InterruptRAM size 2 flags 20
+A UserModules size 113 flags 0
+dbfile lib/tx8sw.asm
+dbfunc 0 ? 10 I
+dbline 3 10
+dbline 2 13
+dbline 3 16
+dbline 4 18
+dbline 5 1A
+dbline 2 1D
+dbline 7 1F
+dbline 8 22
+dbline 2 25
+dbline 56 27
+dbline 2 28
+dbline 2 2B
+dbline 4 2D
+dbline 5 30
+dbline 2 33
+dbline 74 35
+dbline 3 36
+dbline 94 39
+dbline 2 3B
+dbline B8 3D
+dbline B9 3F
+dbline BA 40
+dbline BB 42
+dbline 2 44
+dbline BE 46
+dbline 2 48
+dbline C1 4A
+dbline C2 4B
+dbline C3 4C
+dbline C4 4D
+dbline C6 4E
+dbline FB 50
+dbline FC 52
+dbline FE 54
+dbline 102 56
+dbline 105 58
+dbline 2 59
+dbline 3 5B
+dbline 4 5D
+dbline 5 5F
+dbline 6 61
+dbline 7 63
+dbline 8 65
+dbline 107 67
+dbline 108 68
+dbline 119 6A
+dbline 11A 6C
+dbline 11B 6E
+dbline 11E 70
+dbline 11F 72
+dbline 124 74
+dbline 127 76
+dbline 128 77
+dbline 16E 79
+dbline 2 7A
+dbline 170 7C
+dbline 2 7E
+dbline 2 80
+dbline 176 82
+dbline 190 83
+dbline 191 84
+dbline 192 85
+dbline 193 86
+dbline 194 87
+dbline 195 88
+dbline 196 8A
+dbline 197 8C
+dbline 198 8E
+dbline 199 8F
+dbline 19A 91
+dbline 19B 93
+dbline 19C 95
+dbline 1B8 96
+dbline 1B9 97
+dbline 1BA 98
+dbline 1BB 9A
+dbline 1BC 9B
+dbline 1BE 9D
+dbline 1DB 9E
+dbline 1DC 9F
+dbline 1DD A0
+dbline 1DE A1
+dbline 1DF A3
+dbline 1E0 A5
+dbline 1E1 A6
+dbline 1E2 A7
+dbline 1E3 A8
+dbline 1E4 AA
+dbline 1E5 AB
+dbline 1E9 AD
+dbline 1EB AF
+dbline 3 B0
+dbline 3 B2
+dbline 20D B4
+dbline 20E B6
+dbline 20F B8
+dbline 210 B9
+dbline 211 BB
+dbline 212 BC
+dbline 213 BD
+dbline 3 BF
+dbline 4 C1
+dbline 217 C3
+dbline 231 C4
+dbline 232 C6
+dbline 233 C8
+dbline 234 CA
+dbline 235 CC
+dbline 3 CD
+dbline 3 CF
+dbline 25B D2
+dbline 25E D3
+dbline 25F D5
+dbline 260 D7
+dbline 263 D9
+dbline 266 DB
+dbline 3 DD
+dbline 268 DF
+dbline 269 E1
+dbline 26A E3
+dbline 3 E4
+dbline 26C E7
+dbline 26D E9
+dbline 3 EB
+dbline 4 ED
+dbline 271 EF
+dbline 294 F0
+dbline 298 F1
+dbline 299 F4
+dbline 29A F6
+dbline 29B F9
+dbline 29E FB
+dbline 29F FC
+dbline 2A0 FE
+dbline 2A1 100
+dbline 2A2 101
+dbline 2A3 103
+dbline 2A5 104
+dbline 2A6 107
+dbline 2A9 10A
+dbline 2AA 10D
+dbline 2AC 110
+dbline 2B0 112
+S $se$TX8SW_CPutString Def00B0
+S _TX8SW_PutChar Def0036
+S $sb$TX8SW_Write Def00CD
+S $se$TX8SW_Write Def00F0
+S $sb$TX8SW_Start Def0010
+S $se$TX8SW_Start Def0028
+S _TX8SW_PutSHexInt Def0096
+S TX8SW_PutSHexByte Def0083
+S TX8SW_CWrite Def00F0
+S _TX8SW_CPutString Def009E
+S TX8SW_PutCRLF Def00C4
+S $sb$TX8SW_PutSHexByte Def0083
+S _TX8SW_SendData Def0036
+S $se$TX8SW_PutSHexByte Def0096
+S _TX8SW_Write Def00CD
+S $sb$TX8SW_CWrite Def00F0
+S _TX8SW_Start Def0010
+S $se$TX8SW_CWrite Def0113
+S $lb$Digits Def0000
+S $le$Digits Def0010
+S _TX8SW_PutSHexByte Def0083
+S TX8SW_Stop Def0028
+S _TX8SW_CWrite Def00F0
+S TX8SW_PutString Def00B0
+S TX8SW_PutChar Def0036
+S _TX8SW_PutCRLF Def00C4
+S $sb$TX8SW_Stop Def0028
+S $se$TX8SW_Stop Def0036
+S $sb$TX8SW_PutString Def00B0
+S $se$TX8SW_PutString Def00C4
+S $sb$TX8SW_PutChar Def0036
+S $se$TX8SW_PutChar Def0083
+S $sb$_TX8SW_PutCRLF Def00C4
+S TX8SW_PutSHexInt Def0096
+S $se$_TX8SW_PutCRLF Def00CD
+S TX8SW_CPutString Def009E
+S $sb$TX8SW_PutSHexInt Def0096
+S $se$TX8SW_PutSHexInt Def009E
+S TX8SW_SendData Def0036
+S _TX8SW_Stop Def0028
+S TX8SW_Write Def00CD
+S TX8SW_Start Def0010
+S _TX8SW_PutString Def00B0
+S $sb$TX8SW_CPutString Def009E
+T 00 00 30 31 32 33 34 35 36 37 38 39 41 42 43 44
+R 00 00 00 02
+T 00 0E 45 46 62 D0 00 00 2E 00 00 80 51 00 00 60
+R 00 00 00 02 43 06 00 00 03 09 00 00 03 0D 00 00
+T 00 19 00 41 03 7F 71 10 43 00 80 41 01 7F 70 EF
+R 00 00 00 02
+T 00 27 7F 43 03 80 71 10 43 01 80 41 00 7F 70 EF
+R 00 00 00 02
+T 00 35 7F 62 D0 00 00 53 00 00 71 10 5D E0 08 21
+R 00 00 00 02 41 05 00 01 01 08 00 01
+T 00 41 F8 29 05 70 FE 60 E0 70 EF 4B 4B 4B 4B 51
+R 00 00 00 02
+T 00 4F 00 00 21 7F 60 00 57 08 80 01 40 6E 00 00
+R 00 00 00 02 03 02 00 00 01 0E 00 01
+T 00 5B C0 05 21 7F 80 05 29 80 80 01 60 00 79 BF
+R 00 00 00 02
+T 00 69 EF 6E 00 01 6E 00 01 6E 00 01 29 80 60 00
+R 00 00 00 02 01 04 00 01 01 07 00 01 01 0A 00 01
+T 00 74 57 03 79 BF FE 18 71 10 60 E0 70 EF 71 01
+R 00 00 00 02
+T 00 82 7F 08 67 67 67 67 21 0F FF 74 9F A8 18 21
+R 00 00 00 02
+T 00 90 0F FF 6D 9F A1 7F 08 5B 9F E9 18 9F E6 7F
+R 00 00 00 02
+T 00 9E 08 10 28 A0 0B 9F 91 20 18 75 DF F5 74 8F
+R 00 00 00 02
+T 00 AC F2 38 FE 7F 70 BF 60 D3 52 00 A0 08 10 9F
+R 00 00 00 02
+T 00 BA 7B 20 75 8F F6 70 3F 71 C0 7F 50 0D 9F 6E
+R 00 00 00 02
+T 00 C8 50 0A 9F 6A 7F 70 BF 62 D3 07 4F 52 FB A0
+R 00 00 00 02
+T 00 D6 15 7B FB 52 FC 59 FD 60 D3 52 00 9F 53 4F
+R 00 00 00 02
+T 00 E4 62 D3 07 77 FD 8F E9 70 3F 71 C0 7F 4F 3D
+R 00 00 00 02
+T 00 F2 FA 00 B0 06 3D FB 00 A0 18 10 52 FC 59 FD
+R 00 00 00 02
+T 01 00 28 9F 33 20 07 FD 01 0F FC 00 17 FB 01 1F
+R 00 00 00 02
+T 01 0E FA 00 8F E0 7F
+R 00 00 00 02

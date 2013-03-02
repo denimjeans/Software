@@ -1,0 +1,14 @@
+Starting MAKE...
+creating project.mk -- no changes
+./main.c
+Linking..
+LMM info: area 'InterruptRAM' uses 3 bytes in SRAM bank 0
+LMM info: area 'virtual_registers' uses 2 bytes in SRAM page 0
+LMM info: area 'data' item of 1 bytes allocated in SRAM page 0
+idata dump at output/CAN_Bus.idata
+  ROM 5% full. 1633 out of 32768 bytes used (does not include absolute areas).
+  RAM 1% full. 6 bytes used (does not include stack usage).
+Built with ICCM8C STD V7.05.00
+ 
+CAN_Bus - 0 error(s) 0 warning(s) 20:06:06
+

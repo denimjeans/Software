@@ -1,0 +1,221 @@
+                        .module main.c
+                        .area text(rom, con, rel)
+ 0000                   .dbfile ./main.c
+                        .area data(ram, con, rel)
+ 0000                   .dbfile ./main.c
+ 0000           _Value::
+ 0000                   .blkb 2
+                        .area idata(rom,lit)
+ 0000 0000              .word 0
+                        .area data(ram, con, rel)
+ 0002                   .dbfile ./main.c
+ 0002                   .dbfile I:\Hobby\PROGRA~1\PSOCPR~1\FUNK_L~1\FUNK_L~1\FUNK_L~1\main.c
+ 0002                   .dbsym e Value _Value I
+                        .area text(rom, con, rel)
+ 0000                   .dbfile I:\Hobby\PROGRA~1\PSOCPR~1\FUNK_L~1\FUNK_L~1\FUNK_L~1\main.c
+ 0000                   .dbfunc e main _main fV
+ 0000           _main::
+ 0000                   .dbline -1
+ 0000                   .dbline 13
+ 0000           ; //----------------------------------------------------------------------------
+ 0000           ; // C main line
+ 0000           ; //----------------------------------------------------------------------------
+ 0000           ; 
+ 0000           ; #include <m8c.h>       
+ 0000           ; #include "PSoCAPI.h"  
+ 0000           ; #pragma interrupt_handler Timer;
+ 0000           ; 
+ 0000           ; char *String; 
+ 0000           ; int Value = 0x00;
+ 0000           ; 
+ 0000           ; void main(void)
+ 0000           ; {
+ 0000                   .dbline 14
+ 0000           ;     M8C_EnableGInt ;
+ 0000 7101                      or  F, 01h
+ 0002           
+ 0002                   .dbline 15
+ 0002           ;     UART_CmdReset(); 
+ 0002 10                push X
+ 0003 7C0000            xcall _UART_CmdReset
+ 0006                   .dbline 16
+ 0006           ;       UART_IntCntl(UART_ENABLE_RX_INT);       
+ 0006 5001              mov A,1
+ 0008 7C0000            xcall _UART_IntCntl
+ 000B                   .dbline 17
+ 000B           ;     UART_Start(UART_PARITY_NONE);  
+ 000B 5000              mov A,0
+ 000D 7C0000            xcall _UART_Start
+ 0010                   .dbline 18
+ 0010           ;       ADC8_Start(ADC8_FULLRANGE); 
+ 0010 5003              mov A,3
+ 0012 7C0000            xcall _ADC8_Start
+ 0015                   .dbline 20
+ 0015           ;       //ADC8_bCal(0x42, ADC8_CAL_VBG);
+ 0015           ;       ADC8_StartADC();
+ 0015 7C0000            xcall _ADC8_StartADC
+ 0018                   .dbline 21
+ 0018           ;       Timer8_EnableInt();
+ 0018 7C0000            xcall _Timer8_EnableInt
+ 001B                   .dbline 22
+ 001B           ;     Timer8_Start();
+ 001B 7C0000            xcall _Timer8_Start
+ 001E 20                pop X
+ 001F 807D              xjmp L3
+ 0021           L2:
+ 0021                   .dbline 25
+ 0021           ;       
+ 0021           ;       while(1) 
+ 0021           ;       {
+ 0021                   .dbline 26
+ 0021           ;               if(UART_bCmdCheck()) 
+ 0021 10                push X
+ 0022 7C0000            xcall _UART_bCmdCheck
+ 0025 20                pop X
+ 0026 3900              cmp A,0
+ 0028 A074              jz L5
+ 002A                   .dbline 28
+ 002A           ;               {                 
+ 002A           ;               if(String = UART_szGetParam()) 
+ 002A                   .dbline 28
+ 002A 10                push X
+ 002B 7C0000            xcall _UART_szGetParam
+ 002E 5A00              mov [__r1],X
+ 0030 20                pop X
+ 0031 5F0100            mov [_String+1],[__r1]
+ 0034 5300              mov [_String],A
+ 0036 3C0000            cmp [_String],0
+ 0039 B006              jnz X1
+ 003B 3C0000            cmp [__r1],0
+ 003E A059              jz L7
+ 0040           X1:
+ 0040                   .dbline 30
+ 0040           ;                       {       
+ 0040           ;               UART_CPutString("Found valid command\r\nCommand =>");  
+ 0040                   .dbline 30
+ 0040 10                push X
+ 0041 501A              mov A,>L9
+ 0043 08                push A
+ 0044 501A              mov A,<L9
+ 0046 5C                mov X,A
+ 0047 18                pop A
+ 0048 7C0000            xcall _UART_CPutString
+ 004B                   .dbline 31
+ 004B           ;               UART_PutString(String);            
+ 004B 5100              mov A,[_String]
+ 004D 08                push A
+ 004E 5101              mov A,[_String+1]
+ 0050 5C                mov X,A
+ 0051 18                pop A
+ 0052 7C0000            xcall _UART_PutString
+ 0055                   .dbline 32
+ 0055           ;               UART_CPutString("<\r\nParamaters:\r\n");  
+ 0055 5009              mov A,>L10
+ 0057 08                push A
+ 0058 5009              mov A,<L10
+ 005A 5C                mov X,A
+ 005B 18                pop A
+ 005C 7C0000            xcall _UART_CPutString
+ 005F 20                pop X
+ 0060 8021              xjmp L12
+ 0062           L11:
+ 0062                   .dbline 35
+ 0062           ;                               
+ 0062           ;               while(String = UART_szGetParam()) 
+ 0062           ;                               {
+ 0062                   .dbline 36
+ 0062           ;                               UART_CPutString("   <");  
+ 0062 10                push X
+ 0063 5004              mov A,>L14
+ 0065 08                push A
+ 0066 5004              mov A,<L14
+ 0068 5C                mov X,A
+ 0069 18                pop A
+ 006A 7C0000            xcall _UART_CPutString
+ 006D                   .dbline 37
+ 006D           ;                               UART_PutString(String);          
+ 006D 5100              mov A,[_String]
+ 006F 08                push A
+ 0070 5101              mov A,[_String+1]
+ 0072 5C                mov X,A
+ 0073 18                pop A
+ 0074 7C0000            xcall _UART_PutString
+ 0077                   .dbline 38
+ 0077           ;                               UART_CPutString(">\r\n");  
+ 0077 5000              mov A,>L15
+ 0079 08                push A
+ 007A 5000              mov A,<L15
+ 007C 5C                mov X,A
+ 007D 18                pop A
+ 007E 7C0000            xcall _UART_CPutString
+ 0081 20                pop X
+ 0082                   .dbline 39
+ 0082           ;               } 
+ 0082           L12:
+ 0082                   .dbline 34
+ 0082 10                push X
+ 0083 7C0000            xcall _UART_szGetParam
+ 0086 5A00              mov [__r1],X
+ 0088 20                pop X
+ 0089 5F0100            mov [_String+1],[__r1]
+ 008C 5300              mov [_String],A
+ 008E 3C0000            cmp [_String],0
+ 0091 BFD0              jnz L11
+ 0093 3C0000            cmp [__r1],0
+ 0096 BFCB              jnz L11
+ 0098           X2:
+ 0098                   .dbline 40
+ 0098           ;               } 
+ 0098           L7:
+ 0098                   .dbline 42
+ 0098           ;                       
+ 0098           ;               UART_CmdReset(); 
+ 0098 10                push X
+ 0099 7C0000            xcall _UART_CmdReset
+ 009C 20                pop X
+ 009D                   .dbline 44
+ 009D           ;         
+ 009D           ;               }
+ 009D           L5:
+ 009D                   .dbline 45
+ 009D           ;       }
+ 009D           L3:
+ 009D                   .dbline 24
+ 009D 8F83              xjmp L2
+ 009F           X0:
+ 009F                   .dbline -2
+ 009F           L1:
+ 009F                   .dbline 0 ; func end
+ 009F 8FFF              jmp .
+ 00A1                   .dbend
+ 00A1                   .dbfunc e Timer _Timer fV
+ 00A1           _Timer::
+ 00A1                   .dbline -1
+ 00A1 08                push A
+ 00A2                   .dbline 49
+ 00A2           ; } 
+ 00A2           ; 
+ 00A2           ; void Timer(void) 
+ 00A2           ; {
+ 00A2                   .dbline -2
+ 00A2           L16:
+ 00A2 18                pop A
+ 00A3                   .dbline 0 ; func end
+ 00A3 7E                reti
+ 00A4                   .dbend
+                        .area bss(ram, con, rel)
+ 0000                   .dbfile I:\Hobby\PROGRA~1\PSOCPR~1\FUNK_L~1\FUNK_L~1\FUNK_L~1\main.c
+ 0000           _String::
+ 0000                   .blkb 2
+ 0002                   .dbsym e String _String pc
+                        .area lit(rom, con, rel, lit)
+ 0000           L15:
+ 0000 3E0D0A00          .byte 62,13,10,0
+ 0004           L14:
+ 0004 2020203C00        .byte 32,32,32,60,0
+ 0009           L10:
+ 0009 3C0D0A506172616D61746572733A0D0A  .byte 60,13,10,'P,'a,'r,'a,'m,'a,'t,'e,'r,'s,58,13,10
+ 0019 00                .byte 0
+ 001A           L9:
+ 001A 466F756E642076616C696420636F6D6D  .byte 'F,'o,'u,'n,'d,32,'v,'a,'l,'i,'d,32,'c,'o,'m,'m
+ 002A 616E640D0A436F6D6D616E64203D3E00  .byte 'a,'n,'d,13,10,'C,'o,'m,'m,'a,'n,'d,32,61,62,0

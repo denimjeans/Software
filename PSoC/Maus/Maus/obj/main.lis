@@ -1,0 +1,216 @@
+ 0000                   cpu LMM
+                        .module main.c
+                        .area text(rom, con, rel)
+ 0000                   .dbfile ./main.c
+                        .area data(ram, con, rel)
+ 0000                   .dbfile ./main.c
+ 0000           _Zeit::
+ 0000 00                .byte 0
+ 0001                   .dbfile I:\Hobby\PROGRA~1\PSOCPR~1\Maus\Maus\main.c
+ 0001                   .dbsym e Zeit _Zeit c
+                        .area data(ram, con, rel)
+ 0000                   .dbfile I:\Hobby\PROGRA~1\PSOCPR~1\Maus\Maus\main.c
+                        .area data(ram, con, rel)
+ 0000                   .dbfile I:\Hobby\PROGRA~1\PSOCPR~1\Maus\Maus\main.c
+ 0000           _abMouseData::
+ 0000 0000              .byte 0,0
+ 0002 00                .byte 0
+ 0003                   .dbsym e abMouseData _abMouseData A[3:3]c
+                        .area data(ram, con, rel)
+ 0000                   .dbfile I:\Hobby\PROGRA~1\PSOCPR~1\Maus\Maus\main.c
+                        .area text(rom, con, rel)
+ 0000                   .dbfile I:\Hobby\PROGRA~1\PSOCPR~1\Maus\Maus\main.c
+ 0000                   .dbfunc e main _main fV
+ 0000           _main::
+ 0000                   .dbline -1
+ 0000                   .dbline 13
+ 0000           ; //----------------------------------------------------------------------------
+ 0000           ; // C main line
+ 0000           ; //----------------------------------------------------------------------------
+ 0000           ; 
+ 0000           ; #include <m8c.h>                                                                                      // part specific constants and macros
+ 0000           ; #include "PSoCAPI.h"                                                                                  // PSoC API definitions for all User Modules
+ 0000           ; #pragma interrupt_handler Pause
+ 0000           ; 
+ 0000           ; BOOL Zeit = 0;
+ 0000           ; BYTE abMouseData[3] = {0,0,0};                                                                        // (X,Y,Z)
+ 0000           ; 
+ 0000           ; void main (void)
+ 0000           ; {
+ 0000                   .dbline 14
+ 0000           ;       M8C_EnableGInt;                                                                                 // Enable Global Interrupts
+ 0000 7101                      or  F, 01h
+ 0002           
+ 0002                   .dbline 15
+ 0002           ;               Timer16_EnableInt();
+ 0002 10                push X
+ 0003 7C0000            xcall _Timer16_EnableInt
+ 0006                   .dbline 16
+ 0006           ;               Timer16_Start();
+ 0006 7C0000            xcall _Timer16_Start
+ 0009                   .dbline 17
+ 0009           ;           USBFS_Start(0, USB_5V_OPERATION);                                           // Start USBFS Operation using device 0 at 5V 
+ 0009 5703              mov X,3
+ 000B 5000              mov A,0
+ 000D 7C0000            xcall _USBFS_Start
+ 0010 20                pop X
+ 0011           L3:
+ 0011                   .dbline 18
+ 0011           ;           while(!USBFS_bGetConfiguration());                                          // Wait for Device to enumerate
+ 0011           L4:
+ 0011                   .dbline 18
+ 0011 10                push X
+ 0012 7C0000            xcall _USBFS_bGetConfiguration
+ 0015 20                pop X
+ 0016 62D000            mov REG[0xd0],>__r0
+ 0019 3900              cmp A,0
+ 001B AFF5              jz L3
+ 001D                   .dbline 19
+ 001D           ;       USBFS_LoadInEP(1, abMouseData, 3, USB_NO_TOGGLE);               // Begin initial USB transfers
+ 001D 10                push X
+ 001E 5000              mov A,0
+ 0020 08                push A
+ 0021 08                push A
+ 0022 5003              mov A,3
+ 0024 08                push A
+ 0025 5000              mov A,>_abMouseData
+ 0027 08                push A
+ 0028 5000              mov A,<_abMouseData
+ 002A 08                push A
+ 002B 5001              mov A,1
+ 002D 08                push A
+ 002E 7C0000            xcall _USBFS_LoadInEP
+ 0031 38FA              add SP,-6
+ 0033 20                pop X
+ 0034 805C              xjmp L7
+ 0036           L6:
+ 0036                   .dbline 22
+ 0036           ; 
+ 0036           ;       while(1)
+ 0036           ;            {
+ 0036                   .dbline 23
+ 0036           ;                   if(USBFS_bGetEPAckState(1) != 0)                                    // Check and see if ACK has occured
+ 0036 10                push X
+ 0037 5001              mov A,1
+ 0039 7C0000            xcall _USBFS_bGetEPAckState
+ 003C 20                pop X
+ 003D 62D000            mov REG[0xd0],>__r0
+ 0040 3900              cmp A,0
+ 0042 A04E              jz L9
+ 0044                   .dbline 25
+ 0044           ;                   {
+ 0044           ;                               USBFS_LoadInEP(1, abMouseData, 3, USB_TOGGLE);          // Load EP1 with mouse data
+ 0044                   .dbline 25
+ 0044 10                push X
+ 0045 5001              mov A,1
+ 0047 08                push A
+ 0048 5000              mov A,0
+ 004A 08                push A
+ 004B 5003              mov A,3
+ 004D 08                push A
+ 004E 5000              mov A,>_abMouseData
+ 0050 08                push A
+ 0051 5000              mov A,<_abMouseData
+ 0053 08                push A
+ 0054 5001              mov A,1
+ 0056 08                push A
+ 0057 7C0000            xcall _USBFS_LoadInEP
+ 005A 38FA              add SP,-6
+ 005C 20                pop X
+ 005D                   .dbline 27
+ 005D           ;                       
+ 005D           ;                               if((PRT1DR) & (0x10))
+ 005D 5D04              mov A,REG[0x4]
+ 005F 62D000            mov REG[0xd0],>__r0
+ 0062 5300              mov [__r0],A
+ 0064 470010            tst [__r0],16
+ 0067 A007              jz L11
+ 0069                   .dbline 29
+ 0069           ;                               {
+ 0069           ;                                       abMouseData[2] = 0;
+ 0069                   .dbline 29
+ 0069 62D000            mov REG[0xd0],>_abMouseData
+ 006C 550200            mov [_abMouseData+2],0
+ 006F                   .dbline 30
+ 006F           ;                               }
+ 006F           L11:
+ 006F                   .dbline 32
+ 006F           ;                       
+ 006F           ;                               if(Zeit)
+ 006F 62D000            mov REG[0xd0],>_Zeit
+ 0072 3C0000            cmp [_Zeit],0
+ 0075 A00F              jz L14
+ 0077                   .dbline 34
+ 0077           ;                               {
+ 0077           ;                                       abMouseData[1] = 247;
+ 0077                   .dbline 34
+ 0077 62D000            mov REG[0xd0],>_abMouseData
+ 007A 5501F7            mov [_abMouseData+1],-9
+ 007D                   .dbline 35
+ 007D           ;                                       abMouseData[2] = 247;
+ 007D 5502F7            mov [_abMouseData+2],-9
+ 0080                   .dbline 38
+ 0080           ;                                       // abMouseData[0] |= 0x02;                                                      // Right Click
+ 0080           ;                                       // abMouseData[0] |= 0x01;                                                      // Left Click
+ 0080           ;                                       PRT2DR |= 0x20;
+ 0080 430820            or REG[0x8],32
+ 0083                   .dbline 39
+ 0083           ;                               }
+ 0083 800D              xjmp L15
+ 0085           L14:
+ 0085                   .dbline 41
+ 0085           ;                               else
+ 0085           ;                               {
+ 0085                   .dbline 42
+ 0085           ;                                       abMouseData[1] = 8;
+ 0085 62D000            mov REG[0xd0],>_abMouseData
+ 0088 550108            mov [_abMouseData+1],8
+ 008B                   .dbline 43
+ 008B           ;                                       abMouseData[2] = 8;     
+ 008B 550208            mov [_abMouseData+2],8
+ 008E                   .dbline 44
+ 008E           ;                                       PRT2DR &= ~0x20;
+ 008E 4108DF            and REG[0x8],-33
+ 0091                   .dbline 45
+ 0091           ;                       }
+ 0091           L15:
+ 0091                   .dbline 46
+ 0091           ;                       }
+ 0091           L9:
+ 0091                   .dbline 47
+ 0091           ;            }
+ 0091           L7:
+ 0091                   .dbline 21
+ 0091 8FA4              xjmp L6
+ 0093           X0:
+ 0093                   .dbline -2
+ 0093           L2:
+ 0093                   .dbline 0 ; func end
+ 0093 8FFF              jmp .
+ 0095                   .dbend
+ 0095                   .dbfunc e Pause _Pause fV
+ 0095           _Pause::
+ 0095                   .dbline -1
+ 0095 71C0              or F,-64
+ 0097 08                push A
+ 0098 5DD0              mov A,REG[0xd0]
+ 009A 08                push A
+ 009B                   .dbline 51
+ 009B           ; }
+ 009B           ; 
+ 009B           ; void Pause(void)
+ 009B           ; {
+ 009B                   .dbline 52
+ 009B           ;       Zeit ^= 0x01;
+ 009B 62D000            mov REG[0xd0],>_Zeit
+ 009E 5100              mov A,[_Zeit]
+ 00A0 3101              xor A,1
+ 00A2 5300              mov [_Zeit],A
+ 00A4                   .dbline -2
+ 00A4           L20:
+ 00A4 18                pop A
+ 00A5 60D0              mov REG[208],A
+ 00A7 18                pop A
+ 00A8                   .dbline 0 ; func end
+ 00A8 7E                reti
+ 00A9                   .dbend

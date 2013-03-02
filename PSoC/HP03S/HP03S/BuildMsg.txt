@@ -1,0 +1,18 @@
+Starting MAKE...
+creating project.mk 
+lib/i2chwmms.asm
+lib/i2chwmmsint.asm
+lib/i2chwmmsmstr.asm
+lib/i2chwrsrcinits.asm
+lib/psocconfig.asm
+lib/psocconfigtbl.asm
+lib/pwm16.asm
+lib/pwm16int.asm
+./boot.asm
+Linking..
+  ROM 42% full. 1680 out of 4096 bytes used (does not include absolute areas).
+  RAM 6% full. 15 bytes used (does not include stack usage).
+Built with ICCM8C STD V7.05.00
+ 
+HP03S - 0 error(s) 0 warning(s) 15:19:46
+

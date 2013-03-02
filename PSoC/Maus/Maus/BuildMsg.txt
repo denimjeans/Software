@@ -1,0 +1,26 @@
+Starting MAKE...
+creating project.mk 
+lib/psocconfig.asm
+lib/psocconfigtbl.asm
+lib/timer16.asm
+lib/timer16int.asm
+lib/usbfs.asm
+lib/usbfs_cls_hid.asm
+lib/usbfs_descr.asm
+lib/usbfs_drv.asm
+lib/usbfs_std.asm
+lib/usbfsint.asm
+./boot.asm
+./main.c
+Linking..
+LMM info: area 'InterruptRAM' uses 71 bytes in SRAM bank 0
+LMM info: area 'data' item of 3 bytes allocated in SRAM page 0
+LMM info: area 'virtual_registers' uses 2 bytes in SRAM page 0
+LMM info: area 'data' item of 1 bytes allocated in SRAM page 0
+idata dump at output/Maus.idata
+  ROM 23% full. 3730 out of 16384 bytes used (does not include absolute areas).
+  RAM 11% full. 77 bytes used (does not include stack usage).
+Built with ICCM8C STD V7.05.00
+ 
+Maus - 0 error(s) 0 warning(s) 06:39:16
+

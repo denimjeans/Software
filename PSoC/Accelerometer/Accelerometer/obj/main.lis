@@ -1,0 +1,162 @@
+                        .module main.c
+                        .area text(rom, con, rel)
+ 0000                   .dbfile ./main.c
+                        .area data(ram, con, rel)
+ 0000                   .dbfile ./main.c
+ 0000           _Position_X_Achse::
+ 0000                   .blkb 2
+                        .area idata(rom,lit)
+ 0000 0000              .word 0
+                        .area data(ram, con, rel)
+ 0002                   .dbfile ./main.c
+ 0002                   .dbfile H:\Hobby\PROGRA~1\PSOCPR~1\ACCELE~1\ACCELE~1\main.c
+ 0002                   .dbsym e Position_X_Achse _Position_X_Achse I
+ 0002           _Position_Y_Achse::
+ 0002                   .blkb 2
+                        .area idata(rom,lit)
+ 0002 0000              .word 0
+                        .area data(ram, con, rel)
+ 0004                   .dbfile H:\Hobby\PROGRA~1\PSOCPR~1\ACCELE~1\ACCELE~1\main.c
+ 0004                   .dbsym e Position_Y_Achse _Position_Y_Achse I
+                        .area text(rom, con, rel)
+ 0000                   .dbfile H:\Hobby\PROGRA~1\PSOCPR~1\ACCELE~1\ACCELE~1\main.c
+ 0000                   .dbfunc e main _main fV
+ 0000           _main::
+ 0000                   .dbline -1
+ 0000                   .dbline 12
+ 0000           ; //----------------------------------------------------------------------------
+ 0000           ; // C main line
+ 0000           ; //----------------------------------------------------------------------------
+ 0000           ; 
+ 0000           ; #include <m8c.h>                                                                                                                                      // Part specific constants and macros
+ 0000           ; #include "PSoCAPI.h"                                                                                                                                  // PSoC API definitions for all User Modules
+ 0000           ; 
+ 0000           ; int Position_X_Achse = 0x00;
+ 0000           ; int Position_Y_Achse = 0x00;
+ 0000           ; 
+ 0000           ; void main(void)
+ 0000           ; {
+ 0000                   .dbline 13
+ 0000           ;       M8C_EnableGInt; 
+ 0000 7101                      or  F, 01h
+ 0002           
+ 0002                   .dbline 14
+ 0002           ;       LCD_Start();                                                                                                                            // LCD initialisieren
+ 0002 10                push X
+ 0003 7C0000            xcall _LCD_Start
+ 0006                   .dbline 15
+ 0006           ;       PGA_X_Achse_Start(PGA_X_Achse_MEDPOWER);                                                                                        // PGA für X-Achse starten
+ 0006 5002              mov A,2
+ 0008 7C0000            xcall _PGA_X_Achse_Start
+ 000B                   .dbline 16
+ 000B           ;       PGA_Y_Achse_Start(PGA_Y_Achse_MEDPOWER);                                                                                        // PGA für Y-Achse starten
+ 000B 5002              mov A,2
+ 000D 7C0000            xcall _PGA_Y_Achse_Start
+ 0010                   .dbline 17
+ 0010           ;       DUALADC_Start(DUALADC_HIGHPOWER);                                                                                               // ADC starten
+ 0010 5003              mov A,3
+ 0012 7C0000            xcall _DUALADC_Start
+ 0015                   .dbline 18
+ 0015           ;       DUALADC_SetResolution(10);                                                                                                      // Auflösung setzen
+ 0015 500A              mov A,10
+ 0017 7C0000            xcall _DUALADC_SetResolution
+ 001A                   .dbline 19
+ 001A           ;       DUALADC_GetSamples(0);                                                                                                          // ADC auf permanente Wandlung stellen
+ 001A 5000              mov A,0
+ 001C 7C0000            xcall _DUALADC_GetSamples
+ 001F 20                pop X
+ 0020 8062              xjmp L3
+ 0022           L5:
+ 0022                   .dbline 23
+ 0022           ; 
+ 0022           ;       while(1)
+ 0022           ;       {
+ 0022           ;       while(DUALADC_fIsDataAvailable() == 0);                                                                                 // Warten bis Daten bereit sind
+ 0022           L6:
+ 0022                   .dbline 23
+ 0022 10                push X
+ 0023 7C0000            xcall _DUALADC_fIsDataAvailable
+ 0026 20                pop X
+ 0027 3900              cmp A,0
+ 0029 AFF8              jz L5
+ 002B                   .dbline 24
+ 002B           ;               Position_X_Achse = DUALADC_iGetData2();                                                          
+ 002B 10                push X
+ 002C 7C0000            xcall _DUALADC_iGetData2
+ 002F 5A00              mov [__r0],X
+ 0031 20                pop X
+ 0032 5301              mov [_Position_X_Achse+1],A
+ 0034 5F0000            mov [_Position_X_Achse],[__r0]
+ 0037                   .dbline 25
+ 0037           ;               Position_Y_Achse = DUALADC_iGetData1ClearFlag();                                                
+ 0037 10                push X
+ 0038 7C0000            xcall _DUALADC_iGetData1ClearFlag
+ 003B 5A00              mov [__r0],X
+ 003D 20                pop X
+ 003E 5303              mov [_Position_Y_Achse+1],A
+ 0040 5F0200            mov [_Position_Y_Achse],[__r0]
+ 0043                   .dbline 27
+ 0043           ;       
+ 0043           ;                       LCD_Position(0,0);            
+ 0043 10                push X
+ 0044 5000              mov A,0
+ 0046 5700              mov X,0
+ 0048 7C0000            xcall _LCD_Position
+ 004B                   .dbline 28
+ 004B           ;                       LCD_PrCString("X-Achse:");  
+ 004B 5008              mov A,>L8
+ 004D 08                push A
+ 004E 5008              mov A,<L8
+ 0050 5C                mov X,A
+ 0051 18                pop A
+ 0052 7C0000            xcall _LCD_PrCString
+ 0055                   .dbline 29
+ 0055           ;                       LCD_Position(2,0);   
+ 0055 5700              mov X,0
+ 0057 5002              mov A,2
+ 0059 7C0000            xcall _LCD_Position
+ 005C                   .dbline 30
+ 005C           ;                       LCD_PrCString("Y-Achse");  
+ 005C 5000              mov A,>L9
+ 005E 08                push A
+ 005F 5000              mov A,<L9
+ 0061 5C                mov X,A
+ 0062 18                pop A
+ 0063 7C0000            xcall _LCD_PrCString
+ 0066                   .dbline 31
+ 0066           ;                       LCD_Position(1,0);     
+ 0066 5700              mov X,0
+ 0068 5001              mov A,1
+ 006A 7C0000            xcall _LCD_Position
+ 006D                   .dbline 32
+ 006D           ;                       LCD_PrHexInt(Position_X_Achse); 
+ 006D 5800              mov X,[_Position_X_Achse]
+ 006F 5101              mov A,[_Position_X_Achse+1]
+ 0071 7C0000            xcall _LCD_PrHexInt
+ 0074                   .dbline 33
+ 0074           ;                       LCD_Position(3,0);            
+ 0074 5700              mov X,0
+ 0076 5003              mov A,3
+ 0078 7C0000            xcall _LCD_Position
+ 007B                   .dbline 34
+ 007B           ;                       LCD_PrHexInt(Position_Y_Achse); 
+ 007B 5802              mov X,[_Position_Y_Achse]
+ 007D 5103              mov A,[_Position_Y_Achse+1]
+ 007F 7C0000            xcall _LCD_PrHexInt
+ 0082 20                pop X
+ 0083                   .dbline 35
+ 0083           ;       }
+ 0083           L3:
+ 0083                   .dbline 21
+ 0083 8F9E              xjmp L6
+ 0085           X0:
+ 0085                   .dbline -2
+ 0085           L1:
+ 0085                   .dbline 0 ; func end
+ 0085 8FFF              jmp .
+ 0087                   .dbend
+                        .area lit(rom, con, rel, lit)
+ 0000           L9:
+ 0000 592D416368736500  .byte 'Y,45,'A,'c,'h,'s,'e,0
+ 0008           L8:
+ 0008 582D41636873653A00        .byte 'X,45,'A,'c,'h,'s,'e,58,0

@@ -1,0 +1,155 @@
+XH
+H B areas 12 global symbols
+M boot.asm
+S _main Ref0000
+S _PWM16_ISR Ref0000
+S _ADC10_CNT_ISR Ref0000
+S __r0 Ref0000
+S LoadConfigInit Ref0000
+S __bss_end Ref0000
+S _EzI2Cs_ISR Ref0000
+S __ramareas_end Ref0000
+S __data_end Ref0000
+S _ADC10_ADC_ISR Ref0000
+A TOP size CE flags C
+dbfile ./boot.asm
+dbfunc 0 ? 0 I
+dbline 64 0
+dbline 6C 4
+dbline 70 8
+dbline 73 C
+dbline 74 F
+dbline 78 18
+dbline 7C 1C
+dbline 80 20
+dbline 83 24
+dbline 84 27
+dbline 87 28
+dbline 88 2B
+dbline 8C 2C
+dbline 8F 60
+dbline 90 63
+dbline 94 64
+dbline 2 68
+dbline AD 6A
+dbline 2 6D
+dbline 2 6F
+dbline B5 72
+dbline C5 75
+dbline C6 77
+dbline 2 78
+dbline E7 7B
+dbline E8 7E
+dbline 2 81
+dbline F5 83
+dbline 2 86
+dbline 2 88
+dbline 118 8B
+dbline 11E 8E
+dbline 11F 90
+dbline 121 93
+dbline 122 96
+dbline 123 98
+dbline 124 9A
+dbline 126 9C
+dbline 127 9E
+dbline 128 A0
+dbline 12A A3
+dbline 12B A6
+dbline 12C A8
+dbline 12D A9
+dbline 12E AA
+dbline 12F AC
+dbline 130 AD
+dbline 131 AE
+dbline 132 B0
+dbline 2 B2
+dbline 165 B4
+dbline 2 B7
+dbline 177 B9
+dbline 2 BC
+dbline 17C BE
+dbline 2 C1
+dbline 183 C3
+dbline 18B C6
+dbline 18D C9
+dbline 19D CB
+dbline 19F CD
+S bGetPowerSetting Def00CB
+S _bGetPowerSetting Def00CB
+S __Start Def0068
+A lit size 0 flags 1
+A idata size 0 flags 1
+S __idata_start Def0000
+A func_lit size 0 flags 2
+S __func_lit_start Def0000
+A psoc_config size 0 flags 0
+A UserModules size 0 flags 0
+A text size 0 flags 0
+S __text_start Def0000
+A data size 0 flags 20
+S __data_start Def0000
+A virtual_registers size 0 flags 20
+A InterruptRAM size 0 flags 20
+A bss size 0 flags 20
+dbfile ./boot.asm
+dbfunc 0 ? 0 I
+dbfile memory.inc
+dbfunc 0 ? 0 I
+dbfile ./boot.asm
+dbfunc 0 ? 0 I
+dbfile G:/PSOCDE~1/5.3/Common/CY110F~1/tools/include/CY8C21~2/m8ssc.inc
+dbfunc 0 ? 0 I
+dbfile ./boot.asm
+dbfunc 0 ? 0 I
+dbfile G:/PSOCDE~1/5.3/Common/CY110F~1/tools/include/CY8C21~2/m8c.inc
+dbfunc 0 ? 0 I
+dbfile ./boot.asm
+dbfunc 0 ? 0 I
+dbfile .\lib\GlobalParams.inc
+dbfunc 0 ? 0 I
+S __bss_start Def0000
+T 00 00 80 67
+R 00 00 00 00
+T 00 04 30
+R 00 00 00 00
+T 00 08 7E
+R 00 00 00 00
+T 00 0C 7D 00 00 7E
+R 00 00 00 00 02 03 00 09
+T 00 18 7E
+R 00 00 00 00
+T 00 1C 7E
+R 00 00 00 00
+T 00 20 7E
+R 00 00 00 00
+T 00 24 7D 00 00 7E
+R 00 00 00 00 02 03 00 01
+T 00 28 7D 00 00 7E
+R 00 00 00 00 02 03 00 02
+T 00 2C 7E
+R 00 00 00 00
+T 00 60 7D 00 00 7E
+R 00 00 00 00 02 03 00 06
+T 00 64 7E
+R 00 00 00 00
+T 00 68 71 10 62 E3 87 70 EF 62 E3 38 41 FE FB 50
+R 00 00 00 00
+T 00 76 00 00 4E 62 E3 38 55 F8 00 55 F9 00 71 10
+R 00 00 00 00 03 02 00 07
+T 00 83 62 E0 02 70 EF 62 E3 38 7C 00 00 50 00 55
+R 00 00 00 00 02 0B 00 04
+T 00 91 00 00 00 00 3C 00 00
+R 00 00 00 00 03 02 00 03 01 04 00 0A 03 07 00 03
+T 00 95 00 00 A0 05 3F 00 00 8F F8 50 00 00 57
+R 00 00 00 00 03 02 00 05 03 07 00 03 41 0C 00 02
+T 00 9F 00 00 55 00 00 00 00 3C
+R 00 00 00 00 01 02 00 02 03 05 00 03 01 07 00 07
+T 00 A4 00 00 00 00 A0 0B 08 28 3F 00 00 18 75 09
+R 00 00 00 00 03 02 00 03 03 04 00 08 03 0B 00 03
+T 00 AF 00 8F F2 71 10 43 E3 10 70 EF 62 E0 00 71
+R 00 00 00 00
+T 00 BD 10 62 E0 02 70 EF 62 E2 00 7C 00 00 8F FF
+R 00 00 00 00 02 0C 00 00
+T 00 CB 50 10 7F
+R 00 00 00 00

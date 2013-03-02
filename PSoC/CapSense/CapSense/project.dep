@@ -1,0 +1,31 @@
+# DO NOT DELETE
+./obj/boot.o :  G:/PSOCDE~1/5.3/Common/CY110F~1/tools/include/CY8C21~1/m8c.inc\
+   G:/PSOCDE~1/5.3/Common/CY110F~1/tools/include/CY8C21~1/m8ssc.inc\
+   G:\Dropbox\Hobby\PROGRA~1\PSOCPR~1\CapSense\CapSense\lib\GLOBAL~1.INC\
+   G:\Dropbox\Hobby\PROGRA~1\PSOCPR~1\CapSense\CapSense\memory.inc
+./obj/main.o :  ./lib/CSD.h ./lib/EzI2Cs.h ./lib/PSoCAPI.h\
+   ./lib/PSOCGP~1.H\
+   G:/PSOCDE~1/5.3/Common/CY110F~1/tools/include/CY8C21~1/m8c.h
+./lib/obj/csd.o :  ./lib/CSD.inc ./lib/GLOBAL~1.INC\
+   G:/PSOCDE~1/5.3/Common/CY110F~1/tools/include/CY8C21~1/m8c.inc\
+   G:\Dropbox\Hobby\PROGRA~1\PSOCPR~1\CapSense\CapSense\memory.inc
+./lib/obj/csdhl.o :  ./lib/CSD.inc\
+   G:/PSOCDE~1/5.3/Common/CY110F~1/tools/include/CY8C21~1/m8c.inc\
+   G:\Dropbox\Hobby\PROGRA~1\PSOCPR~1\CapSense\CapSense\memory.inc
+./lib/obj/csdint.o : \
+   G:/PSOCDE~1/5.3/Common/CY110F~1/tools/include/CY8C21~1/m8c.inc\
+   G:\Dropbox\Hobby\PROGRA~1\PSOCPR~1\CapSense\CapSense\memory.inc
+./lib/obj/csdtable.o :  ./lib/CSD.inc\
+   G:/PSOCDE~1/5.3/Common/CY110F~1/tools/include/CY8C21~1/m8c.inc\
+   G:\Dropbox\Hobby\PROGRA~1\PSOCPR~1\CapSense\CapSense\memory.inc
+./lib/obj/ezi2cs.o :  ./lib/EzI2Cs.inc ./lib/PSOCGP~1.INC\
+   G:/PSOCDE~1/5.3/Common/CY110F~1/tools/include/CY8C21~1/m8c.inc\
+   G:\Dropbox\Hobby\PROGRA~1\PSOCPR~1\CapSense\CapSense\memory.inc
+./lib/obj/ezi2csint.o :  ./lib/EzI2Cs.inc\
+   G:/PSOCDE~1/5.3/Common/CY110F~1/tools/include/CY8C21~1/m8c.inc\
+   G:\Dropbox\Hobby\PROGRA~1\PSOCPR~1\CapSense\CapSense\memory.inc
+./lib/obj/psocconfig.o :  ./lib/GLOBAL~1.INC\
+   G:/PSOCDE~1/5.3/Common/CY110F~1/tools/include/CY8C21~1/m8c.inc\
+   G:\Dropbox\Hobby\PROGRA~1\PSOCPR~1\CapSense\CapSense\memory.inc
+./lib/obj/psocconfigtbl.o : \
+   G:/PSOCDE~1/5.3/Common/CY110F~1/tools/include/CY8C21~1/m8c.inc

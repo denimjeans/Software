@@ -1,0 +1,70 @@
+XH
+H 2 areas 20 global symbols
+M spim.asm
+A text size 0 flags 0
+dbfile lib/spim.asm
+dbfunc 0 ? 0 I
+dbfile ./lib/SPIM.inc
+dbfunc 0 ? 0 I
+dbfile lib/spim.asm
+dbfunc 0 ? 0 I
+dbfile memory.inc
+dbfunc 0 ? 0 I
+dbfile lib/spim.asm
+dbfunc 0 ? 0 I
+dbfile G:/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/include/CY8C29~1/m8c.inc
+dbfunc 0 ? 0 I
+A UserModules size 1A flags 0
+dbfile lib/spim.asm
+dbfunc 0 ? 0 I
+dbline 2 0
+dbline 5B 3
+dbline 2 4
+dbline 7C 7
+dbline A3 8
+dbline A4 A
+dbline A6 C
+dbline C5 D
+dbline C7 10
+dbline E8 11
+dbline EA 13
+dbline 10B 14
+dbline 10D 16
+dbline 130 17
+dbline 132 19
+S _SPIM_Start Def0008
+S SPIM_EnableInt Def0000
+S $sb$SPIM_bReadStatus Def0017
+S _bSPIM_ReadRxData Def0014
+S _SPIM_bReadRxData Def0014
+S $se$SPIM_bReadStatus Def001A
+S $sb$SPIM_EnableInt Def0000
+S $se$SPIM_EnableInt Def0004
+S SPIM_Stop Def000D
+S _bSPIM_ReadStatus Def0017
+S _SPIM_bReadStatus Def0017
+S $sb$SPIM_Stop Def000D
+S $se$SPIM_Stop Def0011
+S SPIM_SendTxData Def0011
+S _SPIM_EnableInt Def0000
+S SPIM_DisableInt Def0004
+S $sb$SPIM_SendTxData Def0011
+S $se$SPIM_SendTxData Def0014
+S $sb$SPIM_DisableInt Def0004
+S $se$SPIM_DisableInt Def0008
+S _SPIM_Stop Def000D
+S SPIM_Start Def0008
+S bSPIM_ReadRxData Def0014
+S SPIM_bReadRxData Def0014
+S $sb$SPIM_Start Def0008
+S $se$SPIM_Start Def000D
+S _SPIM_SendTxData Def0011
+S _SPIM_DisableInt Def0004
+S $sb$SPIM_bReadRxData Def0014
+S $se$SPIM_bReadRxData Def0017
+S bSPIM_ReadStatus Def0017
+S SPIM_bReadStatus Def0017
+T 00 00 43 E1 04 7F 41 E1 FB 7F 29 01 60 2B 7F 41
+R 00 00 00 01
+T 00 0E 2B FE 7F 60 29 7F 5D 2A 7F 5D 2B 7F
+R 00 00 00 01

@@ -1,0 +1,96 @@
+XH
+H 2 areas 2C global symbols
+M spis.asm
+A text size 0 flags 0
+dbfile lib/spis.asm
+dbfunc 0 ? 0 I
+dbfile SPIS.inc
+dbfunc 0 ? 0 I
+dbfile D:/Cypress/PSOCDE~1/5.2/Common/CY3E64~1/tools/include/CY8C29~1/m8c.inc
+dbfunc 0 ? 0 I
+dbfile ./lib/SPIS.inc
+dbfunc 0 ? 0 I
+dbfile lib/spis.asm
+dbfunc 0 ? 0 I
+dbfile memory.inc
+dbfunc 0 ? 0 I
+dbfile lib/spis.asm
+dbfunc 0 ? 0 I
+dbfile D:/Cypress/PSOCDE~1/5.2/Common/CY3E64~1/tools/include/CY8C29~1/m8c.inc
+dbfunc 0 ? 0 I
+A UserModules size 2A flags 0
+dbfile lib/spis.asm
+dbfunc 0 ? 0 I
+dbline 2 0
+dbline 64 3
+dbline 2 4
+dbline 82 7
+dbline A4 8
+dbline A5 A
+dbline A7 C
+dbline C3 D
+dbline C5 10
+dbline E2 11
+dbline E4 13
+dbline 103 14
+dbline 105 16
+dbline 124 17
+dbline 126 19
+dbline 2 1A
+dbline 14A 1C
+dbline 2 1F
+dbline 14D 21
+dbline 2 22
+dbline 16F 24
+dbline 2 27
+dbline 172 29
+S bSPIS_ReadStatus Def0017
+S SPIS_bReadStatus Def0017
+S _SPIS_Start Def0008
+S SPIS_EnableInt Def0000
+S $sb$SPIS_SetupTxData Def0011
+S $sb$SPIS_DisableSS Def001A
+S $se$SPIS_SetupTxData Def0014
+S $se$SPIS_DisableSS Def0022
+S $sb$SPIS_bReadStatus Def0017
+S _bSPIS_ReadRxData Def0014
+S _SPIS_bReadRxData Def0014
+S $se$SPIS_bReadStatus Def001A
+S SPIS_ClearSS Def0022
+S $sb$SPIS_EnableInt Def0000
+S $se$SPIS_EnableInt Def0004
+S SPIS_Stop Def000D
+S _SPIS_SetupTxData Def0011
+S _SPIS_DisableSS Def001A
+S _bSPIS_ReadStatus Def0017
+S _SPIS_bReadStatus Def0017
+S $sb$SPIS_Stop Def000D
+S $se$SPIS_Stop Def0011
+S _SPIS_EnableInt Def0000
+S SPIS_SetSS Def001A
+S SPIS_DisableInt Def0004
+S _SPIS_ClearSS Def0022
+S SPIS_EnableSS Def0022
+S $sb$SPIS_DisableInt Def0004
+S $se$SPIS_DisableInt Def0008
+S _SPIS_Stop Def000D
+S $sb$SPIS_EnableSS Def0022
+S $se$SPIS_EnableSS Def002A
+S SPIS_Start Def0008
+S bSPIS_ReadRxData Def0014
+S SPIS_bReadRxData Def0014
+S $sb$SPIS_Start Def0008
+S $se$SPIS_Start Def000D
+S _SPIS_SetSS Def001A
+S _SPIS_DisableInt Def0004
+S $sb$SPIS_bReadRxData Def0014
+S $se$SPIS_bReadRxData Def0017
+S _SPIS_EnableSS Def0022
+S SPIS_SetupTxData Def0011
+S SPIS_DisableSS Def001A
+T 00 00 43 E1 04 7F 41 E1 FB 7F 29 01 60 2B 7F 41
+R 00 00 00 01
+T 00 0E 2B FE 7F 60 29 7F 5D 2A 7F 5D 2B 7F 71 10
+R 00 00 00 01
+T 00 1C 43 2A 08 70 EF 7F 71 10 41 2A F7 70 EF 7F
+R 00 00 00 01

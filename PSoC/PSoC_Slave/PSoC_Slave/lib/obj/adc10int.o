@@ -1,0 +1,61 @@
+XH
+H 3 areas 7 global symbols
+M adc10int.asm
+A text size 0 flags 0
+dbfile lib/adc10int.asm
+dbfunc 0 ? 0 I
+dbfile ./lib/ADC10.inc
+dbfunc 0 ? 0 I
+dbfile lib/adc10int.asm
+dbfunc 0 ? 0 I
+dbfile memory.inc
+dbfunc 0 ? 0 I
+dbfile lib/adc10int.asm
+dbfunc 0 ? 0 I
+dbfile G:/PSOCDE~1/5.3/Common/CY110F~1/tools/include/CY8C21~2/m8c.inc
+dbfunc 0 ? 0 I
+A InterruptRAM size 4 flags 20
+S _ADC10_bfStatus Def0003
+S ADC10_bTempMSB Def0000
+S ADC10_iResult Def0001
+S _ADC10_iResult Def0001
+S ADC10_bfStatus Def0003
+A UserModules size 36 flags 0
+dbfile lib/adc10int.asm
+dbfunc 0 ? 0 I
+dbline 22 0
+dbline 23 3
+dbline 24 5
+dbline 25 7
+dbline 27 A
+dbline 28 B
+dbline 29 E
+dbline 2D 10
+dbline 2E 13
+dbline 2F 16
+dbline 32 18
+dbline 33 1B
+dbline 34 1D
+dbline 35 1F
+dbline 36 20
+dbline 38 22
+dbline 39 25
+dbline 3A 28
+dbline 3C 2B
+dbline 3D 2E
+dbline 59 31
+dbline 5A 32
+dbline 5D 33
+dbline 78 35
+S _ADC10_CNT_ISR Def0033
+S _ADC10_ADC_ISR Def0000
+T 00 00 49 DB 04 A0 06 76 00 00 41 DB FB 08 49 69
+R 00 00 00 02 01 08 00 01
+T 00 0D 80 A0 09 55 00 01 FF 55 00 02 FF 80 0B 5F
+R 00 00 00 02 01 06 00 01 01 0A 00 01
+T 00 19 00 01 00 00 5D 28 5D 2A 73 53 00 02 41 2B
+R 00 00 00 02 01 02 00 01 01 04 00 01 01 0C 00 01
+T 00 24 FE 62 29 FF 43 2B 01 55 00 03 01 55 00 00
+R 00 00 00 02 01 0A 00 01 01 0E 00 01
+T 00 30 00 18 7E 76 00 00 7E
+R 00 00 00 02 01 06 00 01

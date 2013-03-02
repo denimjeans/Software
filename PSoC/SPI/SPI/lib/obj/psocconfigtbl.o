@@ -1,0 +1,142 @@
+XH
+H 3 areas 3 global symbols
+M psocconfigtbl.asm
+A text size 0 flags 0
+dbfile lib/psocconfigtbl.asm
+dbfunc 0 ? 0 I
+dbfile D:/Cypress/PSOCDE~1/5.2/Common/CY3E64~1/tools/include/CY8C27~1/m8c.inc
+dbfunc 0 ? 0 I
+A lit size 8E flags 0
+S LoadConfigTBL_spi_Bank0 Def0000
+S LoadConfigTBL_spi_Bank1 Def0053
+A psoc_config size C5 flags 0
+dbfile lib/psocconfigtbl.asm
+dbfunc 0 ? 0 I
+dbline 2 0
+dbline 6F 2
+dbline 2 5
+dbline 71 7
+dbline 72 A
+dbline 2 D
+dbline 74 F
+dbline 75 12
+dbline 2 15
+dbline 77 17
+dbline 78 1A
+dbline 2 1D
+dbline 7A 1F
+dbline 7B 22
+dbline 2 25
+dbline 7D 27
+dbline 7E 2A
+dbline 2 2D
+dbline 80 2F
+dbline 81 32
+dbline 2 35
+dbline 83 37
+dbline 84 3A
+dbline 2 3D
+dbline 86 3F
+dbline 87 42
+dbline 2 45
+dbline 89 47
+dbline 8A 4A
+dbline 2 4D
+dbline 8C 4F
+dbline 8D 52
+dbline 2 55
+dbline 8F 57
+dbline 90 5A
+dbline 2 5D
+dbline 92 5F
+dbline 93 62
+dbline 2 65
+dbline 95 67
+dbline 96 6A
+dbline 2 6D
+dbline 98 6F
+dbline 99 72
+dbline 2 75
+dbline 9B 77
+dbline 9C 7A
+dbline 2 7D
+dbline 9E 7F
+dbline 9F 82
+dbline 2 85
+dbline A1 87
+dbline A2 8A
+dbline 2 8D
+dbline A4 8F
+dbline A5 92
+dbline 2 95
+dbline A7 97
+dbline A8 9A
+dbline 2 9D
+dbline AA 9F
+dbline AB A2
+dbline 2 A5
+dbline AD A7
+dbline AE AA
+dbline 2 AD
+dbline B0 AF
+dbline B1 B2
+dbline 2 B5
+dbline B3 B7
+dbline B4 BA
+dbline 2 BD
+dbline B6 BF
+dbline 2 C2
+dbline B8 C4
+S LoadConfigTBL_spi_Ordered Def0000
+T 00 00 80 90 81 00 82 60 83 F0 23 00 21 00 22 01
+R 00 00 00 01
+T 00 0E 71 FD 72 21 73 20 70 00 2B 00 29 00 2A 00
+R 00 00 00 01
+T 00 1C 2F 00 2D 00 2E 00 33 04 31 80 32 00 60 28
+R 00 00 00 01
+T 00 2A 66 00 63 05 65 00 E6 00 E7 02 D6 00 B0 02
+R 00 00 00 01
+T 00 38 B1 00 B2 00 B3 33 B4 33 B5 80 B6 40 B8 55
+R 00 00 00 01
+T 00 46 B9 00 BA 10 BB 33 BC 33 BD 00 BE 00 FF 20
+R 00 00 00 01
+T 00 54 31 21 15 22 40 28 06 29 C6 2A 7D 2C 00 2D
+R 00 00 00 01
+T 00 62 17 2E 40 30 20 31 37 32 40 61 00 69 00 60
+R 00 00 00 01
+T 00 70 00 62 00 67 33 68 33 63 00 66 00 D1 00 D3
+R 00 00 00 01
+T 00 7E 00 D0 00 D2 00 E1 FF E2 00 DF FF DE 02 DD
+R 00 00 00 01
+T 00 8C 00 FF
+R 00 00 00 01
+T 00 00 70 EF 62 00 00 71 10 62 00 00 62 01 FF 70
+R 00 00 00 02
+T 00 0E EF 62 03 FF 62 02 00 71 10 62 02 00 62 03
+R 00 00 00 02
+T 00 1C 00 70 EF 62 01 00 62 04 00 71 10 62 04 00
+R 00 00 00 02
+T 00 2A 62 05 FF 70 EF 62 07 FF 62 06 00 71 10 62
+R 00 00 00 02
+T 00 38 06 00 62 07 00 70 EF 62 05 00 62 08 00 71
+R 00 00 00 02
+T 00 46 10 62 08 03 62 09 FC 70 EF 62 0B FC 62 0A
+R 00 00 00 02
+T 00 54 00 71 10 62 0A 00 62 0B 00 70 EF 62 09 00
+R 00 00 00 02
+T 00 62 62 0C 00 71 10 62 0C 28 62 0D 57 70 EF 62
+R 00 00 00 02
+T 00 70 0F 56 62 0E 29 71 10 62 0E 00 62 0F 00 70
+R 00 00 00 02
+T 00 7E EF 62 0D 00 62 10 00 71 10 62 10 7F 62 11
+R 00 00 00 02
+T 00 8C 80 70 EF 62 13 80 62 12 00 71 10 62 12 00
+R 00 00 00 02
+T 00 9A 62 13 00 70 EF 62 11 00 62 14 00 71 10 62
+R 00 00 00 02
+T 00 A8 14 00 62 15 0F 70 EF 62 17 0F 62 16 00 71
+R 00 00 00 02
+T 00 B6 10 62 16 00 62 17 00 70 EF 62 15 00 70 EF
+R 00 00 00 02
+T 00 C4 7F
+R 00 00 00 02

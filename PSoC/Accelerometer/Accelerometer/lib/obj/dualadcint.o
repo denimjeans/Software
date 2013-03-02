@@ -1,0 +1,163 @@
+XH
+H 3 areas E global symbols
+M dualadcint.asm
+A text size 0 flags 0
+dbfile lib/dualadcint.asm
+dbfunc 0 ? 0 I
+dbfile ./lib/DUALADC.inc
+dbfunc 0 ? 0 I
+dbfile lib/dualadcint.asm
+dbfunc 0 ? 0 I
+dbfile memory.inc
+dbfunc 0 ? 0 I
+dbfile lib/dualadcint.asm
+dbfunc 0 ? 0 I
+dbfile G:/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/include/CY8C27~1/m8c.inc
+dbfunc 0 ? 0 I
+A InterruptRAM size 8 flags 20
+S DUALADC_cCounter1U Def0000
+S DUALADC_cCounter2U Def0001
+S DUALADC_iResult1 Def0002
+S DUALADC_iResult2 Def0004
+S DUALADC_bSampC Def0007
+S DUALADC_bfStatus Def0006
+S _DUALADC_iResult1 Def0002
+S _DUALADC_iResult2 Def0004
+S _DUALADC_bfStatus Def0006
+A UserModules size D2 flags 0
+dbfile lib/dualadcint.asm
+dbfunc 0 ? E I
+dbline 76 E
+dbline 90 10
+dbline 9F 11
+dbline B9 13
+dbline C7 14
+dbline C8 17
+dbline CA 1A
+dbline CB 1D
+dbline CD 20
+dbline CE 23
+dbline 2 26
+dbline D3 28
+dbline 2 29
+dbline D5 2B
+dbline D9 2C
+dbline DA 2E
+dbline DB 30
+dbline DC 31
+dbline DD 32
+dbline DE 34
+dbline E0 36
+dbline E1 38
+dbline E2 3A
+dbline E5 3C
+dbline E6 3E
+dbline E7 40
+dbline E8 41
+dbline E9 42
+dbline EA 44
+dbline EC 46
+dbline ED 48
+dbline EE 4A
+dbline F2 4C
+dbline F3 4F
+dbline F4 52
+dbline F5 55
+dbline FF 58
+dbline 100 5B
+dbline 116 5E
+dbline 117 61
+dbline 119 64
+dbline 11A 67
+dbline 130 6A
+dbline 131 6C
+dbline 132 6E
+dbline 133 70
+dbline 134 71
+dbline 135 73
+dbline 137 75
+dbline 138 76
+dbline 13A 78
+dbline 13B 7A
+dbline 13C 7D
+dbline 13E 7F
+dbline 141 80
+dbline 142 82
+dbline 143 84
+dbline 144 86
+dbline 14F 88
+dbline 150 8A
+dbline 151 8C
+dbline 152 8E
+dbline 153 8F
+dbline 154 91
+dbline 156 93
+dbline 157 94
+dbline 159 96
+dbline 15A 98
+dbline 15B 9B
+dbline 15D 9D
+dbline 160 9E
+dbline 161 A0
+dbline 162 A2
+dbline 163 A4
+dbline 17A A6
+dbline 17C A7
+dbline 17E AA
+dbline 17F AD
+dbline 181 AF
+dbline 182 B1
+dbline 184 B3
+dbline 186 B6
+dbline 187 B9
+dbline 18A BC
+dbline 18B BF
+dbline 18E C2
+dbline 18F C5
+dbline 191 C8
+dbline 192 CB
+dbline 193 CE
+dbline 196 D1
+S _DUALADC_CNT1_ISR Def000E
+S _DUALADC_CNT2_ISR Def0011
+S _DUALADC_PWM16_ISR Def0014
+S $lb$DUALADCMaxNegX4Table Def0000
+S $le$DUALADCMaxNegX4Table Def000E
+T 00 00 FF FE FC F8 F0 E0 C0 02 04 08 10 20 40 80
+R 00 00 00 02
+T 00 0E 76 00 00 7E 76 00 01 7E 41 23 FE 41 2F FE
+R 00 00 00 02 01 03 00 01 01 07 00 01
+T 00 1A 43 82 20 43 86 20 43 83 10 43 87 10 71 01
+R 00 00 00 02
+T 00 28 40 70 FE 08 5D 20 5D 22 78 73 D0 03 76
+R 00 00 00 02
+T 00 35 00 00 53 00 03 51 00 00 53
+R 00 00 00 02 01 02 00 01 01 05 00 01 01 08 00 01
+T 00 3B 00 02 5D 2C 5D 2E 78 73 D0 03 76 00 01 53
+R 00 00 00 02 01 02 00 01 01 0D 00 01
+T 00 47 00 05 51 00 01 53 00 04 62 21 FF 62 2D FF
+R 00 00 00 02 01 02 00 01 01 05 00 01 01 08 00 01
+T 00 52 43 23 01 43 2F 01 55 00 00 00 55 00 01 00
+R 00 00 00 02 01 09 00 01 01 0D 00 01
+T 00 5E 41 83 EF 41 87 EF 41 82 DF 41 86 DF 51
+R 00 00 00 02
+T 00 6B 00 06 21 0F FF 97 08 22 00 02 A0 0B 18 11
+R 00 00 00 02 01 02 00 01 01 0A 00 01
+T 00 77 01 53 00 02 55 00 03 FF 80 02 18 68 00 02
+R 00 00 00 02 01 04 00 01 01 07 00 01 01 0E 00 01
+T 00 82 6E 00 03 68 00 02 6E 00 03 51
+R 00 00 00 02 01 03 00 01 01 06 00 01 01 09 00 01
+T 00 89 00 06 21 0F FF 79 08 22 00 04 A0 0B 18 11
+R 00 00 00 02 01 02 00 01 01 0A 00 01
+T 00 95 01 53 00 04 55 00 05 FF 80 02 18 68 00 04
+R 00 00 00 02 01 04 00 01 01 07 00 01 01 0E 00 01
+T 00 A0 6E 00 05 68 00 04 6E 00 05 18 2E
+R 00 00 00 02 01 03 00 01 01 06 00 01 01 09 00 01
+T 00 A8 00 06 10 47 00 07 FF A0 23 7A 00 07 B0 1F
+R 00 00 00 02 01 02 00 01 01 06 00 01 01 0C 00 01
+T 00 B3 41 27 FE 41 23 FE 41 2F FE 43 82 20 43 86
+R 00 00 00 02
+T 00 C1 20 43 83 10 43 87 10 41 E1 FB 41 E1 FE 41
+R 00 00 00 02
+T 00 CF E1 F7 7E
+R 00 00 00 02

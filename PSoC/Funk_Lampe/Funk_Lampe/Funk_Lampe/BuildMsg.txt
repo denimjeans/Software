@@ -1,0 +1,21 @@
+Starting MAKE...
+creating project.mk 
+lib/adc8.asm
+lib/adc8int.asm
+lib/e2prom.asm
+lib/psocconfig.asm
+lib/psocconfigtbl.asm
+lib/timer8.asm
+lib/timer8int.asm
+lib/uart.asm
+lib/uartint.asm
+lib/uartplus.asm
+./boot.asm
+./main.c
+Linking..
+  ROM 34% full. 1383 out of 4096 bytes used (does not include absolute areas).
+  RAM 17% full. 43 bytes used (does not include stack usage).
+Built with ICCM8C STD V7.05.00
+ 
+Funk_Lampe - 0 error(s) 0 warning(s) 20:16:29
+

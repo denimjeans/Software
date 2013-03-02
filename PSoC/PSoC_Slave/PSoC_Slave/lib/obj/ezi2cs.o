@@ -1,0 +1,130 @@
+XH
+H 2 areas 2A global symbols
+M ezi2cs.asm
+S EzI2Cs_bRAM_Buf_Size Ref0000
+S EzI2Cs_bRAM_RWoffset Ref0000
+S EzI2Cs_bBusy_Flag Ref0000
+S EzI2Cs_pRAM_Buf_Addr_LSB Ref0000
+S EzI2Cs_bRAM_Buf_WSize Ref0000
+S EzI2Cs_bState Ref0000
+A text size 0 flags 0
+dbfile lib/ezi2cs.asm
+dbfunc 0 ? 0 I
+dbfile ./lib/PSoCGPIOINT.inc
+dbfunc 0 ? 0 I
+dbfile lib/ezi2cs.asm
+dbfunc 0 ? 0 I
+dbfile ./lib/EzI2Cs.inc
+dbfunc 0 ? 0 I
+dbfile lib/ezi2cs.asm
+dbfunc 0 ? 0 I
+dbfile memory.inc
+dbfunc 0 ? 0 I
+dbfile lib/ezi2cs.asm
+dbfunc 0 ? 0 I
+dbfile G:/PSOCDE~1/5.3/Common/CY110F~1/tools/include/CY8C21~2/m8c.inc
+dbfunc 0 ? 0 I
+A UserModules size 63 flags 0
+dbfile lib/ezi2cs.asm
+dbfunc 0 ? 0 I
+dbline 2 0
+dbline 75 2
+dbline 76 5
+dbline 2 8
+dbline 78 A
+dbline 7A D
+dbline 7B 10
+dbline 7D 13
+dbline 7E 15
+dbline 80 17
+dbline 81 18
+dbline 82 19
+dbline 83 1A
+dbline 84 1B
+dbline 86 1C
+dbline 87 1E
+dbline 2 20
+dbline 8D 22
+dbline 8E 25
+dbline 2 28
+dbline 90 2A
+dbline 93 2D
+dbline EF 2E
+dbline F0 30
+dbline F1 32
+dbline F5 35
+dbline 125 36
+dbline 127 38
+dbline 143 39
+dbline 149 3B
+dbline 2 3E
+dbline 14D 41
+dbline 179 42
+dbline 183 45
+dbline 2 46
+dbline 1A4 49
+dbline 1A7 4C
+dbline 2 4D
+dbline 1C5 50
+dbline 1E3 51
+dbline 1E6 54
+dbline 217 55
+dbline 218 56
+dbline 219 58
+dbline 21B 5A
+dbline 21C 5C
+dbline 21E 5E
+dbline 21F 60
+dbline 229 62
+S $sb$EzI2Cs_GetAddr Def0036
+S $sb$EzI2Cs_ResumeInt Def0039
+S $se$EzI2Cs_GetAddr Def0039
+S $se$EzI2Cs_ResumeInt Def0042
+S $sb$EzI2Cs_SetRamBuffer Def0055
+S $sb$EzI2Cs_Stop Def0046
+S $se$EzI2Cs_SetRamBuffer Def0063
+S $se$EzI2Cs_Stop Def004D
+S $sb$EzI2Cs_DisableSlave Def0051
+S _EzI2Cs_GetActivity Def002E
+S $se$EzI2Cs_DisableSlave Def0055
+S _EzI2Cs_EnableInt Def003B
+S EzI2Cs_DisableInt Def004D
+S _EzI2Cs_GetAddr Def0036
+S _EzI2Cs_ResumeInt Def0039
+S $sb$EzI2Cs_DisableInt Def004D
+S $se$EzI2Cs_DisableInt Def0051
+S _EzI2Cs_SetRamBuffer Def0055
+S _EzI2Cs_Stop Def0046
+S _EzI2Cs_DisableSlave Def0051
+S EzI2Cs_Start Def0000
+S $sb$EzI2Cs_Start Def0000
+S $se$EzI2Cs_Start Def002E
+S _EzI2Cs_DisableInt Def004D
+S $sb$EzI2Cs_EnableSlave Def0042
+S $se$EzI2Cs_EnableSlave Def0046
+S EzI2Cs_GetActivity Def002E
+S _EzI2Cs_Start Def0000
+S EzI2Cs_EnableInt Def003B
+S $sb$EzI2Cs_GetActivity Def002E
+S $se$EzI2Cs_GetActivity Def0036
+S EzI2Cs_GetAddr Def0036
+S EzI2Cs_ResumeInt Def0039
+S EzI2Cs_SetRamBuffer Def0055
+S EzI2Cs_Stop Def0046
+S EzI2Cs_DisableSlave Def0051
+T 00 00 71 10 41 04 FC 43 05 03 70 EF 43 07 03 55
+R 00 00 00 01
+T 00 0E 00 00 00 55 00 00 00 90 26 90 2B 40 40 40
+R 00 00 00 01 03 02 00 05 03 06 00 02
+T 00 1A 40 40 50 00 53 00 00 71 10 43 04 03 43 05
+R 00 00 00 01 03 07 00 01
+T 00 27 03 70 EF 43 07 03 7F 51 00 00 21 B0 26
+R 00 00 00 01 03 0A 00 05
+T 00 33 00 00 4F 7F 50 3C 7F 80 04 41 DD FE 43 DE
+R 00 00 00 01 03 02 00 05
+T 00 40 01 7F 43 D6 31 7F 41 DE FE 41 D6 FE 7F 41
+R 00 00 00 01
+T 00 4E DE FE 7F 41 D6 FE 7F 4F 52 FD 53 00 00 52
+R 00 00 00 01 03 0D 00 00
+T 00 5B FC 53 00 00 52 FB 53 00 00 7F
+R 00 00 00 01 03 04 00 04 03 09 00 03

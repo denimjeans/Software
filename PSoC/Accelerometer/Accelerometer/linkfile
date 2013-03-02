@@ -1,0 +1,5 @@
+-F0x30 -g -blit:0x150.0x3fff 
+ -bdata:0.0xFF -rwh:SSCParmBlk:0x00F7.0x00FF   
+ -o"output/Accelerometer" 
+ ./obj/main.o  
+ H:/Hobby/PROGRA~1/PSOCPR~1/ACCELE~1/ACCELE~1/lib/libPSoc.a -LG:/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/lib/SMM G:/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/lib/CY8C27000B/cms.a G:/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/lib/SMM/UASW/MAC/arith.a  

@@ -1,0 +1,301 @@
+                        .module main.c
+                        .area text(rom, con, rel)
+ 0000                   .dbfile ./main.c
+                        .area data(ram, con, rel)
+ 0000                   .dbfile ./main.c
+ 0000           _ADWandler::
+ 0000                   .blkb 1
+                        .area idata(rom,lit)
+ 0000 05                .byte 5
+                        .area data(ram, con, rel)
+ 0001                   .dbfile ./main.c
+ 0001                   .dbfile G:\Hobby\PROGRA~1\PSOCPR~1\SPI\SPI\main.c
+ 0001                   .dbsym e ADWandler _ADWandler c
+ 0001           _SPI::
+ 0001                   .blkb 1
+                        .area idata(rom,lit)
+ 0001 00                .byte 0
+                        .area data(ram, con, rel)
+ 0002                   .dbfile G:\Hobby\PROGRA~1\PSOCPR~1\SPI\SPI\main.c
+ 0002                   .dbsym e SPI _SPI c
+                        .area text(rom, con, rel)
+ 0000                   .dbfile G:\Hobby\PROGRA~1\PSOCPR~1\SPI\SPI\main.c
+ 0000                   .dbfunc e main _main fV
+ 0000           _main::
+ 0000                   .dbline -1
+ 0000                   .dbline 16
+ 0000           ; //----------------------------------------------------------------------------
+ 0000           ; // C main line
+ 0000           ; //----------------------------------------------------------------------------
+ 0000           ; 
+ 0000           ; #include <m8c.h>                                                                                                              // Part specific constants and macros
+ 0000           ; #include "PSoCAPI.h"                                                                                                          // PSoC API definitions for all User Modules
+ 0000           ; #pragma interrupt_handler Timer16
+ 0000           ; 
+ 0000           ; void Sample(void);
+ 0000           ; void SPI_Send(char *Senden);
+ 0000           ; 
+ 0000           ; char ADWandler = 0x05;
+ 0000           ; char SPI = 0x00;
+ 0000           ; 
+ 0000           ; void main(void)
+ 0000           ; {
+ 0000                   .dbline 17
+ 0000           ;       M8C_EnableGInt; 
+ 0000 7101                      or  F, 01h
+ 0002           
+ 0002                   .dbline 18
+ 0002           ;       PGA_Start(PGA_MEDPOWER);
+ 0002 10                push X
+ 0003 5002              mov A,2
+ 0005 7C0000            xcall _PGA_Start
+ 0008                   .dbline 19
+ 0008           ;       LCD_Start();  
+ 0008 7C0000            xcall _LCD_Start
+ 000B                   .dbline 20
+ 000B           ;       SPIM_Start(SPIM_SPIM_MODE_0 | SPIM_SPIM_MSB_FIRST);
+ 000B 5000              mov A,0
+ 000D 7C0000            xcall _SPIM_Start
+ 0010                   .dbline 21
+ 0010           ;       ADCINC_Start(ADCINC_HIGHPOWER);       
+ 0010 5003              mov A,3
+ 0012 7C0000            xcall _ADCINC_Start
+ 0015                   .dbline 22
+ 0015           ;       ADCINC_GetSamples(0); 
+ 0015 5000              mov A,0
+ 0017 7C0000            xcall _ADCINC_GetSamples
+ 001A                   .dbline 23
+ 001A           ;       Timer16_EnableInt();                                                                            
+ 001A 7C0000            xcall _Timer16_EnableInt
+ 001D                   .dbline 24
+ 001D           ;     Timer16_Start();          
+ 001D 7C0000            xcall _Timer16_Start
+ 0020 20                pop X
+ 0021 8032              xjmp L3
+ 0023           L2:
+ 0023                   .dbline 27
+ 0023           ; 
+ 0023           ;       while (1)
+ 0023           ;       {
+ 0023                   .dbline 28
+ 0023           ;               if(SPI)
+ 0023 3C0100            cmp [_SPI],0
+ 0026 A00E              jz L5
+ 0028                   .dbline 30
+ 0028           ;               {
+ 0028           ;                       SPI_Send(&ADWandler);
+ 0028                   .dbline 30
+ 0028 5000              mov A,>_ADWandler
+ 002A 08                push A
+ 002B 5000              mov A,<_ADWandler
+ 002D 08                push A
+ 002E 9039              xcall _SPI_Send
+ 0030 38FE              add SP,-2
+ 0032                   .dbline 31
+ 0032           ;                       SPI = 0x00;
+ 0032 550100            mov [_SPI],0
+ 0035                   .dbline 32
+ 0035           ;               }
+ 0035           L5:
+ 0035                   .dbline 35
+ 0035           ;               
+ 0035           ;               //Sample();
+ 0035           ;               LCD_Position(0,0);
+ 0035 10                push X
+ 0036 5000              mov A,0
+ 0038 5700              mov X,0
+ 003A 7C0000            xcall _LCD_Position
+ 003D                   .dbline 36
+ 003D           ;               LCD_PrCString("AD-Wert:");
+ 003D 5000              mov A,>L7
+ 003F 08                push A
+ 0040 5000              mov A,<L7
+ 0042 5C                mov X,A
+ 0043 18                pop A
+ 0044 7C0000            xcall _LCD_PrCString
+ 0047                   .dbline 37
+ 0047           ;               LCD_Position(1,0);
+ 0047 5700              mov X,0
+ 0049 5001              mov A,1
+ 004B 7C0000            xcall _LCD_Position
+ 004E                   .dbline 38
+ 004E           ;               LCD_PrHexByte(ADWandler);
+ 004E 5100              mov A,[_ADWandler]
+ 0050 7C0000            xcall _LCD_PrHexByte
+ 0053 20                pop X
+ 0054                   .dbline 39
+ 0054           ;       }
+ 0054           L3:
+ 0054                   .dbline 26
+ 0054 8FCE              xjmp L2
+ 0056           X0:
+ 0056                   .dbline -2
+ 0056           L1:
+ 0056                   .dbline 0 ; func end
+ 0056 8FFF              jmp .
+ 0058                   .dbend
+ 0058                   .dbfunc e Sample _Sample fV
+ 0058           _Sample::
+ 0058                   .dbline -1
+ 0058                   .dbline 44
+ 0058           ; 
+ 0058           ; }
+ 0058           ; 
+ 0058           ; void Sample(void)
+ 0058           ; {     
+ 0058           L9:
+ 0058                   .dbline 45
+ 0058           ;       while(ADCINC_fIsDataAvailable() == 0);   
+ 0058           L10:
+ 0058                   .dbline 45
+ 0058 10                push X
+ 0059 7C0000            xcall _ADCINC_fIsDataAvailable
+ 005C 20                pop X
+ 005D 3900              cmp A,0
+ 005F AFF8              jz L9
+ 0061                   .dbline 46
+ 0061           ;     ADWandler = ADCINC_iClearFlagGetData();              
+ 0061 10                push X
+ 0062 7C0000            xcall _ADCINC_iClearFlagGetData
+ 0065 20                pop X
+ 0066 5300              mov [_ADWandler],A
+ 0068                   .dbline -2
+ 0068           L8:
+ 0068                   .dbline 0 ; func end
+ 0068 7F                ret
+ 0069                   .dbend
+ 0069                   .dbfunc e SPI_Send _SPI_Send fV
+ 0069           ;         Senden -> X-5
+ 0069           _SPI_Send::
+ 0069                   .dbline -1
+ 0069 10                push X
+ 006A 4F                mov X,SP
+ 006B                   .dbline 50
+ 006B           ; }
+ 006B           ; 
+ 006B           ; void SPI_Send(char *Senden)
+ 006B           ; {
+ 006B           L13:
+ 006B                   .dbline 51
+ 006B           ;                       while(!(SPIM_bReadStatus() & SPIM_SPIM_TX_BUFFER_EMPTY));
+ 006B           L14:
+ 006B                   .dbline 51
+ 006B 10                push X
+ 006C 7C0000            xcall _SPIM_bReadStatus
+ 006F 20                pop X
+ 0070 5300              mov [__r0],A
+ 0072 470010            tst [__r0],16
+ 0075 AFF5              jz L13
+ 0077                   .dbline 52
+ 0077           ;               { 
+ 0077                   .dbline 53
+ 0077           ;                       SPIM_SendTxData(*Senden);
+ 0077 52FC              mov A,[X-4]
+ 0079 5300              mov [__r1],A
+ 007B 3E00              mvi A,[__r1]
+ 007D 10                push X
+ 007E 7C0000            xcall _SPIM_SendTxData
+ 0081 20                pop X
+ 0082                   .dbline 54
+ 0082           ;                               PRT2DR ^= 0x02;                                                                                         //LED_SPI togglen
+ 0082 450802            xor REG[0x8],2
+ 0085                   .dbline 55
+ 0085           ;                       }
+ 0085                   .dbline -2
+ 0085           L12:
+ 0085 20                pop X
+ 0086                   .dbline 0 ; func end
+ 0086 7F                ret
+ 0087                   .dbsym l Senden -5 pc
+ 0087                   .dbend
+ 0087                   .dbfunc e Timer16 _Timer16 fV
+ 0087           _Timer16::
+ 0087                   .dbline -1
+ 0087 08                push A
+ 0088 5100              mov A,[__r0]
+ 008A 08                push A
+ 008B 5100              mov A,[__r1]
+ 008D 08                push A
+ 008E 5100              mov A,[__r2]
+ 0090 08                push A
+ 0091 5100              mov A,[__r3]
+ 0093 08                push A
+ 0094 5100              mov A,[__r4]
+ 0096 08                push A
+ 0097 5100              mov A,[__r5]
+ 0099 08                push A
+ 009A 5100              mov A,[__r6]
+ 009C 08                push A
+ 009D 5100              mov A,[__r7]
+ 009F 08                push A
+ 00A0 5100              mov A,[__r8]
+ 00A2 08                push A
+ 00A3 5100              mov A,[__r9]
+ 00A5 08                push A
+ 00A6 5100              mov A,[__r10]
+ 00A8 08                push A
+ 00A9 5100              mov A,[__r11]
+ 00AB 08                push A
+ 00AC 5100              mov A,[__rX]
+ 00AE 08                push A
+ 00AF 5100              mov A,[__rY]
+ 00B1 08                push A
+ 00B2 5100              mov A,[__rZ]
+ 00B4 08                push A
+ 00B5                   .dbline 59
+ 00B5           ; }
+ 00B5           ; 
+ 00B5           ; void Timer16(void)
+ 00B5           ; {     
+ 00B5                   .dbline 60
+ 00B5           ;       SPI = 0x01;
+ 00B5 550101            mov [_SPI],1
+ 00B8                   .dbline 61
+ 00B8           ;       Timer16_WritePeriod(32768);
+ 00B8 10                push X
+ 00B9 5780              mov X,-128
+ 00BB 5000              mov A,0
+ 00BD 7C0000            xcall _Timer16_WritePeriod
+ 00C0 20                pop X
+ 00C1                   .dbline 62
+ 00C1           ;       PRT2DR ^= 0x01;                                                                                                                 //LED_Timer togglen
+ 00C1 450801            xor REG[0x8],1
+ 00C4                   .dbline -2
+ 00C4           L16:
+ 00C4 18                pop A
+ 00C5 5300              mov [__rZ],A
+ 00C7 18                pop A
+ 00C8 5300              mov [__rY],A
+ 00CA 18                pop A
+ 00CB 5300              mov [__rX],A
+ 00CD 18                pop A
+ 00CE 5300              mov [__r11],A
+ 00D0 18                pop A
+ 00D1 5300              mov [__r10],A
+ 00D3 18                pop A
+ 00D4 5300              mov [__r9],A
+ 00D6 18                pop A
+ 00D7 5300              mov [__r8],A
+ 00D9 18                pop A
+ 00DA 5300              mov [__r7],A
+ 00DC 18                pop A
+ 00DD 5300              mov [__r6],A
+ 00DF 18                pop A
+ 00E0 5300              mov [__r5],A
+ 00E2 18                pop A
+ 00E3 5300              mov [__r4],A
+ 00E5 18                pop A
+ 00E6 5300              mov [__r3],A
+ 00E8 18                pop A
+ 00E9 5300              mov [__r2],A
+ 00EB 18                pop A
+ 00EC 5300              mov [__r1],A
+ 00EE 18                pop A
+ 00EF 5300              mov [__r0],A
+ 00F1 18                pop A
+ 00F2                   .dbline 0 ; func end
+ 00F2 7E                reti
+ 00F3                   .dbend
+                        .area lit(rom, con, rel, lit)
+ 0000           L7:
+ 0000 41442D576572743A00        .byte 'A,'D,45,'W,'e,'r,'t,58,0

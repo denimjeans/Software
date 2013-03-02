@@ -1,0 +1,31 @@
+XH
+H 3 areas 3 global symbols
+M led7segint.asm
+S LED7SEG_Update Ref0000
+S Port_4_Data_SHADE Ref0000
+A text size 0 flags 0
+dbfile lib/led7segint.asm
+dbfunc 0 ? 0 I
+dbfile LED7SEG.inc
+dbfunc 0 ? 0 I
+dbfile G:/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/include/CY8C29~1/m8c.inc
+dbfunc 0 ? 0 I
+dbfile ./lib/LED7SEG.inc
+dbfunc 0 ? 0 I
+dbfile lib/led7segint.asm
+dbfunc 0 ? 0 I
+dbfile memory.inc
+dbfunc 0 ? 0 I
+dbfile lib/led7segint.asm
+dbfunc 0 ? 0 I
+dbfile G:/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/include/CY8C29~1/m8c.inc
+dbfunc 0 ? 0 I
+A InterruptRAM size 0 flags 20
+A UserModules size 4 flags 0
+dbfile lib/led7segint.asm
+dbfunc 0 ? 0 I
+dbline 40 0
+dbline 5C 3
+S _LED7SEG_ISR Def0000
+T 00 00 7C 00 00 7E
+R 00 00 00 02 02 03 00 00

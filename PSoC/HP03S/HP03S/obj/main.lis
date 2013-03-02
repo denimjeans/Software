@@ -1,0 +1,46 @@
+                        .module main.c
+                        .area text(rom, con, rel)
+ 0000                   .dbfile ./main.c
+ 0000                   .dbfile G:\Dropbox\Hobby\PROGRA~1\PSOCPR~1\HP03S\HP03S\main.c
+ 0000                   .dbfunc e main _main fV
+ 0000           _main::
+ 0000                   .dbline -1
+ 0000                   .dbline 9
+ 0000           ; //----------------------------------------------------------------------------
+ 0000           ; // C main line
+ 0000           ; //----------------------------------------------------------------------------
+ 0000           ; 
+ 0000           ; #include <m8c.h>        // Part specific constants and macros
+ 0000           ; #include "PSoCAPI.h"    // PSoC API definitions for all User Modules
+ 0000           ; 
+ 0000           ; void main(void)
+ 0000           ; {
+ 0000                   .dbline 10
+ 0000           ;       M8C_EnableGInt;
+ 0000 7101                      or  F, 01h
+ 0002           
+ 0002                   .dbline 11
+ 0002           ;       PWM16_EnableInt();    
+ 0002 10                push X
+ 0003 7C0000            xcall _PWM16_EnableInt
+ 0006                   .dbline 12
+ 0006           ;       PWM16_Start(); 
+ 0006 7C0000            xcall _PWM16_Start
+ 0009 20                pop X
+ 000A           L2:
+ 000A                   .dbline 15
+ 000A           ;       
+ 000A           ;       while(1)
+ 000A           ;       {
+ 000A                   .dbline 17
+ 000A           ;       
+ 000A           ;       }
+ 000A           L3:
+ 000A                   .dbline 14
+ 000A 8FFF              xjmp L2
+ 000C           X0:
+ 000C                   .dbline -2
+ 000C           L1:
+ 000C                   .dbline 0 ; func end
+ 000C 8FFF              jmp .
+ 000E                   .dbend

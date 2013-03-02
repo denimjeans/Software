@@ -1,0 +1,6 @@
+-F0x30 -g -blit:0x1a0.0x7fff 
+ -bdata:0.0x6ff -bSSCParmBlk:0x00F7.0x00FF -BInterruptRAM:0 -Bvirtual_registers  
+ -Bpsoc_master_RAM 
+ -o"output/PSoC_Master" 
+ ./obj/main.o  
+ G:/PSOCPR~1/PSOC_M~1/PSOC_M~1/lib/libPSoc.a -LG:/PSoC/PSOCDE~1/5.1/Common/CY110F~1/tools/lib/LMM/eightpages G:/PSoC/PSOCDE~1/5.1/Common/CY110F~1/tools/lib/CY8C29000/cms.a G:/PSoC/PSOCDE~1/5.1/Common/CY110F~1/tools/lib/LMM/UASW/MAC/arith.a  

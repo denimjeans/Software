@@ -1,0 +1,1 @@
+-a -f project.dep -p./std/obj/ -o.o -- -IG:/PSOCDE~1/5.3/Common/CY110F~1/tools/include -I./lib -I./std -I. -IG:/PSOCDE~1/5.3/Common/CY110F~1/tools/include/CY8C29~1  -- 

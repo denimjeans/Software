@@ -1,0 +1,32 @@
+# DO NOT DELETE
+./obj/boot.o :  G:/PSOCDE~1/5.3/Common/CY110F~1/tools/include/CY8C21~2/m8c.inc\
+   G:/PSOCDE~1/5.3/Common/CY110F~1/tools/include/CY8C21~2/m8ssc.inc\
+   G:\Dropbox\Hobby\PROGRA~1\PSOCPR~1\PSOC_S~1\PSOC_S~1\lib\GLOBAL~1.INC\
+   G:\Dropbox\Hobby\PROGRA~1\PSOCPR~1\PSOC_S~1\PSOC_S~1\memory.inc
+./obj/main.o :  ./lib/ADC10.h ./lib/EzI2Cs.h ./lib/PSoCAPI.h\
+   ./lib/PSOCGP~1.H ./lib/PWM16.h\
+   G:/PSOCDE~1/5.3/Common/CY110F~1/tools/include/CY8C21~2/m8C.h\
+   G:/PSOCDE~1/5.3/Common/CY110F~1/tools/include/CY8C21~2/m8c.h
+./lib/obj/adc10.o :  ./lib/ADC10.inc\
+   G:/PSOCDE~1/5.3/Common/CY110F~1/tools/include/CY8C21~2/m8c.inc\
+   G:\Dropbox\Hobby\PROGRA~1\PSOCPR~1\PSOC_S~1\PSOC_S~1\memory.inc
+./lib/obj/adc10int.o :  ./lib/ADC10.inc\
+   G:/PSOCDE~1/5.3/Common/CY110F~1/tools/include/CY8C21~2/m8c.inc\
+   G:\Dropbox\Hobby\PROGRA~1\PSOCPR~1\PSOC_S~1\PSOC_S~1\memory.inc
+./lib/obj/ezi2cs.o :  ./lib/EzI2Cs.inc ./lib/PSOCGP~1.INC\
+   G:/PSOCDE~1/5.3/Common/CY110F~1/tools/include/CY8C21~2/m8c.inc\
+   G:\Dropbox\Hobby\PROGRA~1\PSOCPR~1\PSOC_S~1\PSOC_S~1\memory.inc
+./lib/obj/ezi2csint.o :  ./lib/EzI2Cs.inc\
+   G:/PSOCDE~1/5.3/Common/CY110F~1/tools/include/CY8C21~2/m8c.inc\
+   G:\Dropbox\Hobby\PROGRA~1\PSOCPR~1\PSOC_S~1\PSOC_S~1\memory.inc
+./lib/obj/psocconfig.o :  ./lib/GLOBAL~1.INC\
+   G:/PSOCDE~1/5.3/Common/CY110F~1/tools/include/CY8C21~2/m8c.inc\
+   G:\Dropbox\Hobby\PROGRA~1\PSOCPR~1\PSOC_S~1\PSOC_S~1\memory.inc
+./lib/obj/psocconfigtbl.o : \
+   G:/PSOCDE~1/5.3/Common/CY110F~1/tools/include/CY8C21~2/m8c.inc
+./lib/obj/pwm16.o :  ./lib/PWM16.inc\
+   G:/PSOCDE~1/5.3/Common/CY110F~1/tools/include/CY8C21~2/m8c.inc\
+   G:\Dropbox\Hobby\PROGRA~1\PSOCPR~1\PSOC_S~1\PSOC_S~1\memory.inc
+./lib/obj/pwm16int.o :  ./lib/PWM16.inc\
+   G:/PSOCDE~1/5.3/Common/CY110F~1/tools/include/CY8C21~2/m8c.inc\
+   G:\Dropbox\Hobby\PROGRA~1\PSOCPR~1\PSOC_S~1\PSOC_S~1\memory.inc

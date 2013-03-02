@@ -1,0 +1,26 @@
+Starting MAKE...
+creating project.mk 
+lib/i2chwcommon.asm
+lib/i2chwint.asm
+lib/i2chwmstr.asm
+lib/i2chwrsrcinits.asm
+lib/lcd.asm
+lib/psocconfig.asm
+lib/psocconfigtbl.asm
+lib/psocgpioint.asm
+./boot.asm
+./main.c
+Linking..
+LMM info: area 'InterruptRAM' uses 12 bytes in SRAM bank 0
+LMM info: area 'virtual_registers' uses 15 bytes in SRAM page 0
+LMM info: area 'data' item of 8 bytes allocated in SRAM page 0
+LMM info: area 'data' item of 8 bytes allocated in SRAM page 0
+LMM info: area 'data' item of 1 bytes allocated in SRAM page 0
+LMM info: area 'data' item of 1 bytes allocated in SRAM page 0
+idata dump at output/DS1307.idata
+  ROM 10% full. 2980 out of 32768 bytes used (does not include absolute areas).
+  RAM 3% full. 45 bytes used (does not include stack usage).
+Built with ICCM8C STD V7.05.00
+ 
+DS1307 - 0 error(s) 0 warning(s) 16:47:12
+

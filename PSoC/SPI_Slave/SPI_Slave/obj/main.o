@@ -1,0 +1,50 @@
+XH
+H 3 areas 8 global symbols
+M main.c
+S _SPIS_Start Ref0000
+S _SPIS_bReadRxData Ref0000
+S _SPIS_bReadStatus Ref0000
+S __r0 Ref0000
+S _LED7SEG_DispInt Ref0000
+S _LED7SEG_Start Ref0000
+A text size 44 flags 0
+dbfile ./main.c
+dbfile G:\Hobby\PROGRA~1\PSOCPR~1\SPI_SL~1\SPI_SL~1\main.c
+dbfunc e main 0 fV
+dbline FFFFFFFF 0
+dbline B 0
+dbline C 0
+dbline D 2
+dbline E 5
+dbline 11 E
+dbline 12 E
+dbline 13 11
+dbline 13 11
+dbline 14 20
+dbline 15 2D
+dbline 16 40
+dbline 10 40
+dbline FFFFFFFE 42
+dbline 0 42
+S _main Def0000
+A data size 2 flags 20
+dbfile ./main.c
+dbfile G:\Hobby\PROGRA~1\PSOCPR~1\SPI_SL~1\SPI_SL~1\main.c
+dbsym e ADWandler 0 I
+S _ADWandler Def0000
+A data size 0 flags 20
+dbfile G:\Hobby\PROGRA~1\PSOCPR~1\SPI_SL~1\SPI_SL~1\main.c
+T 00 00 00 00
+R 00 00 00 01
+T 00 00 71 01 7C 00 00 10 50 00 7C 00 00 20 80 33
+R 00 00 00 00 02 05 00 05 02 0B 00 00
+T 00 0E 45 08 01 10 7C 00 00 20 62 D0 00 00 53
+R 00 00 00 00 02 07 00 02 43 0C 00 03
+T 00 1A 00 00 47 00 00 20 AF F2 10 7C 00 00 20 62
+R 00 00 00 00 03 02 00 03 03 05 00 03 02 0C 00 01
+T 00 26 D0 00 00 53 00 01 55 00 00 00 10 50 04 08
+R 00 00 00 00 41 03 00 01 01 06 00 01 01 09 00 01
+T 00 31 50 01 08 51 00 00 08 51 00 01 08 7C 00 00
+R 00 00 00 00 01 06 00 01 01 0A 00 01 02 0E 00 04
+T 00 3D 38 FC 20 8F CD 8F FF
+R 00 00 00 00

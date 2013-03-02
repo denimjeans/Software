@@ -1,0 +1,74 @@
+XH
+H 4 areas C global symbols
+M main.c
+S _LCD_PrCString Ref0000
+S _EzI2Cs_EnableInt Ref0000
+S _EzI2Cs_SetRamBuffer Ref0000
+S __r0 Ref0000
+S __r1 Ref0000
+S _LCD_Start Ref0000
+S _LCD_PrHexInt Ref0000
+S _EzI2Cs_Start Ref0000
+S _LCD_Position Ref0000
+A text size 67 flags 0
+dbfile ./main.c
+dbfile I:\ASUSWE~1\UPLOAD~1\Hobby\PROGRA~1\PSOCPR~1\I2C_SL~1\I2C_SL~1\main.c
+dbfunc e main 0 fV
+dbline FFFFFFFF 0
+dbline F 0
+dbline 10 0
+dbline 11 2
+dbline 13 6
+dbline 14 D
+dbline 16 17
+dbline 18 27
+dbline 1B 2B
+dbline 1C 2B
+dbline 1D 33
+dbline 1E 3D
+dbline 1F 45
+dbline 20 5A
+dbline 1A 5A
+dbline FFFFFFFE 5C
+dbline 0 5C
+dbfunc e I2C_Init 5E fV
+dbline FFFFFFFF 5E
+dbline 24 5E
+dbline 25 5E
+dbline 26 62
+dbline FFFFFFFE 66
+dbline 0 66
+S _main Def0000
+S _I2C_Init Def005E
+A data size 1 flags 20
+dbfile ./main.c
+dbfile I:\ASUSWE~1\UPLOAD~1\Hobby\PROGRA~1\PSOCPR~1\I2C_SL~1\I2C_SL~1\main.c
+dbsym e Wert 0 c
+S _Wert Def0000
+A data size 0 flags 20
+dbfile I:\ASUSWE~1\UPLOAD~1\Hobby\PROGRA~1\PSOCPR~1\I2C_SL~1\I2C_SL~1\main.c
+A lit size 15 flags 1
+T 00 00 96
+R 00 00 00 01
+T 00 00 71 01 10 7C 00 00 50 00 57 00 7C 00 00 50
+R 00 00 00 00 02 06 00 05 02 0D 00 08
+T 00 0E 00 06 08 50 00 06 5C 18 7C 00 00 50
+R 00 00 00 00 41 02 00 03 01 06 00 03 02 0B 00 00
+T 00 18 00 00 08 50 00 00 08 50 01 08 08 7C 00 00
+R 00 00 00 00 41 02 00 01 01 06 00 01 02 0E 00 02
+T 00 24 38 FC 20 90 35 80 30 10 57 00 50 01 7C
+R 00 00 00 00
+T 00 31 00 00 50 00 00 08 50 00 00 5C 18 7C
+R 00 00 00 00 02 02 00 08 41 05 00 03 01 09 00 03
+T 00 3B 00 00 57 00 50 02 7C 00 00 20 62 D0 00 00
+R 00 00 00 00 02 02 00 00 02 09 00 08 41 0E 00 01
+T 00 48 51 00 00 62 D0 00 00 53 00 00 10 50 00 08
+R 00 00 00 00 01 03 00 01 43 07 00 03 03 0A 00 04
+T 00 53 51 00 00 20 7C 00 00 20 8F D0 8F FF 10 7C
+R 00 00 00 00 03 03 00 04 02 07 00 06
+T 00 60 00 00 7C 00 00 20 7F
+R 00 00 00 00 02 02 00 07 02 05 00 01
+T 00 00 57 65 72 74 3A 00 50 53 6F 43 20 49 32 43
+R 00 00 00 03
+T 00 0E 20 53 6C 61 76 65 00
+R 00 00 00 03

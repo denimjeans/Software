@@ -1,0 +1,46 @@
+XH
+H 3 areas 5 global symbols
+M adc8int.asm
+A text size 0 flags 0
+dbfile lib/adc8int.asm
+dbfunc 0 ? 0 I
+dbfile ./lib/ADC8.inc
+dbfunc 0 ? 0 I
+dbfile lib/adc8int.asm
+dbfunc 0 ? 0 I
+dbfile memory.inc
+dbfunc 0 ? 0 I
+dbfile lib/adc8int.asm
+dbfunc 0 ? 0 I
+dbfile G:/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/include/CY8C21~2/m8c.inc
+dbfunc 0 ? 0 I
+A InterruptRAM size 2 flags 20
+S _ADC8_bfStatus Def0001
+S ADC8_bResult Def0000
+S _ADC8_bResult Def0000
+S ADC8_bfStatus Def0001
+A UserModules size 1F flags 0
+dbfile lib/adc8int.asm
+dbfunc 0 ? 0 I
+dbline 21 0
+dbline 22 1
+dbline 23 4
+dbline 27 6
+dbline 28 8
+dbline 2B A
+dbline 2C C
+dbline 2D E
+dbline 30 F
+dbline 31 12
+dbline 32 15
+dbline 34 18
+dbline 35 1B
+dbline 51 1D
+dbline 52 1E
+S _ADC8_ADC_ISR Def0000
+T 00 00 08 49 68 80 A0 05 50 FF 80 06 5D 20 5D 22
+R 00 00 00 02
+T 00 0E 73 41 23 FE 62 21 FF 43 23 01 55 00 01 01
+R 00 00 00 02 01 0D 00 01
+T 00 1B 53 00 00 18 7E
+R 00 00 00 02 01 03 00 01

@@ -1,0 +1,100 @@
+XH
+H 5 areas B global symbols
+M main.c
+S _USBFS_LoadInEP Ref0000
+S _USBFS_bGetConfiguration Ref0000
+S _Timer16_Start Ref0000
+S _USBFS_Start Ref0000
+S __r0 Ref0000
+S _USBFS_bGetEPAckState Ref0000
+S _Timer16_EnableInt Ref0000
+A text size A9 flags 0
+dbfile ./main.c
+dbfile I:\Hobby\PROGRA~1\PSOCPR~1\Maus\Maus\main.c
+dbfunc e main 0 fV
+dbline FFFFFFFF 0
+dbline D 0
+dbline E 0
+dbline F 2
+dbline 10 6
+dbline 11 9
+dbline 12 11
+dbline 12 11
+dbline 13 1D
+dbline 16 36
+dbline 17 36
+dbline 19 44
+dbline 19 44
+dbline 1B 5D
+dbline 1D 69
+dbline 1D 69
+dbline 1E 6F
+dbline 20 6F
+dbline 22 77
+dbline 22 77
+dbline 23 7D
+dbline 26 80
+dbline 27 83
+dbline 29 85
+dbline 2A 85
+dbline 2B 8B
+dbline 2C 8E
+dbline 2D 91
+dbline 2E 91
+dbline 2F 91
+dbline 15 91
+dbline FFFFFFFE 93
+dbline 0 93
+dbfunc e Pause 95 fV
+dbline FFFFFFFF 95
+dbline 33 9B
+dbline 34 9B
+dbline FFFFFFFE A4
+dbline 0 A8
+S _main Def0000
+S _Pause Def0095
+A data size 1 flags 20
+dbfile ./main.c
+dbfile I:\Hobby\PROGRA~1\PSOCPR~1\Maus\Maus\main.c
+dbsym e Zeit 0 c
+S _Zeit Def0000
+A data size 0 flags 20
+dbfile I:\Hobby\PROGRA~1\PSOCPR~1\Maus\Maus\main.c
+A data size 3 flags 20
+dbfile I:\Hobby\PROGRA~1\PSOCPR~1\Maus\Maus\main.c
+dbsym e abMouseData 0 A[3:3]c
+S _abMouseData Def0000
+A data size 0 flags 20
+dbfile I:\Hobby\PROGRA~1\PSOCPR~1\Maus\Maus\main.c
+T 00 00 00
+R 00 00 00 01
+T 00 00 00 00 00
+R 00 00 00 03
+T 00 00 71 01 10 7C 00 00 7C 00 00 57 03 50 00 7C
+R 00 00 00 00 02 06 00 06 02 09 00 02
+T 00 0E 00 00 20 10 7C 00 00 20 62 D0 00 00 39 00
+R 00 00 00 00 02 02 00 03 02 07 00 01 43 0C 00 04
+T 00 1B AF F5 10 50 00 08 08 50 03 08 50 00 00 08
+R 00 00 00 00 41 0D 00 03
+T 00 28 50 00 00 08 50 01 08 7C 00 00 38 FA 20 80
+R 00 00 00 00 01 03 00 03 02 0A 00 00
+T 00 35 5C 10 50 01 7C 00 00 20 62 D0 00 00 39 00
+R 00 00 00 00 02 07 00 05 43 0C 00 04
+T 00 42 A0 4E 10 50 01 08 50 00 08 50 03 08 50
+R 00 00 00 00
+T 00 4F 00 00 08 50 00 00 08 50 01 08 7C 00 00 38
+R 00 00 00 00 41 02 00 03 01 06 00 03 02 0D 00 00
+T 00 5B FA 20 5D 04 62 D0 00 00 53 00 00 47 00 00
+R 00 00 00 00 43 08 00 04 03 0B 00 04 03 0E 00 04
+T 00 66 10 A0 07 62 D0 00 00 55 00 02 00 62 D0
+R 00 00 00 00 41 07 00 03 01 0A 00 03
+T 00 71 00 00 3C 00 00 00 A0 0F 62 D0 00 00 55
+R 00 00 00 00 41 02 00 01 01 05 00 01 41 0C 00 03
+T 00 7B 00 01 F7 55 00 02 F7 43 08 20 80 0D 62 D0
+R 00 00 00 00 01 02 00 03 01 06 00 03
+T 00 87 00 00 55 00 01 08 55 00 02 08 41 08 DF 8F
+R 00 00 00 00 41 02 00 03 01 05 00 03 01 09 00 03
+T 00 92 A4 8F FF 71 C0 08 5D D0 08 62 D0 00 00 51
+R 00 00 00 00 41 0D 00 01
+T 00 9F 00 00 31 01 53 00 00 18 60 D0 18 7E
+R 00 00 00 00 01 02 00 01 01 07 00 01

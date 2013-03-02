@@ -1,0 +1,96 @@
+ 0000                   cpu LMM
+                        .module main.c
+                        .area text(rom, con, rel)
+ 0000                   .dbfile ./main.c
+                        .area data(ram, con, rel)
+ 0000                   .dbfile ./main.c
+ 0000           _ADWandler::
+ 0000 0000              .word 0
+ 0002                   .dbfile G:\Hobby\PROGRA~1\PSOCPR~1\SPI_SL~1\SPI_SL~1\main.c
+ 0002                   .dbsym e ADWandler _ADWandler I
+                        .area data(ram, con, rel)
+ 0000                   .dbfile G:\Hobby\PROGRA~1\PSOCPR~1\SPI_SL~1\SPI_SL~1\main.c
+                        .area text(rom, con, rel)
+ 0000                   .dbfile G:\Hobby\PROGRA~1\PSOCPR~1\SPI_SL~1\SPI_SL~1\main.c
+ 0000                   .dbfunc e main _main fV
+ 0000           _main::
+ 0000                   .dbline -1
+ 0000                   .dbline 11
+ 0000           ; //----------------------------------------------------------------------------
+ 0000           ; // C main line
+ 0000           ; //----------------------------------------------------------------------------
+ 0000           ; 
+ 0000           ; #include <m8c.h>                                                                                                              // Part specific constants and macros
+ 0000           ; #include "PSoCAPI.h"                                                                                                          // PSoC API definitions for all User Modules
+ 0000           ; 
+ 0000           ; int ADWandler = 0x00;
+ 0000           ; 
+ 0000           ; void main(void)
+ 0000           ; {
+ 0000                   .dbline 12
+ 0000           ;       M8C_EnableGInt;
+ 0000 7101                      or  F, 01h
+ 0002           
+ 0002                   .dbline 13
+ 0002           ;       LED7SEG_Start(); 
+ 0002 7C0000            xcall _LED7SEG_Start
+ 0005                   .dbline 14
+ 0005           ;       SPIS_Start(SPIS_SPIS_MODE_0 | SPIS_SPIS_MSB_FIRST);
+ 0005 10                push X
+ 0006 5000              mov A,0
+ 0008 7C0000            xcall _SPIS_Start
+ 000B 20                pop X
+ 000C 8033              xjmp L3
+ 000E           L2:
+ 000E                   .dbline 17
+ 000E           ;       
+ 000E           ;       while (1)
+ 000E           ;       {
+ 000E                   .dbline 18
+ 000E           ;               PRT2DR ^= 0x01;                                                                                                         // LED_Empfangen togglen
+ 000E 450801            xor REG[0x8],1
+ 0011           L5:
+ 0011                   .dbline 19
+ 0011           ;               while(!(SPIS_bReadStatus() & SPIS_SPIS_SPI_COMPLETE));
+ 0011           L6:
+ 0011                   .dbline 19
+ 0011 10                push X
+ 0012 7C0000            xcall _SPIS_bReadStatus
+ 0015 20                pop X
+ 0016 62D000            mov REG[0xd0],>__r0
+ 0019 5300              mov [__r0],A
+ 001B 470020            tst [__r0],32
+ 001E AFF2              jz L5
+ 0020                   .dbline 20
+ 0020           ;         ADWandler = SPIS_bReadRxData();
+ 0020 10                push X
+ 0021 7C0000            xcall _SPIS_bReadRxData
+ 0024 20                pop X
+ 0025 62D000            mov REG[0xd0],>_ADWandler
+ 0028 5301              mov [_ADWandler+1],A
+ 002A 550000            mov [_ADWandler],0
+ 002D                   .dbline 21
+ 002D           ;         LED7SEG_DispInt(ADWandler,1,4);
+ 002D 10                push X
+ 002E 5004              mov A,4
+ 0030 08                push A
+ 0031 5001              mov A,1
+ 0033 08                push A
+ 0034 5100              mov A,[_ADWandler]
+ 0036 08                push A
+ 0037 5101              mov A,[_ADWandler+1]
+ 0039 08                push A
+ 003A 7C0000            xcall _LED7SEG_DispInt
+ 003D 38FC              add SP,-4
+ 003F 20                pop X
+ 0040                   .dbline 22
+ 0040           ;       }
+ 0040           L3:
+ 0040                   .dbline 16
+ 0040 8FCD              xjmp L2
+ 0042           X0:
+ 0042                   .dbline -2
+ 0042           L1:
+ 0042                   .dbline 0 ; func end
+ 0042 8FFF              jmp .
+ 0044                   .dbend

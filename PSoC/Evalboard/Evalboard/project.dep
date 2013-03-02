@@ -1,0 +1,26 @@
+# DO NOT DELETE
+./obj/boot.o : \
+   G:/PSoC/PSOCDE~1/5.1/Common/CY110F~1/tools/include/CY8C29~1/m8c.inc\
+   G:/PSoC/PSOCDE~1/5.1/Common/CY110F~1/tools/include/CY8C29~1/m8ssc.inc\
+   G:\PSOCPR~1\EVALBO~1\EVALBO~1\lib\GLOBAL~1.INC\
+   G:\PSOCPR~1\EVALBO~1\EVALBO~1\memory.inc
+./obj/main.o :  ./lib/I2CM.h ./lib/LCD.h ./lib/PSoCAPI.h\
+   ./lib/PSOCGP~1.H ./lib/Timer16.h\
+   G:/PSoC/PSOCDE~1/5.1/Common/CY110F~1/tools/include/CY8C29~1/m8c.h
+./lib/obj/i2cm.o :  ./lib/I2CM.inc\
+   G:/PSoC/PSOCDE~1/5.1/Common/CY110F~1/tools/include/CY8C29~1/m8c.inc\
+   G:\PSOCPR~1\EVALBO~1\EVALBO~1\memory.inc
+./lib/obj/lcd.o :  ./lib/LCD.inc\
+   G:/PSoC/PSOCDE~1/5.1/Common/CY110F~1/tools/include/CY8C29~1/m8c.inc\
+   G:\PSOCPR~1\EVALBO~1\EVALBO~1\memory.inc
+./lib/obj/psocconfig.o :  ./lib/GLOBAL~1.INC\
+   G:/PSoC/PSOCDE~1/5.1/Common/CY110F~1/tools/include/CY8C29~1/m8c.inc\
+   G:\PSOCPR~1\EVALBO~1\EVALBO~1\memory.inc
+./lib/obj/psocconfigtbl.o : \
+   G:/PSoC/PSOCDE~1/5.1/Common/CY110F~1/tools/include/CY8C29~1/m8c.inc
+./lib/obj/timer16.o :  ./lib/Timer16.inc\
+   G:/PSoC/PSOCDE~1/5.1/Common/CY110F~1/tools/include/CY8C29~1/m8c.inc\
+   G:\PSOCPR~1\EVALBO~1\EVALBO~1\memory.inc
+./lib/obj/timer16int.o :  ./lib/Timer16.inc\
+   G:/PSoC/PSOCDE~1/5.1/Common/CY110F~1/tools/include/CY8C29~1/m8c.inc\
+   G:\PSOCPR~1\EVALBO~1\EVALBO~1\memory.inc

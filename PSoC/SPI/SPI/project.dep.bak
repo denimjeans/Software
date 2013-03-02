@@ -1,0 +1,39 @@
+# DO NOT DELETE
+./obj/boot.o : \
+   D:/Cypress/PSOCDE~1/5.2/Common/CY3E64~1/tools/include/CY8C27~1/m8c.inc\
+   D:/Cypress/PSOCDE~1/5.2/Common/CY3E64~1/tools/include/CY8C27~1/m8ssc.inc\
+   G:\Hobby\PROGRA~1\PSOCPR~1\SPI\SPI\lib\GLOBAL~1.INC\
+   G:\Hobby\PROGRA~1\PSOCPR~1\SPI\SPI\memory.inc
+./obj/main.o :  ./lib/ADCINC.h ./lib/LCD.h ./lib/PGA.h ./lib/PSoCAPI.h\
+   ./lib/PSOCGP~1.H ./lib/SPIM.h ./lib/Timer16.h\
+   D:/Cypress/PSOCDE~1/5.2/Common/CY3E64~1/tools/include/CY8C27~1/M8C.h\
+   D:/Cypress/PSOCDE~1/5.2/Common/CY3E64~1/tools/include/CY8C27~1/m8c.h
+./lib/obj/adcinc.o :  ./lib/ADCINC.inc\
+   D:/Cypress/PSOCDE~1/5.2/Common/CY3E64~1/tools/include/CY8C27~1/m8c.inc\
+   G:\Hobby\PROGRA~1\PSOCPR~1\SPI\SPI\memory.inc
+./lib/obj/adcincint.o :  ./lib/ADCINC.inc\
+   D:/Cypress/PSOCDE~1/5.2/Common/CY3E64~1/tools/include/CY8C27~1/m8c.inc\
+   G:\Hobby\PROGRA~1\PSOCPR~1\SPI\SPI\memory.inc
+./lib/obj/lcd.o :  ./lib/LCD.inc\
+   D:/Cypress/PSOCDE~1/5.2/Common/CY3E64~1/tools/include/CY8C27~1/m8c.inc\
+   G:\Hobby\PROGRA~1\PSOCPR~1\SPI\SPI\memory.inc
+./lib/obj/pga.o :  ./lib/PGA.inc\
+   D:/Cypress/PSOCDE~1/5.2/Common/CY3E64~1/tools/include/CY8C27~1/m8c.inc\
+   G:\Hobby\PROGRA~1\PSOCPR~1\SPI\SPI\memory.inc
+./lib/obj/psocconfig.o :  ./lib/GLOBAL~1.INC\
+   D:/Cypress/PSOCDE~1/5.2/Common/CY3E64~1/tools/include/CY8C27~1/m8c.inc\
+   G:\Hobby\PROGRA~1\PSOCPR~1\SPI\SPI\memory.inc
+./lib/obj/psocconfigtbl.o : \
+   D:/Cypress/PSOCDE~1/5.2/Common/CY3E64~1/tools/include/CY8C27~1/m8c.inc
+./lib/obj/spim.o :  ./lib/SPIM.inc\
+   D:/Cypress/PSOCDE~1/5.2/Common/CY3E64~1/tools/include/CY8C27~1/m8c.inc\
+   G:\Hobby\PROGRA~1\PSOCPR~1\SPI\SPI\memory.inc
+./lib/obj/spimint.o :  ./lib/SPIM.inc\
+   D:/Cypress/PSOCDE~1/5.2/Common/CY3E64~1/tools/include/CY8C27~1/m8c.inc\
+   G:\Hobby\PROGRA~1\PSOCPR~1\SPI\SPI\memory.inc
+./lib/obj/timer16.o :  ./lib/Timer16.inc\
+   D:/Cypress/PSOCDE~1/5.2/Common/CY3E64~1/tools/include/CY8C27~1/m8c.inc\
+   G:\Hobby\PROGRA~1\PSOCPR~1\SPI\SPI\memory.inc
+./lib/obj/timer16int.o :  ./lib/Timer16.inc\
+   D:/Cypress/PSOCDE~1/5.2/Common/CY3E64~1/tools/include/CY8C27~1/m8c.inc\
+   G:\Hobby\PROGRA~1\PSOCPR~1\SPI\SPI\memory.inc

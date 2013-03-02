@@ -1,0 +1,177 @@
+ 0000                   cpu LMM
+                        .module main.c
+                        .area text(rom, con, rel)
+ 0000                   .dbfile ./main.c
+                        .area data(ram, con, rel)
+ 0000                   .dbfile ./main.c
+ 0000           _Wert::
+ 0000 64                .byte 100
+ 0001                   .dbfile G:\PSOCPR~1\EVALBO~1\EVALBO~1\main.c
+ 0001                   .dbsym e Wert _Wert c
+                        .area data(ram, con, rel)
+ 0000                   .dbfile G:\PSOCPR~1\EVALBO~1\EVALBO~1\main.c
+                        .area data(ram, con, rel)
+ 0000                   .dbfile G:\PSOCPR~1\EVALBO~1\EVALBO~1\main.c
+ 0000           _Port::
+ 0000 01                .byte 1
+ 0001                   .dbsym e Port _Port c
+                        .area data(ram, con, rel)
+ 0000                   .dbfile G:\PSOCPR~1\EVALBO~1\EVALBO~1\main.c
+                        .area text(rom, con, rel)
+ 0000                   .dbfile G:\PSOCPR~1\EVALBO~1\EVALBO~1\main.c
+ 0000                   .dbfunc e main _main fV
+ 0000           _main::
+ 0000                   .dbline -1
+ 0000                   .dbline 13
+ 0000           ; //----------------------------------------------------------------------------
+ 0000           ; // C main line
+ 0000           ; //----------------------------------------------------------------------------
+ 0000           ; 
+ 0000           ; #include <m8c.h>        // part specific constants and macros
+ 0000           ; #include "PSoCAPI.h"    // PSoC API definitions for all User Modules
+ 0000           ; #pragma interrupt_handler Timer;
+ 0000           ; 
+ 0000           ; volatile char Wert = 100;
+ 0000           ; char Port = 1;
+ 0000           ; 
+ 0000           ; void main(void)
+ 0000           ; {
+ 0000                   .dbline 14
+ 0000           ;       M8C_EnableIntMask(INT_MSK0, INT_MSK0_GPIO);                                                                                     // Interrupts an den I/O-Ports aktivieren
+ 0000 43E020            or REG[0xe0],32
+ 0003                   .dbline 15
+ 0003           ;     M8C_EnableGInt;  
+ 0003 7101                      or  F, 01h
+ 0005           
+ 0005                   .dbline 16
+ 0005           ;       LCD_Start();
+ 0005 10                push X
+ 0006 7C0000            xcall _LCD_Start
+ 0009 20                pop X
+ 000A                   .dbline 17
+ 000A           ;       LCD_InitBG(LCD_SOLID_BG);
+ 000A 10                push X
+ 000B 5000              mov A,0
+ 000D 7C0000            xcall _LCD_InitBG
+ 0010                   .dbline 18
+ 0010           ;     Timer16_Start();                                                                                                                          
+ 0010 7C0000            xcall _Timer16_Start
+ 0013                   .dbline 19
+ 0013           ;       Timer16_EnableInt(); 
+ 0013 7C0000            xcall _Timer16_EnableInt
+ 0016                   .dbline 20
+ 0016           ;       I2CM_Start();   
+ 0016 7C0000            xcall _I2CM_Start
+ 0019 20                pop X
+ 001A                   .dbline 22
+ 001A           ;       
+ 001A           ;       I2CM_fSendStart(0x20, I2CM_WRITE);
+ 001A 10                push X
+ 001B 5700              mov X,0
+ 001D 5020              mov A,32
+ 001F 7C0000            xcall _I2CM_fSendStart
+ 0022 62D000            mov REG[0xd0],>__r0
+ 0025 20                pop X
+ 0026                   .dbline 23
+ 0026           ;       I2CM_fWrite(0x00);
+ 0026 10                push X
+ 0027 5000              mov A,0
+ 0029 7C0000            xcall _I2CM_fWrite
+ 002C 62D000            mov REG[0xd0],>__r0
+ 002F 20                pop X
+ 0030                   .dbline 24
+ 0030           ;       I2CM_fSendRepeatStart(0x20,I2CM_WRITE);  
+ 0030 10                push X
+ 0031 5700              mov X,0
+ 0033 5020              mov A,32
+ 0035 7C0000            xcall _I2CM_fSendRepeatStart
+ 0038 20                pop X
+ 0039                   .dbline 25
+ 0039           ;       I2CM_fWrite(Port);
+ 0039 10                push X
+ 003A 62D000            mov REG[0xd0],>_Port
+ 003D 5100              mov A,[_Port]
+ 003F 7C0000            xcall _I2CM_fWrite
+ 0042 62D000            mov REG[0xd0],>__r0
+ 0045 20                pop X
+ 0046                   .dbline 26
+ 0046           ;       I2CM_SendStop();
+ 0046 10                push X
+ 0047 7C0000            xcall _I2CM_SendStop
+ 004A 20                pop X
+ 004B 8031              xjmp L3
+ 004D           L2:
+ 004D                   .dbline 29
+ 004D           ; 
+ 004D           ;       while(1)
+ 004D           ;       {     
+ 004D                   .dbline 30
+ 004D           ;       LCD_Position(0,0);
+ 004D 10                push X
+ 004E 5000              mov A,0
+ 0050 5C                mov X,A
+ 0051 7C0000            xcall _LCD_Position
+ 0054 20                pop X
+ 0055                   .dbline 31
+ 0055           ;       LCD_PrHexInt(Wert);
+ 0055 62D000            mov REG[0xd0],>_Wert
+ 0058 5100              mov A,[_Wert]
+ 005A 62D000            mov REG[0xd0],>__r0
+ 005D 5300              mov [__r1],A
+ 005F 10                push X
+ 0060 5000              mov A,0
+ 0062 08                push A
+ 0063 5100              mov A,[__r1]
+ 0065 20                pop X
+ 0066 7C0000            xcall _LCD_PrHexInt
+ 0069 20                pop X
+ 006A                   .dbline 32
+ 006A           ;       LCD_DrawBG(1,0,16,0);
+ 006A 10                push X
+ 006B 5000              mov A,0
+ 006D 08                push A
+ 006E 5010              mov A,16
+ 0070 08                push A
+ 0071 5000              mov A,0
+ 0073 08                push A
+ 0074 5001              mov A,1
+ 0076 08                push A
+ 0077 7C0000            xcall _LCD_DrawBG
+ 007A 38FC              add SP,-4
+ 007C 20                pop X
+ 007D                   .dbline 34
+ 007D           ;       
+ 007D           ;       }
+ 007D           L3:
+ 007D                   .dbline 28
+ 007D 8FCF              xjmp L2
+ 007F           X0:
+ 007F                   .dbline -2
+ 007F           L1:
+ 007F                   .dbline 0 ; func end
+ 007F 8FFF              jmp .
+ 0081                   .dbend
+ 0081                   .dbfunc e Timer _Timer fV
+ 0081           _Timer::
+ 0081                   .dbline -1
+ 0081 71C0              or F,-64
+ 0083 08                push A
+ 0084 5DD0              mov A,REG[0xd0]
+ 0086 08                push A
+ 0087                   .dbline 38
+ 0087           ; }
+ 0087           ; 
+ 0087           ; void Timer(void) 
+ 0087           ; {
+ 0087                   .dbline 39
+ 0087           ;     Wert++;
+ 0087 62D000            mov REG[0xd0],>_Wert
+ 008A 7600              inc [_Wert]
+ 008C                   .dbline -2
+ 008C           L5:
+ 008C 18                pop A
+ 008D 60D0              mov REG[208],A
+ 008F 18                pop A
+ 0090                   .dbline 0 ; func end
+ 0090 7E                reti
+ 0091                   .dbend

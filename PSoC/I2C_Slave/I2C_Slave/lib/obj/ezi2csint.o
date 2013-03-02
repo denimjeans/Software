@@ -1,0 +1,186 @@
+XH
+H 3 areas 13 global symbols
+M ezi2csint.asm
+A text size 0 flags 0
+dbfile lib/ezi2csint.asm
+dbfunc 0 ? 0 I
+dbfile memory.inc
+dbfunc 0 ? 0 I
+dbfile lib/ezi2csint.asm
+dbfunc 0 ? 0 I
+dbfile G:/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/include/CY8C29~1/m8c.inc
+dbfunc 0 ? 0 I
+dbfile lib/ezi2csint.asm
+dbfunc 0 ? 0 I
+dbfile ./lib/EzI2Cs.inc
+dbfunc 0 ? 0 I
+A InterruptRAM size 8 flags 20
+S EzI2Cs_bRAM_Buf_Size Def0005
+S _EzI2Cs_bState Def0000
+S EzI2Cs_varPage Def0000
+S EzI2Cs_bRAM_RWoffset Def0001
+S EzI2Cs_bBusy_Flag Def0007
+S EzI2Cs_pRAM_Buf_Addr_LSB Def0004
+S EzI2Cs_pRAM_Buf_Addr_MSB Def0003
+S EzI2Cs_bRAM_RWcntr Def0002
+S EzI2Cs_bRAM_Buf_WSize Def0006
+S _EzI2Cs_bRAM_Buf_Size Def0005
+S _EzI2Cs_varPage Def0000
+S _EzI2Cs_bRAM_RWoffset Def0001
+S _EzI2Cs_bBusy_Flag Def0007
+S _EzI2Cs_pRAM_Buf_Addr_LSB Def0004
+S _EzI2Cs_pRAM_Buf_Addr_MSB Def0003
+S _EzI2Cs_bRAM_RWcntr Def0002
+S EzI2Cs_bState Def0000
+S _EzI2Cs_bRAM_Buf_WSize Def0006
+A UserModules size E3 flags 0
+dbfile lib/ezi2csint.asm
+dbfunc 0 ? 0 I
+dbline C4 0
+dbline C5 1
+dbline 3 2
+dbline 4 4
+dbline 2 6
+dbline 3 8
+dbline 2 9
+dbline 3 B
+dbline 3 C
+dbline D8 F
+dbline 3 11
+dbline DC 13
+dbline DD 16
+dbline DE 19
+dbline DF 1B
+dbline E0 1E
+dbline E1 21
+dbline E5 23
+dbline E6 26
+dbline EA 28
+dbline EC 2A
+dbline ED 2C
+dbline EE 2E
+dbline F1 30
+dbline F2 32
+dbline F3 34
+dbline F4 36
+dbline FA 38
+dbline FB 3A
+dbline FC 3C
+dbline FE 3E
+dbline 100 40
+dbline 118 42
+dbline 119 44
+dbline 11A 46
+dbline 11B 48
+dbline 15 4A
+dbline 11D 4D
+dbline 128 4F
+dbline 129 52
+dbline 12B 54
+dbline 12E 57
+dbline 12F 5A
+dbline 15 5D
+dbline 131 60
+dbline 134 62
+dbline 136 65
+dbline 137 68
+dbline 138 6B
+dbline 139 6E
+dbline 13A 70
+dbline 13B 72
+dbline 13C 73
+dbline 13D 75
+dbline 13E 77
+dbline 15 79
+dbline 142 7C
+dbline 151 7E
+dbline 152 80
+dbline 153 81
+dbline 154 83
+dbline 156 85
+dbline 157 87
+dbline 158 89
+dbline 159 8A
+dbline 15A 8C
+dbline 15B 8E
+dbline 15C 90
+dbline 160 93
+dbline 15 95
+dbline 162 98
+dbline 169 9A
+dbline 16A 9C
+dbline 16B 9E
+dbline 16C A0
+dbline 16F A2
+dbline 170 A4
+dbline 171 A6
+dbline 172 A9
+dbline 173 AC
+dbline 182 AE
+dbline 183 B0
+dbline 184 B2
+dbline 185 B3
+dbline 186 B5
+dbline 188 B7
+dbline 189 B9
+dbline 18A BB
+dbline 18C BC
+dbline 18D BE
+dbline 18E C0
+dbline 18F C3
+dbline 190 C5
+dbline 15 C7
+dbline 1F8 CA
+dbline 15 CC
+dbline 1FC CF
+dbline 209 D1
+dbline 20A D4
+dbline 20B D7
+dbline 2 DA
+dbline 3 DB
+dbline 2 DD
+dbline 3 DE
+dbline 21E E0
+dbline 21F E1
+dbline 221 E2
+S _EzI2Cs_ISR Def0000
+T 00 00 08 10 70 3F 71 80 5D D3 08 5D D0 08 62 D0
+R 00 00 00 02
+T 00 0E 00 00 51 00 03 60 D3 2E 00 00 80 49 D7 08
+R 00 00 00 02 41 02 00 01 01 05 00 01 01 0A 00 01
+T 00 19 A0 09 26 00 00 F0 2E 00 00 00 80 08 49 D7
+R 00 00 00 02 01 05 00 01 01 09 00 01
+T 00 25 20 A0 03 80 A8 51 00 00 21 0E E0 01 80 11
+R 00 00 00 02 01 08 00 01
+T 00 32 80 67 80 79 80 47 80 98 80 96 80 94 80 92
+R 00 00 00 02
+T 00 40 80 99 5D D8 21 FE 39 80 A0 06 62 D7 00 80
+R 00 00 00 02
+T 00 4E 8C 49 D8 01 B0 0F 55 00 07 02 26 00 00 F0
+R 00 00 00 02 01 09 00 01 01 0D 00 01
+T 00 5A 2E 00 00 02 62 D7 10 80 79 55 00 07 01 26
+R 00 00 00 02 01 03 00 01 01 0C 00 01
+T 00 66 00 00 F0 2E 00 00 06 5F 00 02
+R 00 00 00 02 01 02 00 01 01 06 00 01 01 0A 00 01
+T 00 6D 00 01 51 00 04 02 00 02 5C 52 00 60 D8 76
+R 00 00 00 02 01 02 00 01 01 05 00 01 01 08 00 01
+T 00 78 00 02 62 D7 14 80 5D 51 00 05 78 3A 00 02
+R 00 00 00 02 01 02 00 01 01 0A 00 01 01 0E 00 01
+T 00 83 C0 0F 51 00 04 02 00 02 5C 52 00 60 D8 76
+R 00 00 00 02 01 05 00 01 01 08 00 01
+T 00 8F 00 02 2E 00 00 20 60 D8 62 D7 04 80 41 5D
+R 00 00 00 02 01 02 00 01 01 05 00 01
+T 00 9B D8 3A 00 05 D0 2D A0 2B 53 00 02 53 00 01
+R 00 00 00 02 01 04 00 01 01 0B 00 01 01 0E 00 01
+T 00 A6 26 00 00 F0 2E 00 00 04 80 1A 51 00 06 A0
+R 00 00 00 02 01 03 00 01 01 07 00 01 01 0D 00 01
+T 00 B1 1B 78 3A 00 02 C0 16 51 00 04 02 00 02 5C
+R 00 00 00 02 01 05 00 01 01 0A 00 01 01 0D 00 01
+T 00 BC 5D D8 54 00 2E 00 00 10 76 00 02 80 01 62
+R 00 00 00 02 01 07 00 01 01 0B 00 01
+T 00 C8 D7 10 80 0F 62 D7 00 80 0A 26 00 00 F0 2E
+R 00 00 00 02 01 0C 00 01
+T 00 D5 00 00 00 55 00 07 00 18 60 D0 18 60 D3 20
+R 00 00 00 02 01 02 00 01 01 06 00 01
+T 00 E1 18 7E
+R 00 00 00 02

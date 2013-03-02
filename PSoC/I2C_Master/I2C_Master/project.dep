@@ -1,0 +1,36 @@
+# DO NOT DELETE
+./obj/boot.o : \
+   G:/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/include/CY8C27~1/m8c.inc\
+   G:/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/include/CY8C27~1/m8ssc.inc\
+   H:\Hobby\PROGRA~1\PSOCPR~1\I2C_MA~1\I2C_MA~1\lib\GLOBAL~1.INC\
+   H:\Hobby\PROGRA~1\PSOCPR~1\I2C_MA~1\I2C_MA~1\memory.inc
+./obj/main.o :  ./lib/I2CHWC~1.H ./lib/I2CHWM~1.H ./lib/LCD.h\
+   ./lib/PSoCAPI.h ./lib/PSOCGP~1.H ./lib/Timer16.h\
+   G:/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/include/CY8C27~1/m8c.h
+./lib/obj/i2chwcommon.o :  ./lib/I2CHWC~1.INC\
+   G:/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/include/CY8C27~1/m8c.inc\
+   H:\Hobby\PROGRA~1\PSOCPR~1\I2C_MA~1\I2C_MA~1\memory.inc
+./lib/obj/i2chwint.o :  ./lib/I2CHWC~1.INC ./lib/I2CHWM~1.INC\
+   G:/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/include/CY8C27~1/m8c.inc\
+   H:\Hobby\PROGRA~1\PSOCPR~1\I2C_MA~1\I2C_MA~1\memory.inc
+./lib/obj/i2chwmstr.o :  ./lib/I2CHWC~1.INC ./lib/I2CHWM~1.INC\
+   G:/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/include/CY8C27~1/m8c.inc\
+   H:\Hobby\PROGRA~1\PSOCPR~1\I2C_MA~1\I2C_MA~1\memory.inc
+./lib/obj/i2chwrsrcinits.o :  ./lib/I2CHWC~1.INC ./lib/I2CHWM~1.INC\
+   ./lib/LCD.inc ./lib/PSoCAPI.inc ./lib/PSOCGP~1.INC ./lib/Timer16.inc\
+   G:/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/include/CY8C27~1/m8c.inc\
+   H:\Hobby\PROGRA~1\PSOCPR~1\I2C_MA~1\I2C_MA~1\memory.inc
+./lib/obj/lcd.o :  ./lib/LCD.inc\
+   G:/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/include/CY8C27~1/m8c.inc\
+   H:\Hobby\PROGRA~1\PSOCPR~1\I2C_MA~1\I2C_MA~1\memory.inc
+./lib/obj/psocconfig.o :  ./lib/GLOBAL~1.INC\
+   G:/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/include/CY8C27~1/m8c.inc\
+   H:\Hobby\PROGRA~1\PSOCPR~1\I2C_MA~1\I2C_MA~1\memory.inc
+./lib/obj/psocconfigtbl.o : \
+   G:/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/include/CY8C27~1/m8c.inc
+./lib/obj/timer16.o :  ./lib/Timer16.inc\
+   G:/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/include/CY8C27~1/m8c.inc\
+   H:\Hobby\PROGRA~1\PSOCPR~1\I2C_MA~1\I2C_MA~1\memory.inc
+./lib/obj/timer16int.o :  ./lib/Timer16.inc\
+   G:/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/include/CY8C27~1/m8c.inc\
+   H:\Hobby\PROGRA~1\PSOCPR~1\I2C_MA~1\I2C_MA~1\memory.inc

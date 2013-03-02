@@ -1,0 +1,20 @@
+Starting MAKE...
+creating project.mk -- no changes
+./boot.asm
+Linking..
+LMM info: area 'InterruptRAM' uses 29 bytes in SRAM bank 0
+LMM info: area 'ram2' item of 17 bytes allocated in SRAM page 0
+LMM info: area 'ram1' item of 16 bytes allocated in SRAM page 0
+LMM info: area 'bss' item of 8 bytes allocated in SRAM page 0
+LMM info: area 'virtual_registers' uses 2 bytes in SRAM page 0
+LMM info: area 'data' item of 1 bytes allocated in SRAM page 0
+idata dump at output/CapSense.idata
+  ROM 25% full. 1998 out of 8192 bytes used (does not include absolute areas).
+  RAM 29% full. 73 bytes used (does not include stack usage).
+Built with ICCM8C STD V7.05.00
+ 
+CapSense - 0 error(s) 0 warning(s) 23:41:19
+
+Performing Project Clean...
+done
+
