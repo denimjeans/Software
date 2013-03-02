@@ -1,0 +1,7 @@
+xst -intstyle ise -ifn "G:/Dropbox/Hobby/Programme/FPGA/1-Bit Magnitude Komparator/src/Ein_Bit_Magnitude_Komparator/Magnitude_Komparator.xst" -ofn "G:/Dropbox/Hobby/Programme/FPGA/1-Bit Magnitude Komparator/src/Ein_Bit_Magnitude_Komparator/Magnitude_Komparator.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Magnitude_Komparator.ucf -p xc3s250e-vq100-4 "Magnitude_Komparator.ngc" Magnitude_Komparator.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o Magnitude_Komparator_map.ncd Magnitude_Komparator.ngd Magnitude_Komparator.pcf 
+par -w -intstyle ise -ol high -t 1 Magnitude_Komparator_map.ncd Magnitude_Komparator.ncd Magnitude_Komparator.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Magnitude_Komparator.twx Magnitude_Komparator.ncd -o Magnitude_Komparator.twr Magnitude_Komparator.pcf -ucf Magnitude_Komparator.ucf 
+bitgen -intstyle ise -f Magnitude_Komparator.ut Magnitude_Komparator.ncd 
+xst -intstyle ise -ifn "G:/Dropbox/Hobby/Programme/FPGA/1-Bit Magnitude Komparator/src/Ein_Bit_Magnitude_Komparator/Magnitude_Komparator.xst" -ofn "G:/Dropbox/Hobby/Programme/FPGA/1-Bit Magnitude Komparator/src/Ein_Bit_Magnitude_Komparator/Magnitude_Komparator.syr" 

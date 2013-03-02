@@ -1,0 +1,15 @@
+V3 8
+FL G:/Dropbox/Hobby/Programme/FPGA/Zwei_Bit_Komparator/Ein_Bit_Komparator.vhd 2013/02/25.23:11:56 P.49d
+EN work/Ein_Bit_Komparator 1362079227 \
+      FL G:/Dropbox/Hobby/Programme/FPGA/Zwei_Bit_Komparator/Ein_Bit_Komparator.vhd \
+      PB ieee/std_logic_1164 1354696159
+AR work/Ein_Bit_Komparator/Ein_Bit_Komparator_Arch 1362079228 \
+      FL G:/Dropbox/Hobby/Programme/FPGA/Zwei_Bit_Komparator/Ein_Bit_Komparator.vhd \
+      EN work/Ein_Bit_Komparator 1362079227
+FL G:/Dropbox/Hobby/Programme/FPGA/Zwei_Bit_Komparator/Komparator.vhd 2013/02/28.20:06:25 P.49d
+EN work/Komparator 1362079229 \
+      FL G:/Dropbox/Hobby/Programme/FPGA/Zwei_Bit_Komparator/Komparator.vhd \
+      PB ieee/std_logic_1164 1354696159
+AR work/Komparator/Komparator_Arch 1362079230 \
+      FL G:/Dropbox/Hobby/Programme/FPGA/Zwei_Bit_Komparator/Komparator.vhd \
+      EN work/Komparator 1362079229 CP Ein_Bit_Komparator

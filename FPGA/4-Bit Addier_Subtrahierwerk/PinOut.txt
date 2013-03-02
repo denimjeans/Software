@@ -1,0 +1,19 @@
+CarryOut	P90
+Control		P66
+
+B3		P83
+B2		P84
+B1		P85
+B0		P86
+
+A3		P67
+A2		P68
+A1		P70
+A0		P71
+
+Q3		P03
+Q2		P02
+Q1		P95	
+Q0		P94
+
+

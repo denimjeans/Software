@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=G:\Dropbox\Hobby\Programme\FPGA\1-Bit Magnitude Komparator\src\Ein_Bit_Magnitude_Komparator\Magnitude_Komparator.ncd
+OUTFILE=G:\Dropbox\Hobby\Programme\FPGA\1-Bit Magnitude Komparator\src\Ein_Bit_Magnitude_Komparator\Magnitude_Komparator.bit
+FAMILY=Spartan3E
+PART=xc3s250e-4vq100
+WORKINGDIR=G:\Dropbox\Hobby\Programme\FPGA\1-Bit Magnitude Komparator\src\Ein_Bit_Magnitude_Komparator
+LICENSE=WebPack
+USER_INFO=210727995_0_0_823

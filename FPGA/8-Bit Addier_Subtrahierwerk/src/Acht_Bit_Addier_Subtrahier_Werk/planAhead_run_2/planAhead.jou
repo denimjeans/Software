@@ -1,0 +1,70 @@
+#-----------------------------------------------------------
+# PlanAhead v14.4 (64-bit)
+# Build 222254 by xbuild on Tue Dec 18 05:21:09 MST 2012
+# Start of session at: Fri Mar 01 18:24:34 2013
+# Process ID: 5848
+# Log file: G:/Dropbox/Hobby/Programme/FPGA/Acht_Bit_Addier_Subtrahier_Werk/planAhead_run_2/planAhead.log
+# Journal file: G:/Dropbox/Hobby/Programme/FPGA/Acht_Bit_Addier_Subtrahier_Werk/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source G:/Dropbox/Hobby/Programme/FPGA/Acht_Bit_Addier_Subtrahier_Werk/pa.fromNetlist.tcl
+set_property package_pin "" [get_ports [list  {B[7]}]]
+set_property package_pin "" [get_ports [list  {B[6]}]]
+set_property package_pin "" [get_ports [list  {B[5]}]]
+set_property package_pin "" [get_ports [list  {B[4]}]]
+set_property package_pin "" [get_ports [list  {B[3]}]]
+set_property package_pin "" [get_ports [list  {B[2]}]]
+set_property package_pin "" [get_ports [list  {B[1]}]]
+startgroup
+set_property package_pin P86 [get_ports {B[0]}]
+endgroup
+startgroup
+set_property package_pin P85 [get_ports {B[1]}]
+endgroup
+startgroup
+set_property package_pin P84 [get_ports {B[2]}]
+endgroup
+startgroup
+set_property package_pin P83 [get_ports {B[3]}]
+endgroup
+startgroup
+set_property package_pin P71 [get_ports {B[4]}]
+endgroup
+startgroup
+set_property package_pin P70 [get_ports {B[5]}]
+endgroup
+startgroup
+set_property package_pin P68 [get_ports {B[6]}]
+endgroup
+startgroup
+set_property package_pin P67 [get_ports {B[7]}]
+endgroup
+set_property package_pin "" [get_ports [list  {A[7]}]]
+set_property package_pin "" [get_ports [list  {A[6]}]]
+set_property package_pin "" [get_ports [list  {A[5]}]]
+set_property package_pin "" [get_ports [list  {A[4]}]]
+startgroup
+set_property package_pin P66 [get_ports {A[0]}]
+endgroup
+startgroup
+set_property package_pin P65 [get_ports {A[1]}]
+endgroup
+startgroup
+set_property package_pin P62 [get_ports {A[2]}]
+endgroup
+startgroup
+set_property package_pin P61 [get_ports {A[3]}]
+endgroup
+startgroup
+set_property package_pin P60 [get_ports {A[4]}]
+endgroup
+startgroup
+set_property package_pin P58 [get_ports {A[5]}]
+endgroup
+startgroup
+set_property package_pin P57 [get_ports {A[6]}]
+endgroup
+startgroup
+set_property package_pin P54 [get_ports {A[7]}]
+endgroup
+save_constraints

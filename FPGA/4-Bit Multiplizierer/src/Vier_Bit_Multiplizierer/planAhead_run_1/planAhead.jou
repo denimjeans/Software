@@ -1,0 +1,65 @@
+#-----------------------------------------------------------
+# PlanAhead v14.4 (64-bit)
+# Build 222254 by xbuild on Tue Dec 18 05:21:09 MST 2012
+# Start of session at: Sat Mar 02 16:13:06 2013
+# Process ID: 7292
+# Log file: G:/Dropbox/Hobby/Programme/FPGA/Vier_Bit_Multiplizierer/planAhead_run_1/planAhead.log
+# Journal file: G:/Dropbox/Hobby/Programme/FPGA/Vier_Bit_Multiplizierer/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source G:/Dropbox/Hobby/Programme/FPGA/Vier_Bit_Multiplizierer/pa.fromNetlist.tcl
+startgroup
+set_property package_pin P94 [get_ports {Q[0]}]
+endgroup
+startgroup
+set_property package_pin P95 [get_ports {Q[1]}]
+endgroup
+startgroup
+set_property package_pin P2 [get_ports {Q[2]}]
+endgroup
+startgroup
+set_property package_pin P3 [get_ports {Q[3]}]
+endgroup
+startgroup
+set_property package_pin P4 [get_ports {Q[4]}]
+endgroup
+startgroup
+set_property package_pin P5 [get_ports {Q[5]}]
+endgroup
+startgroup
+set_property package_pin P9 [get_ports {Q[6]}]
+endgroup
+startgroup
+set_property package_pin P10 [get_ports {Q[7]}]
+endgroup
+startgroup
+set_property package_pin P86 [get_ports {B[0]}]
+endgroup
+startgroup
+set_property package_pin P85 [get_ports {B[1]}]
+endgroup
+startgroup
+set_property package_pin P84 [get_ports {B[2]}]
+endgroup
+startgroup
+set_property package_pin P83 [get_ports {B[3]}]
+endgroup
+startgroup
+set_property package_pin P67 [get_ports {A[3]}]
+endgroup
+startgroup
+set_property package_pin P68 [get_ports {A[2]}]
+endgroup
+startgroup
+set_property package_pin P70 [get_ports {A[1]}]
+endgroup
+startgroup
+set_property package_pin P71 [get_ports {A[0]}]
+endgroup
+set_property iostandard LVCMOS25 [get_ports [list {A[3]} {A[2]} {A[1]} {A[0]}]]
+set_property iostandard LVCMOS33 [get_ports [list {A[3]} {A[2]} {A[1]} {A[0]}]]
+set_property iostandard LVCMOS33 [get_ports [list {B[3]} {B[2]} {B[1]} {B[0]}]]
+set_property iostandard LVCMOS33 [get_ports [list {Q[7]} {Q[6]} {Q[5]} {Q[4]} {Q[3]} {Q[2]} {Q[1]} {Q[0]}]]
+set_property pulltype PULLDOWN [get_ports [list {A[3]} {A[2]} {A[1]} {A[0]}]]
+set_property pulltype PULLDOWN [get_ports [list {B[3]} {B[2]} {B[1]} {B[0]}]]
+save_constraints

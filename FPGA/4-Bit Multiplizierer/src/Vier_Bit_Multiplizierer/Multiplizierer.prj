@@ -1,0 +1,3 @@
+vhdl work "../Ripple_Vier_Bit_Addierer/Addierer.vhd"
+vhdl work "../Ripple_Vier_Bit_Addierer/Vier_Bit_Addierer.vhd"
+vhdl work "Multipliziere_Arch.vhd"

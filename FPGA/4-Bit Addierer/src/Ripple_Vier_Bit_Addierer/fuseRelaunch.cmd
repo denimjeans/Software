@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "G:/Dropbox/Hobby/Programme/FPGA/Vier_Bit_Addierer/Vier_Bit_Addierer_isim_beh.exe" -prj "G:/Dropbox/Hobby/Programme/FPGA/Vier_Bit_Addierer/Vier_Bit_Addierer_beh.prj" "work.Vier_Bit_Addierer" 

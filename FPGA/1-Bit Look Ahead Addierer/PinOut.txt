@@ -1,0 +1,7 @@
+Out		P94
+Propagate 	P90
+Generate 	P91
+
+CarryIn		P84
+B		P86
+A		P85

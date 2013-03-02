@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "G:/Dropbox/Hobby/Programme/FPGA/Look_Ahead_Adder/Look_Ahead_Adder.xst" -ofn "G:/Dropbox/Hobby/Programme/FPGA/Look_Ahead_Adder/Look_Ahead_Adder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Look_Ahead_Adder.ucf -p xc3s250e-vq100-4 Look_Ahead_Adder.ngc Look_Ahead_Adder.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o Look_Ahead_Adder_map.ncd Look_Ahead_Adder.ngd Look_Ahead_Adder.pcf 
+par -w -intstyle ise -ol high -t 1 Look_Ahead_Adder_map.ncd Look_Ahead_Adder.ncd Look_Ahead_Adder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Look_Ahead_Adder.twx Look_Ahead_Adder.ncd -o Look_Ahead_Adder.twr Look_Ahead_Adder.pcf -ucf Look_Ahead_Adder.ucf 
+bitgen -intstyle ise -f Look_Ahead_Adder.ut Look_Ahead_Adder.ncd 

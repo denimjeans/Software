@@ -1,0 +1,15 @@
+V3 7
+FL "G:/Dropbox/Hobby/Programme/FPGA/1-Bit Magnitude Komparator/src/Ein_Bit_Magnitude_Komparator/Magnitude_Komparator.vhd" 2013/03/02.18:36:44 P.49d
+EN work/Magnitude_Komparator 1362245841 \
+      FL "G:/Dropbox/Hobby/Programme/FPGA/1-Bit Magnitude Komparator/src/Ein_Bit_Magnitude_Komparator/Magnitude_Komparator.vhd" \
+      PB ieee/std_logic_1164 1354696159
+AR work/Magnitude_Komparator/Magnitude_Komparator_Arch 1362245842 \
+      FL "G:/Dropbox/Hobby/Programme/FPGA/1-Bit Magnitude Komparator/src/Ein_Bit_Magnitude_Komparator/Magnitude_Komparator.vhd" \
+      EN work/Magnitude_Komparator 1362245841
+FL "G:/Dropbox/Hobby/Programme/FPGA/4-Bit Magnitude Komparator/src/Vier_Bit_Magnitude_Komparator/Vier_Bit_Magnitude_Komparator.vhd" 2013/03/02.18:37:16 P.49d
+EN work/Vier_Bit_Magnitude_Komparator 1362245843 \
+      FL "G:/Dropbox/Hobby/Programme/FPGA/4-Bit Magnitude Komparator/src/Vier_Bit_Magnitude_Komparator/Vier_Bit_Magnitude_Komparator.vhd" \
+      PB ieee/std_logic_1164 1354696159
+AR work/Vier_Bit_Magnitude_Komparator/Vier_Bit_Magnitude_Komparator_Arch 1362245844 \
+      FL "G:/Dropbox/Hobby/Programme/FPGA/4-Bit Magnitude Komparator/src/Vier_Bit_Magnitude_Komparator/Vier_Bit_Magnitude_Komparator.vhd" \
+      EN work/Vier_Bit_Magnitude_Komparator 1362245843 CP Magnitude_Komparator

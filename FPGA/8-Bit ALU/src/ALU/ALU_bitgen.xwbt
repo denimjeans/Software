@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=G:\Dropbox\Hobby\Programme\FPGA\8-Bit ALU\src\ALU\ALU.ncd
+OUTFILE=G:\Dropbox\Hobby\Programme\FPGA\8-Bit ALU\src\ALU\ALU.bit
+FAMILY=Spartan3E
+PART=xc3s250e-4vq100
+WORKINGDIR=G:\Dropbox\Hobby\Programme\FPGA\8-Bit ALU\src\ALU
+LICENSE=WebPack
+USER_INFO=210727995_0_0_823

@@ -1,0 +1,440 @@
+Release 14.4 - xst P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: ALU.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "ALU.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "ALU"
+Output Format                      : NGC
+Target Device                      : xc3s250e-4-vq100
+
+---- Source Options
+Top Module Name                    : ALU
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "G:/Dropbox/Hobby/Programme/FPGA/8-Bit ALU/src/ALU/Und.vhd" in Library work.
+Architecture behavioral of Entity und is up to date.
+Compiling vhdl file "G:/Dropbox/Hobby/Programme/FPGA/8-Bit ALU/src/ALU/EXOR.vhd" in Library work.
+Architecture exor_arch of Entity exor is up to date.
+Compiling vhdl file "G:/Dropbox/Hobby/Programme/FPGA/8-Bit ALU/src/ALU/Addierer.vhd" in Library work.
+Architecture addierer_arch of Entity addierer is up to date.
+Compiling vhdl file "G:/Dropbox/Hobby/Programme/FPGA/8-Bit ALU/src/ALU/Oder.vhd" in Library work.
+Architecture oder_arch of Entity oder is up to date.
+Compiling vhdl file "G:/Dropbox/Hobby/Programme/FPGA/8-Bit ALU/src/ALU/Acht_Bit_Und.vhd" in Library work.
+Architecture acht_bit_und of Entity acht_bit_und is up to date.
+Compiling vhdl file "G:/Dropbox/Hobby/Programme/FPGA/8-Bit ALU/src/ALU/Acht_Bit_XOR.vhd" in Library work.
+Architecture acht_bit_xor_arch of Entity acht_bit_xor is up to date.
+Compiling vhdl file "G:/Dropbox/Hobby/Programme/FPGA/8-Bit ALU/src/ALU/Eingang_A.vhd" in Library work.
+Architecture eingang_a_arch of Entity eingang_a is up to date.
+Compiling vhdl file "G:/Dropbox/Hobby/Programme/FPGA/8-Bit ALU/src/ALU/Eingang_B.vhd" in Library work.
+Architecture eingang_b_arch of Entity eingang_b is up to date.
+Compiling vhdl file "G:/Dropbox/Hobby/Programme/FPGA/8-Bit ALU/src/ALU/Acht_Bit_Oder.vhd" in Library work.
+Architecture acht_bit_oder_arch of Entity acht_bit_oder is up to date.
+Compiling vhdl file "G:/Dropbox/Hobby/Programme/FPGA/8-Bit ALU/src/ALU/Acht_Bit_Addierer.vhd" in Library work.
+Architecture acht_bit_addierer_arch of Entity acht_bit_addierer is up to date.
+Compiling vhdl file "G:/Dropbox/Hobby/Programme/FPGA/8-Bit ALU/src/ALU/Acht_Bit_Multiplexer.vhd" in Library work.
+Architecture acht_bit_multiplexer_arch of Entity acht_bit_multiplexer is up to date.
+Compiling vhdl file "G:/Dropbox/Hobby/Programme/FPGA/8-Bit ALU/src/ALU/ALU.vhd" in Library work.
+Entity <alu> compiled.
+Entity <alu> (Architecture <alu_arch>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <ALU> in library <work> (architecture <alu_arch>).
+
+Analyzing hierarchy for entity <Eingang_A> in library <work> (architecture <eingang_a_arch>).
+
+Analyzing hierarchy for entity <Eingang_B> in library <work> (architecture <eingang_b_arch>).
+
+Analyzing hierarchy for entity <Acht_Bit_Und> in library <work> (architecture <acht_bit_und>).
+
+Analyzing hierarchy for entity <Acht_Bit_Oder> in library <work> (architecture <acht_bit_oder_arch>).
+
+Analyzing hierarchy for entity <Acht_Bit_XOR> in library <work> (architecture <acht_bit_xor_arch>).
+
+Analyzing hierarchy for entity <Acht_Bit_Addierer> in library <work> (architecture <acht_bit_addierer_arch>).
+
+Analyzing hierarchy for entity <Acht_Bit_Multiplexer> in library <work> (architecture <acht_bit_multiplexer_arch>).
+
+Analyzing hierarchy for entity <Und> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Oder> in library <work> (architecture <oder_arch>).
+
+Analyzing hierarchy for entity <EXOR> in library <work> (architecture <exor_arch>).
+
+Analyzing hierarchy for entity <Addierer> in library <work> (architecture <addierer_arch>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <ALU> in library <work> (Architecture <alu_arch>).
+Entity <ALU> analyzed. Unit <ALU> generated.
+
+Analyzing Entity <Eingang_A> in library <work> (Architecture <eingang_a_arch>).
+Entity <Eingang_A> analyzed. Unit <Eingang_A> generated.
+
+Analyzing Entity <Eingang_B> in library <work> (Architecture <eingang_b_arch>).
+Entity <Eingang_B> analyzed. Unit <Eingang_B> generated.
+
+Analyzing Entity <Acht_Bit_Und> in library <work> (Architecture <acht_bit_und>).
+Entity <Acht_Bit_Und> analyzed. Unit <Acht_Bit_Und> generated.
+
+Analyzing Entity <Und> in library <work> (Architecture <behavioral>).
+Entity <Und> analyzed. Unit <Und> generated.
+
+Analyzing Entity <Acht_Bit_Oder> in library <work> (Architecture <acht_bit_oder_arch>).
+Entity <Acht_Bit_Oder> analyzed. Unit <Acht_Bit_Oder> generated.
+
+Analyzing Entity <Oder> in library <work> (Architecture <oder_arch>).
+Entity <Oder> analyzed. Unit <Oder> generated.
+
+Analyzing Entity <Acht_Bit_XOR> in library <work> (Architecture <acht_bit_xor_arch>).
+Entity <Acht_Bit_XOR> analyzed. Unit <Acht_Bit_XOR> generated.
+
+Analyzing Entity <EXOR> in library <work> (Architecture <exor_arch>).
+Entity <EXOR> analyzed. Unit <EXOR> generated.
+
+Analyzing Entity <Acht_Bit_Addierer> in library <work> (Architecture <acht_bit_addierer_arch>).
+Entity <Acht_Bit_Addierer> analyzed. Unit <Acht_Bit_Addierer> generated.
+
+Analyzing Entity <Addierer> in library <work> (Architecture <addierer_arch>).
+Entity <Addierer> analyzed. Unit <Addierer> generated.
+
+Analyzing Entity <Acht_Bit_Multiplexer> in library <work> (Architecture <acht_bit_multiplexer_arch>).
+INFO:Xst:1561 - "G:/Dropbox/Hobby/Programme/FPGA/8-Bit ALU/src/ALU/Acht_Bit_Multiplexer.vhd" line 29: Mux is complete : default of case is discarded
+Entity <Acht_Bit_Multiplexer> analyzed. Unit <Acht_Bit_Multiplexer> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Acht_Bit_Multiplexer>.
+    Related source file is "G:/Dropbox/Hobby/Programme/FPGA/8-Bit ALU/src/ALU/Acht_Bit_Multiplexer.vhd".
+    Found 8-bit 4-to-1 multiplexer for signal <O>.
+    Summary:
+	inferred   8 Multiplexer(s).
+Unit <Acht_Bit_Multiplexer> synthesized.
+
+
+Synthesizing Unit <Und>.
+    Related source file is "G:/Dropbox/Hobby/Programme/FPGA/8-Bit ALU/src/ALU/Und.vhd".
+Unit <Und> synthesized.
+
+
+Synthesizing Unit <Oder>.
+    Related source file is "G:/Dropbox/Hobby/Programme/FPGA/8-Bit ALU/src/ALU/Oder.vhd".
+Unit <Oder> synthesized.
+
+
+Synthesizing Unit <EXOR>.
+    Related source file is "G:/Dropbox/Hobby/Programme/FPGA/8-Bit ALU/src/ALU/EXOR.vhd".
+    Found 1-bit xor2 for signal <Q>.
+Unit <EXOR> synthesized.
+
+
+Synthesizing Unit <Addierer>.
+    Related source file is "G:/Dropbox/Hobby/Programme/FPGA/8-Bit ALU/src/ALU/Addierer.vhd".
+Unit <Addierer> synthesized.
+
+
+Synthesizing Unit <Acht_Bit_Und>.
+    Related source file is "G:/Dropbox/Hobby/Programme/FPGA/8-Bit ALU/src/ALU/Acht_Bit_Und.vhd".
+Unit <Acht_Bit_Und> synthesized.
+
+
+Synthesizing Unit <Acht_Bit_Oder>.
+    Related source file is "G:/Dropbox/Hobby/Programme/FPGA/8-Bit ALU/src/ALU/Acht_Bit_Oder.vhd".
+Unit <Acht_Bit_Oder> synthesized.
+
+
+Synthesizing Unit <Acht_Bit_XOR>.
+    Related source file is "G:/Dropbox/Hobby/Programme/FPGA/8-Bit ALU/src/ALU/Acht_Bit_XOR.vhd".
+Unit <Acht_Bit_XOR> synthesized.
+
+
+Synthesizing Unit <Acht_Bit_Addierer>.
+    Related source file is "G:/Dropbox/Hobby/Programme/FPGA/8-Bit ALU/src/ALU/Acht_Bit_Addierer.vhd".
+Unit <Acht_Bit_Addierer> synthesized.
+
+
+Synthesizing Unit <Eingang_A>.
+    Related source file is "G:/Dropbox/Hobby/Programme/FPGA/8-Bit ALU/src/ALU/Eingang_A.vhd".
+Unit <Eingang_A> synthesized.
+
+
+Synthesizing Unit <Eingang_B>.
+    Related source file is "G:/Dropbox/Hobby/Programme/FPGA/8-Bit ALU/src/ALU/Eingang_B.vhd".
+Unit <Eingang_B> synthesized.
+
+
+Synthesizing Unit <ALU>.
+    Related source file is "G:/Dropbox/Hobby/Programme/FPGA/8-Bit ALU/src/ALU/ALU.vhd".
+Unit <ALU> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multiplexers                                         : 1
+ 8-bit 4-to-1 multiplexer                              : 1
+# Xors                                                 : 16
+ 1-bit xor2                                            : 16
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multiplexers                                         : 1
+ 8-bit 4-to-1 multiplexer                              : 1
+# Xors                                                 : 16
+ 1-bit xor2                                            : 16
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <ALU> ...
+
+Optimizing unit <Acht_Bit_Addierer> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block ALU, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : ALU.ngr
+Top Level Output File Name         : ALU
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 29
+
+Cell Usage :
+# BELS                             : 47
+#      LUT2                        : 15
+#      LUT4                        : 24
+#      MUXF5                       : 8
+# IO Buffers                       : 29
+#      IBUF                        : 20
+#      OBUF                        : 9
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s250evq100-4 
+
+ Number of Slices:                       21  out of   2448     0%  
+ Number of 4 input LUTs:                 39  out of   4896     0%  
+ Number of IOs:                          29
+ Number of bonded IOBs:                  29  out of     66    43%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 16.251ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 232 / 9
+-------------------------------------------------------------------------
+Delay:               16.251ns (Levels of Logic = 11)
+  Source:            F3 (PAD)
+  Destination:       Q<7> (PAD)
+
+  Data Path: F3 to Q<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            17   1.218   1.226  F3_IBUF (F3_IBUF)
+     LUT2:I0->O            2   0.704   0.526  EA/X1/X2/Mxor_Q_Result1 (QA<1>)
+     LUT4:I1->O            2   0.704   0.622  A1/A2/CarryOut1 (A1/C<1>)
+     LUT4:I0->O            2   0.704   0.622  A1/A3/CarryOut1 (A1/C<2>)
+     LUT4:I0->O            2   0.704   0.622  A1/A4/CarryOut1 (A1/C<3>)
+     LUT4:I0->O            2   0.704   0.622  A1/A5/CarryOut1 (A1/C<4>)
+     LUT4:I0->O            2   0.704   0.622  A1/A6/CarryOut1 (A1/C<5>)
+     LUT4:I0->O            2   0.704   0.526  A1/A7/CarryOut1 (A1/C<6>)
+     LUT4:I1->O            1   0.704   0.000  M1/Mmux_O_37 (M1/Mmux_O_37)
+     MUXF5:I1->O           1   0.321   0.420  M1/Mmux_O_2_f5_6 (Q_7_OBUF)
+     OBUF:I->O                 3.272          Q_7_OBUF (Q<7>)
+    ----------------------------------------
+    Total                     16.251ns (10.443ns logic, 5.808ns route)
+                                       (64.3% logic, 35.7% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.38 secs
+ 
+--> 
+
+Total memory usage is 258972 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

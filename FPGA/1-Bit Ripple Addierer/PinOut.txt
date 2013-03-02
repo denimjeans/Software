@@ -1,0 +1,6 @@
+Out		P94
+CarryOut 	P90
+
+CarryIn		P84
+A		P85
+B		P86

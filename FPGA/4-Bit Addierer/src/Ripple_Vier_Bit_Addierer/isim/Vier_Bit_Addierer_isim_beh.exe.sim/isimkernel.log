@@ -1,0 +1,28 @@
+Command line:
+   Vier_Bit_Addierer_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  57336
+
+Fri Mar 01 01:03:38 2013
+
+
+ Elaboration Time: 0.062401 sec
+
+ Current Memory Usage: 503.489 Meg
+
+ Total Signals          : 81
+ Total Nets             : 71
+ Total Signal Drivers   : 58
+ Total Blocks           : 8
+ Total Primitive Blocks : 7
+ Total Processes        : 58
+ Total Traceable Variables  : 10
+ Total Scalar Nets and Variables : 449
+
+ Total Simulation Time: 0.468003 sec
+
+ Current Memory Usage: 503.489 Meg
+
+Fri Mar 01 01:16:32 2013
+

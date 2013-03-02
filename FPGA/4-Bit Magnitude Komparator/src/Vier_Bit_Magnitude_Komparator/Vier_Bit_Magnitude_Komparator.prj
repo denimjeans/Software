@@ -1,0 +1,2 @@
+vhdl work "../../../1-Bit Magnitude Komparator/src/Ein_Bit_Magnitude_Komparator/Magnitude_Komparator.vhd"
+vhdl work "Vier_Bit_Magnitude_Komparator.vhd"

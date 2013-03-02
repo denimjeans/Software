@@ -1,0 +1,181 @@
+--------------------------------------------------------------------------------
+Release 14.4 Trace  (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+G:\Xilinx\14.4\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 4
+-n 3 -fastpaths -xml ALU.twx ALU.ncd -o ALU.twr ALU.pcf -ucf ALU.ucf
+
+Design file:              ALU.ncd
+Physical constraint file: ALU.pcf
+Device,package,speed:     xc3s250e,vq100,-4 (PRODUCTION 1.27 2012-12-04)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+A<0>           |Carryflag      |   16.554|
+A<0>           |Q<0>           |    8.967|
+A<0>           |Q<1>           |    9.904|
+A<0>           |Q<2>           |   12.134|
+A<0>           |Q<3>           |   13.691|
+A<0>           |Q<4>           |   14.509|
+A<0>           |Q<5>           |   16.500|
+A<0>           |Q<6>           |   15.993|
+A<0>           |Q<7>           |   17.204|
+A<1>           |Carryflag      |   16.941|
+A<1>           |Q<1>           |   10.349|
+A<1>           |Q<2>           |   12.521|
+A<1>           |Q<3>           |   14.078|
+A<1>           |Q<4>           |   14.896|
+A<1>           |Q<5>           |   16.887|
+A<1>           |Q<6>           |   16.380|
+A<1>           |Q<7>           |   17.591|
+A<2>           |Carryflag      |   16.389|
+A<2>           |Q<2>           |   11.758|
+A<2>           |Q<3>           |   13.526|
+A<2>           |Q<4>           |   14.344|
+A<2>           |Q<5>           |   16.335|
+A<2>           |Q<6>           |   15.828|
+A<2>           |Q<7>           |   17.039|
+A<3>           |Carryflag      |   13.895|
+A<3>           |Q<3>           |   11.543|
+A<3>           |Q<4>           |   11.850|
+A<3>           |Q<5>           |   13.841|
+A<3>           |Q<6>           |   13.334|
+A<3>           |Q<7>           |   14.545|
+A<4>           |Carryflag      |   14.145|
+A<4>           |Q<4>           |   11.192|
+A<4>           |Q<5>           |   14.091|
+A<4>           |Q<6>           |   13.584|
+A<4>           |Q<7>           |   14.795|
+A<5>           |Carryflag      |   11.622|
+A<5>           |Q<5>           |   11.810|
+A<5>           |Q<6>           |   11.061|
+A<5>           |Q<7>           |   12.272|
+A<6>           |Carryflag      |   11.153|
+A<6>           |Q<6>           |   10.465|
+A<6>           |Q<7>           |   11.803|
+A<7>           |Carryflag      |    9.773|
+A<7>           |Q<7>           |   10.898|
+B<0>           |Carryflag      |   15.289|
+B<0>           |Q<0>           |    8.639|
+B<0>           |Q<1>           |    8.639|
+B<0>           |Q<2>           |   10.869|
+B<0>           |Q<3>           |   12.426|
+B<0>           |Q<4>           |   13.244|
+B<0>           |Q<5>           |   15.235|
+B<0>           |Q<6>           |   14.728|
+B<0>           |Q<7>           |   15.939|
+B<1>           |Carryflag      |   14.427|
+B<1>           |Q<1>           |    8.677|
+B<1>           |Q<2>           |   10.007|
+B<1>           |Q<3>           |   11.564|
+B<1>           |Q<4>           |   12.382|
+B<1>           |Q<5>           |   14.373|
+B<1>           |Q<6>           |   13.866|
+B<1>           |Q<7>           |   15.077|
+B<2>           |Carryflag      |   14.161|
+B<2>           |Q<2>           |   10.165|
+B<2>           |Q<3>           |   11.298|
+B<2>           |Q<4>           |   12.116|
+B<2>           |Q<5>           |   14.107|
+B<2>           |Q<6>           |   13.600|
+B<2>           |Q<7>           |   14.811|
+B<3>           |Carryflag      |   12.918|
+B<3>           |Q<3>           |   10.879|
+B<3>           |Q<4>           |   10.873|
+B<3>           |Q<5>           |   12.864|
+B<3>           |Q<6>           |   12.357|
+B<3>           |Q<7>           |   13.568|
+B<4>           |Carryflag      |   12.277|
+B<4>           |Q<4>           |   10.405|
+B<4>           |Q<5>           |   12.223|
+B<4>           |Q<6>           |   11.716|
+B<4>           |Q<7>           |   12.927|
+B<5>           |Carryflag      |   10.083|
+B<5>           |Q<5>           |   11.648|
+B<5>           |Q<6>           |    9.522|
+B<5>           |Q<7>           |   10.733|
+B<6>           |Carryflag      |    9.431|
+B<6>           |Q<6>           |    9.283|
+B<6>           |Q<7>           |   10.081|
+B<7>           |Carryflag      |    7.907|
+B<7>           |Q<7>           |    9.778|
+F0             |Q<0>           |    9.422|
+F0             |Q<1>           |    9.341|
+F0             |Q<2>           |    9.884|
+F0             |Q<3>           |   10.749|
+F0             |Q<4>           |   10.078|
+F0             |Q<5>           |   11.158|
+F0             |Q<6>           |    9.715|
+F0             |Q<7>           |   10.001|
+F1             |Q<0>           |    8.953|
+F1             |Q<1>           |    8.834|
+F1             |Q<2>           |   10.083|
+F1             |Q<3>           |   10.743|
+F1             |Q<4>           |    9.968|
+F1             |Q<5>           |   11.690|
+F1             |Q<6>           |   10.189|
+F1             |Q<7>           |   10.681|
+F2             |Carryflag      |   16.512|
+F2             |Q<0>           |    9.831|
+F2             |Q<1>           |   10.169|
+F2             |Q<2>           |   12.092|
+F2             |Q<3>           |   13.649|
+F2             |Q<4>           |   14.467|
+F2             |Q<5>           |   16.458|
+F2             |Q<6>           |   15.951|
+F2             |Q<7>           |   17.162|
+F3             |Carryflag      |   17.227|
+F3             |Q<0>           |   10.207|
+F3             |Q<1>           |   10.577|
+F3             |Q<2>           |   12.807|
+F3             |Q<3>           |   14.364|
+F3             |Q<4>           |   15.182|
+F3             |Q<5>           |   17.173|
+F3             |Q<6>           |   16.666|
+F3             |Q<7>           |   17.877|
+---------------+---------------+---------+
+
+
+Analysis completed Sat Mar 02 14:26:08 2013 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 157 MB
+
+
+

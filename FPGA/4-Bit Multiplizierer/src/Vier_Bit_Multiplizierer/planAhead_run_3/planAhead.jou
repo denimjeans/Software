@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# PlanAhead v14.4 (64-bit)
+# Build 222254 by xbuild on Tue Dec 18 05:21:09 MST 2012
+# Start of session at: Sat Mar 02 16:24:10 2013
+# Process ID: 7384
+# Log file: G:/Dropbox/Hobby/Programme/FPGA/Vier_Bit_Multiplizierer/planAhead_run_3/planAhead.log
+# Journal file: G:/Dropbox/Hobby/Programme/FPGA/Vier_Bit_Multiplizierer/planAhead_run_3/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source G:/Dropbox/Hobby/Programme/FPGA/Vier_Bit_Multiplizierer/pa.fromNetlist.tcl

@@ -1,0 +1,8 @@
+Release 14.4 Drc P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Thu Feb 28 20:22:26 2013
+
+drc -z Komparator.ncd Komparator.pcf
+
+DRC detected 0 errors and 0 warnings.

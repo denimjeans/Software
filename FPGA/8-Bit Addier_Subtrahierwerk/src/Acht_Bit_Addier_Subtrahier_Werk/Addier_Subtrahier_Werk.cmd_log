@@ -1,0 +1,56 @@
+xst -intstyle ise -ifn "G:/Dropbox/Hobby/Programme/FPGA/Acht_Bit_Addier_Subtrahier_Werk/Addier_Subtrahier_Werk.xst" -ofn "G:/Dropbox/Hobby/Programme/FPGA/Acht_Bit_Addier_Subtrahier_Werk/Addier_Subtrahier_Werk.syr" 
+xst -intstyle ise -ifn "G:/Dropbox/Hobby/Programme/FPGA/Acht_Bit_Addier_Subtrahier_Werk/Addier_Subtrahier_Werk.xst" -ofn "G:/Dropbox/Hobby/Programme/FPGA/Acht_Bit_Addier_Subtrahier_Werk/Addier_Subtrahier_Werk.syr" 
+xst -intstyle ise -ifn "G:/Dropbox/Hobby/Programme/FPGA/Acht_Bit_Addier_Subtrahier_Werk/Addier_Subtrahier_Werk.xst" -ofn "G:/Dropbox/Hobby/Programme/FPGA/Acht_Bit_Addier_Subtrahier_Werk/Addier_Subtrahier_Werk.syr" 
+xst -intstyle ise -ifn "G:/Dropbox/Hobby/Programme/FPGA/Acht_Bit_Addier_Subtrahier_Werk/Addier_Subtrahier_Werk.xst" -ofn "G:/Dropbox/Hobby/Programme/FPGA/Acht_Bit_Addier_Subtrahier_Werk/Addier_Subtrahier_Werk.syr" 
+xst -intstyle ise -ifn "G:/Dropbox/Hobby/Programme/FPGA/Acht_Bit_Addier_Subtrahier_Werk/Addier_Subtrahier_Werk.xst" -ofn "G:/Dropbox/Hobby/Programme/FPGA/Acht_Bit_Addier_Subtrahier_Werk/Addier_Subtrahier_Werk.syr" 
+xst -intstyle ise -ifn "G:/Dropbox/Hobby/Programme/FPGA/Acht_Bit_Addier_Subtrahier_Werk/Addier_Subtrahier_Werk.xst" -ofn "G:/Dropbox/Hobby/Programme/FPGA/Acht_Bit_Addier_Subtrahier_Werk/Addier_Subtrahier_Werk.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Addier_Subtrahier_Werk.ucf -p xc3s250e-vq100-4 Addier_Subtrahier_Werk.ngc Addier_Subtrahier_Werk.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o Addier_Subtrahier_Werk_map.ncd Addier_Subtrahier_Werk.ngd Addier_Subtrahier_Werk.pcf 
+par -w -intstyle ise -ol high -t 1 Addier_Subtrahier_Werk_map.ncd Addier_Subtrahier_Werk.ncd Addier_Subtrahier_Werk.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Addier_Subtrahier_Werk.twx Addier_Subtrahier_Werk.ncd -o Addier_Subtrahier_Werk.twr Addier_Subtrahier_Werk.pcf -ucf Addier_Subtrahier_Werk.ucf 
+bitgen -intstyle ise -f Addier_Subtrahier_Werk.ut Addier_Subtrahier_Werk.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Addier_Subtrahier_Werk.ucf -p xc3s250e-vq100-4 Addier_Subtrahier_Werk.ngc Addier_Subtrahier_Werk.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o Addier_Subtrahier_Werk_map.ncd Addier_Subtrahier_Werk.ngd Addier_Subtrahier_Werk.pcf 
+par -w -intstyle ise -ol high -t 1 Addier_Subtrahier_Werk_map.ncd Addier_Subtrahier_Werk.ncd Addier_Subtrahier_Werk.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Addier_Subtrahier_Werk.twx Addier_Subtrahier_Werk.ncd -o Addier_Subtrahier_Werk.twr Addier_Subtrahier_Werk.pcf -ucf Addier_Subtrahier_Werk.ucf 
+bitgen -intstyle ise -f Addier_Subtrahier_Werk.ut Addier_Subtrahier_Werk.ncd 
+xst -intstyle ise -ifn "G:/Dropbox/Hobby/Programme/FPGA/Acht_Bit_Addier_Subtrahier_Werk/Addier_Subtrahier_Werk.xst" -ofn "G:/Dropbox/Hobby/Programme/FPGA/Acht_Bit_Addier_Subtrahier_Werk/Addier_Subtrahier_Werk.syr" 
+xst -intstyle ise -ifn "G:/Dropbox/Hobby/Programme/FPGA/Acht_Bit_Addier_Subtrahier_Werk/Addier_Subtrahier_Werk.xst" -ofn "G:/Dropbox/Hobby/Programme/FPGA/Acht_Bit_Addier_Subtrahier_Werk/Addier_Subtrahier_Werk.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Addier_Subtrahier_Werk.ucf -p xc3s250e-vq100-4 Addier_Subtrahier_Werk.ngc Addier_Subtrahier_Werk.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o Addier_Subtrahier_Werk_map.ncd Addier_Subtrahier_Werk.ngd Addier_Subtrahier_Werk.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Addier_Subtrahier_Werk.ucf -p xc3s250e-vq100-4 Addier_Subtrahier_Werk.ngc Addier_Subtrahier_Werk.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o Addier_Subtrahier_Werk_map.ncd Addier_Subtrahier_Werk.ngd Addier_Subtrahier_Werk.pcf 
+par -w -intstyle ise -ol high -t 1 Addier_Subtrahier_Werk_map.ncd Addier_Subtrahier_Werk.ncd Addier_Subtrahier_Werk.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Addier_Subtrahier_Werk.twx Addier_Subtrahier_Werk.ncd -o Addier_Subtrahier_Werk.twr Addier_Subtrahier_Werk.pcf -ucf Addier_Subtrahier_Werk.ucf 
+bitgen -intstyle ise -f Addier_Subtrahier_Werk.ut Addier_Subtrahier_Werk.ncd 
+xst -intstyle ise -ifn "G:/Dropbox/Hobby/Programme/FPGA/Acht_Bit_Addier_Subtrahier_Werk/Addier_Subtrahier_Werk.xst" -ofn "G:/Dropbox/Hobby/Programme/FPGA/Acht_Bit_Addier_Subtrahier_Werk/Addier_Subtrahier_Werk.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Addier_Subtrahier_Werk.ucf -p xc3s250e-vq100-4 Addier_Subtrahier_Werk.ngc Addier_Subtrahier_Werk.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o Addier_Subtrahier_Werk_map.ncd Addier_Subtrahier_Werk.ngd Addier_Subtrahier_Werk.pcf 
+par -w -intstyle ise -ol high -t 1 Addier_Subtrahier_Werk_map.ncd Addier_Subtrahier_Werk.ncd Addier_Subtrahier_Werk.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Addier_Subtrahier_Werk.twx Addier_Subtrahier_Werk.ncd -o Addier_Subtrahier_Werk.twr Addier_Subtrahier_Werk.pcf -ucf Addier_Subtrahier_Werk.ucf 
+bitgen -intstyle ise -f Addier_Subtrahier_Werk.ut Addier_Subtrahier_Werk.ncd 
+xst -intstyle ise -ifn "G:/Dropbox/Hobby/Programme/FPGA/Acht_Bit_Addier_Subtrahier_Werk/Addier_Subtrahier_Werk.xst" -ofn "G:/Dropbox/Hobby/Programme/FPGA/Acht_Bit_Addier_Subtrahier_Werk/Addier_Subtrahier_Werk.syr" 
+xst -intstyle ise -ifn "G:/Dropbox/Hobby/Programme/FPGA/Acht_Bit_Addier_Subtrahier_Werk/Addier_Subtrahier_Werk.xst" -ofn "G:/Dropbox/Hobby/Programme/FPGA/Acht_Bit_Addier_Subtrahier_Werk/Addier_Subtrahier_Werk.syr" 
+xst -intstyle ise -ifn "G:/Dropbox/Hobby/Programme/FPGA/Acht_Bit_Addier_Subtrahier_Werk/Addier_Subtrahier_Werk.xst" -ofn "G:/Dropbox/Hobby/Programme/FPGA/Acht_Bit_Addier_Subtrahier_Werk/Addier_Subtrahier_Werk.syr" 
+xst -intstyle ise -ifn "G:/Dropbox/Hobby/Programme/FPGA/Acht_Bit_Addier_Subtrahier_Werk/Addier_Subtrahier_Werk.xst" -ofn "G:/Dropbox/Hobby/Programme/FPGA/Acht_Bit_Addier_Subtrahier_Werk/Addier_Subtrahier_Werk.syr" 
+xst -intstyle ise -ifn "G:/Dropbox/Hobby/Programme/FPGA/Acht_Bit_Addier_Subtrahier_Werk/Addier_Subtrahier_Werk.xst" -ofn "G:/Dropbox/Hobby/Programme/FPGA/Acht_Bit_Addier_Subtrahier_Werk/Addier_Subtrahier_Werk.syr" 
+xst -intstyle ise -ifn "G:/Dropbox/Hobby/Programme/FPGA/Acht_Bit_Addier_Subtrahier_Werk/Addier_Subtrahier_Werk.xst" -ofn "G:/Dropbox/Hobby/Programme/FPGA/Acht_Bit_Addier_Subtrahier_Werk/Addier_Subtrahier_Werk.syr" 
+xst -intstyle ise -ifn "G:/Dropbox/Hobby/Programme/FPGA/Acht_Bit_Addier_Subtrahier_Werk/Addier_Subtrahier_Werk.xst" -ofn "G:/Dropbox/Hobby/Programme/FPGA/Acht_Bit_Addier_Subtrahier_Werk/Addier_Subtrahier_Werk.syr" 
+xst -intstyle ise -ifn "G:/Dropbox/Hobby/Programme/FPGA/Acht_Bit_Addier_Subtrahier_Werk/Addier_Subtrahier_Werk.xst" -ofn "G:/Dropbox/Hobby/Programme/FPGA/Acht_Bit_Addier_Subtrahier_Werk/Addier_Subtrahier_Werk.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Addier_Subtrahier_Werk.ucf -p xc3s250e-vq100-4 Addier_Subtrahier_Werk.ngc Addier_Subtrahier_Werk.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o Addier_Subtrahier_Werk_map.ncd Addier_Subtrahier_Werk.ngd Addier_Subtrahier_Werk.pcf 
+par -w -intstyle ise -ol high -t 1 Addier_Subtrahier_Werk_map.ncd Addier_Subtrahier_Werk.ncd Addier_Subtrahier_Werk.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Addier_Subtrahier_Werk.twx Addier_Subtrahier_Werk.ncd -o Addier_Subtrahier_Werk.twr Addier_Subtrahier_Werk.pcf -ucf Addier_Subtrahier_Werk.ucf 
+bitgen -intstyle ise -f Addier_Subtrahier_Werk.ut Addier_Subtrahier_Werk.ncd 
+xst -intstyle ise -ifn "G:/Dropbox/Hobby/Programme/FPGA/Acht_Bit_Addier_Subtrahier_Werk/Addier_Subtrahier_Werk.xst" -ofn "G:/Dropbox/Hobby/Programme/FPGA/Acht_Bit_Addier_Subtrahier_Werk/Addier_Subtrahier_Werk.syr" 
+xst -intstyle ise -ifn "G:/Dropbox/Hobby/Programme/FPGA/Acht_Bit_Addier_Subtrahier_Werk/Addier_Subtrahier_Werk.xst" -ofn "G:/Dropbox/Hobby/Programme/FPGA/Acht_Bit_Addier_Subtrahier_Werk/Addier_Subtrahier_Werk.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Addier_Subtrahier_Werk.ucf -p xc3s250e-vq100-4 Addier_Subtrahier_Werk.ngc Addier_Subtrahier_Werk.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o Addier_Subtrahier_Werk_map.ncd Addier_Subtrahier_Werk.ngd Addier_Subtrahier_Werk.pcf 
+par -w -intstyle ise -ol high -t 1 Addier_Subtrahier_Werk_map.ncd Addier_Subtrahier_Werk.ncd Addier_Subtrahier_Werk.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Addier_Subtrahier_Werk.twx Addier_Subtrahier_Werk.ncd -o Addier_Subtrahier_Werk.twr Addier_Subtrahier_Werk.pcf -ucf Addier_Subtrahier_Werk.ucf 
+bitgen -intstyle ise -f Addier_Subtrahier_Werk.ut Addier_Subtrahier_Werk.ncd 
+xst -intstyle ise -ifn "G:/Dropbox/Hobby/Programme/FPGA/Acht_Bit_Addier_Subtrahier_Werk/Addier_Subtrahier_Werk.xst" -ofn "G:/Dropbox/Hobby/Programme/FPGA/Acht_Bit_Addier_Subtrahier_Werk/Addier_Subtrahier_Werk.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Addier_Subtrahier_Werk.ucf -p xc3s250e-vq100-4 Addier_Subtrahier_Werk.ngc Addier_Subtrahier_Werk.ngd  
+map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o Addier_Subtrahier_Werk_map.ncd Addier_Subtrahier_Werk.ngd Addier_Subtrahier_Werk.pcf 
+par -w -intstyle ise -ol high -t 1 Addier_Subtrahier_Werk_map.ncd Addier_Subtrahier_Werk.ncd Addier_Subtrahier_Werk.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Addier_Subtrahier_Werk.twx Addier_Subtrahier_Werk.ncd -o Addier_Subtrahier_Werk.twr Addier_Subtrahier_Werk.pcf -ucf Addier_Subtrahier_Werk.ucf 

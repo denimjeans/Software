@@ -1,0 +1,5 @@
+vhdl work "Multiplexer.vhd"
+vhdl work "Addierer.vhd"
+vhdl work "Acht_Bit_Multiplexer.vhd"
+vhdl work "Acht_Bit_Addierer.vhd"
+vhdl work "Addier_Subtrahier_Werk.vhd"
