@@ -1,6 +1,0 @@
--F0x30 -g -blit:0x1a0.0x7fff 
- -bdata:0.0x6ff -rwh:SSCParmBlk:0x00F7.0x00FF -BInterruptRAM:0 -Bvirtual_registers  
- -BI2C_RAM 
- -o"output/I2C" 
- ./obj/main.o  
- H:/Hobby/PROGRA~1/PSOCPR~1/I2C/I2C/lib/libPSoc.a -LG:/PSoC/PSOCDE~1/PSOCDE~1/5.2/Common/CY110F~1/tools/lib/LMM/eightpages G:/PSoC/PSOCDE~1/PSOCDE~1/5.2/Common/CY110F~1/tools/lib/CY8C29000/cms.a G:/PSoC/PSOCDE~1/PSOCDE~1/5.2/Common/CY110F~1/tools/lib/LMM/UASW/MAC/arith.a  
