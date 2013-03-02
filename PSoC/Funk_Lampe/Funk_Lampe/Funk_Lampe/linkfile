@@ -1,5 +1,0 @@
--F0x30 -g -blit:0x150.0xfff 
- -bdata:0.0xFF -rwh:SSCParmBlk:0x00F7.0x00FF   
- -o"output/Funk_Lampe" 
- ./obj/main.o  
- I:/Hobby/PROGRA~1/PSOCPR~1/FUNK_L~1/FUNK_L~1/FUNK_L~1/lib/libPSoc.a -LG:/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/lib/SMM G:/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/lib/CY8C21020/cms.a G:/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/lib/SMM/UASW/NoMAC/arith.a  
