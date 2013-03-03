@@ -11,16 +11,15 @@ int Position_Y_Achse = 0x00;
 void main(void)
 {
 	M8C_EnableGInt; 
-	LCD_Start();                  														// LCD initialisieren
-	PGA_X_Achse_Start(PGA_X_Achse_MEDPOWER);											// PGA für X-Achse starten
-	PGA_Y_Achse_Start(PGA_Y_Achse_MEDPOWER);											// PGA für Y-Achse starten
-	DUALADC_Start(DUALADC_HIGHPOWER);     												// ADC starten
-   	DUALADC_SetResolution(10);            												// Auflösung setzen
-   	DUALADC_GetSamples(0);                												// ADC auf permanente Wandlung stellen
-
+	LCD_Start();                  														// Start LCD
+	PGA_X_Achse_Start(PGA_X_Achse_MEDPOWER);											// Start PGA for X-Axis
+	PGA_Y_Achse_Start(PGA_Y_Achse_MEDPOWER);											// Start PGA for Y-Axis
+	DUALADC_Start(DUALADC_HIGHPOWER);     												// Starting ADC
+   	DUALADC_SetResolution(10);            												// Set Resolution
+   	DUALADC_GetSamples(0);                												// Free Run Mode
 	while(1)
 	{
-    	while(DUALADC_fIsDataAvailable() == 0);  										// Warten bis Daten bereit sind
+    	while(DUALADC_fIsDataAvailable() == 0);  										// Wait for Data
     		Position_X_Achse = DUALADC_iGetData2();          						 
     		Position_Y_Achse = DUALADC_iGetData1ClearFlag(); 						
 	

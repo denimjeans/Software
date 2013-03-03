@@ -73,6 +73,5 @@ void main(void)
 
 void I2C_Init(void)
 {
-	EzI2Cs_Start();																	// I²C Modul starten
-	EzI2Cs_EnableInt();																// I²C Interrupts aktivieren
-}
+	EzI2Cs_Start();																	
+	EzI2Cs_EnableInt();																

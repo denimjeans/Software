@@ -14,12 +14,12 @@ void I2C_Init(void);
 void main(void)
 {
 	M8C_EnableGInt; 
-	LCD_Start();																	// LCD Modul aktivieren
+	LCD_Start();																	// Start LCD
 	
 	LCD_Position(0,0); 
 	LCD_PrCString("PSoC I2C Slave");
 	
-	EzI2Cs_SetRamBuffer(1, 1, (char *)&Wert);										// I²C Buffer setzen, 1 Byte Größe, 1 Byte Schreib/Lesbar
+	EzI2Cs_SetRamBuffer(1, 1, (char *)&Wert);										// Start I²C Buffer, Size of 1 Byte, Allowing to Read/Write 1 Byte
 	
 	I2C_Init();
 	
@@ -34,6 +34,6 @@ void main(void)
 
 void I2C_Init(void)
 {
-	EzI2Cs_Start();																	// I²C Modul starten
-	EzI2Cs_EnableInt();																// I²C Interrupts aktivieren
+	EzI2Cs_Start();																	
+	EzI2Cs_EnableInt();																
 }
