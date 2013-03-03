@@ -3,65 +3,65 @@ import time
 import os
 from pizypwm import *
 
-# Pin 26 als Ausgang deklarieren
+# Set Pin 26 as Output
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(26, GPIO.OUT)
 
 while True:
-	# PWM mit 50Hz an Pin 26 starten
+	# Start PWM with 50Hz on Pin 26
 	Servo = PiZyPwm(50, 26, GPIO.BOARD)							
 
-	# Richtungseingabe
-	Eingabe = raw_input("Bitte treffen Sie Ihre Wahl: ") 
+	# Input the Direction
+	Eingabe = raw_input("Take a choice: ") 
 
-	# Richtung "Rechts"
+	# Direction "Right"
 	if(Eingabe == "r"):
 
-		# Schrittweite eingeben
-		Schritte = raw_input("Schrittweite: ") 
-		print Schritte, "Schritte nach Rechts"
+		# Number of Steps
+		Schritte = raw_input("Number of Steps: ") 
+		print Schritte, "Steps to right"
 	
-		# PWM mit 10% Dutycycle (2ms) generieren
+		# Generate PWM with 10% Dutycycle (2ms)
 		Servo.start(10)
 		for Counter in range(int(Schritte)):
 			time.sleep(0.01)
 	
-		# PWM stoppen
+		# PWM stop
 		Servo.stop()
 		GPIO.cleanup()
 
-	# Mittelstellung einnehmen
+	# Direction "Middle"
 	elif(Eingabe == "m"):
 		Servo.start(7)
-		print "Drehung in die Mitte"
+		print "Middle"
 		time.sleep(1) 
 		Servo.stop()
 		GPIO.cleanup()
 	
-	# Richtung "Links"
+	# Direction "Left
 	elif(Eingabe == "l"):
 	
-		# Schrittweite eingeben
-		Schritte = raw_input("Schrittweite: ") 
-		print Schritte, "Schritte nach Links"
+		# Number of Steps
+		Schritte = raw_input("Number of Steps: ") 
+		print Schritte, "Steps to left"
 		
-		# PWM mit 5% Dutycycle (1ms) generieren
+		# Generate PWM with 10% Dutycycle (1ms)
 		Servo.start(5)
 		for Counter in range(int(Schritte)):
 			time.sleep(0.01)
 		
-		# PWM stoppen
+		# Stop PWM
 		Servo.stop()
 		GPIO.cleanup()
 	
-	# Programm beenden
+	# Quti Programm
 	elif(Eingabe == "q"):
-		print "Programm wird beendet......"
+		print "Quit Programm......"
 		os._exit(1)
 		Servo.stop()
 		GPIO.cleanup()
 		
-	# Ungueltige Eingabe
+	# Error
 	else:
-		print "Ungueltige Eingabe!"
+		print "Error."
