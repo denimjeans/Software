@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=G:\Dropbox\Hobby\Programme\FPGA\Acht_Bit_Addier_Subtrahier_Werk\Addier_Subtrahier_Werk.ncd
-OUTFILE=G:\Dropbox\Hobby\Programme\FPGA\Acht_Bit_Addier_Subtrahier_Werk\Addier_Subtrahier_Werk.bit
-FAMILY=Spartan3E
-PART=xc3s250e-4vq100
-WORKINGDIR=G:\Dropbox\Hobby\Programme\FPGA\Acht_Bit_Addier_Subtrahier_Werk
-LICENSE=WebPack
-USER_INFO=210727995_0_0_823

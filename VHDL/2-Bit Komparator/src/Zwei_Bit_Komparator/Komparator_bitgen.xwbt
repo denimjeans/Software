@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=G:\Dropbox\Hobby\Programme\FPGA\Zwei_Bit_Komparator\Komparator.ncd
-OUTFILE=G:\Dropbox\Hobby\Programme\FPGA\Zwei_Bit_Komparator\Komparator.bit
-FAMILY=Spartan3E
-PART=xc3s250e-4vq100
-WORKINGDIR=G:\Dropbox\Hobby\Programme\FPGA\Zwei_Bit_Komparator
-LICENSE=WebPack
-USER_INFO=210727995_0_0_823

@@ -1,6 +1,0 @@
-xst -intstyle ise -ifn "G:/Dropbox/Hobby/Programme/FPGA/Ripple_Addierer/Addierer.xst" -ofn "G:/Dropbox/Hobby/Programme/FPGA/Ripple_Addierer/Addierer.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Addierer.ucf -p xc3s250e-vq100-4 Addierer.ngc Addierer.ngd  
-map -intstyle ise -p xc3s250e-vq100-4 -cm area -ir off -pr off -c 100 -o Addierer_map.ncd Addierer.ngd Addierer.pcf 
-par -w -intstyle ise -ol high -t 1 Addierer_map.ncd Addierer.ncd Addierer.pcf 
-trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Addierer.twx Addierer.ncd -o Addierer.twr Addierer.pcf -ucf Addierer.ucf 
-bitgen -intstyle ise -f Addierer.ut Addierer.ncd 

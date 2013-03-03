@@ -1,8 +1,0 @@
-Release 14.4 Drc P.49d (nt64)
-Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
-
-Fri Mar 01 00:28:30 2013
-
-drc -z Vier_Bit_Addierer.ncd Vier_Bit_Addierer.pcf
-
-DRC detected 0 errors and 0 warnings.

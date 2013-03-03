@@ -1,8 +1,0 @@
-Release 14.4 Drc P.49d (nt64)
-Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
-
-Fri Mar 01 15:26:15 2013
-
-drc -z Look_Ahead_Adder.ncd Look_Ahead_Adder.pcf
-
-DRC detected 0 errors and 0 warnings.
