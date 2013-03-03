@@ -1,0 +1,21 @@
+Carryflag	P90
+
+Q0		P94
+Q1		P95
+Q2		P02
+Q3		P03
+
+F0		P11
+F1		P12
+F2		P13
+F3		P15
+
+A3		P67
+A2		P68
+A1		P70
+A0		P71
+
+B3		P83
+B2		P84
+B1		P85	
+B0		P86

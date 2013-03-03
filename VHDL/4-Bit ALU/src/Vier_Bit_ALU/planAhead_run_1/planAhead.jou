@@ -1,0 +1,30 @@
+#-----------------------------------------------------------
+# PlanAhead v14.4 (64-bit)
+# Build 222254 by xbuild on Tue Dec 18 05:21:09 MST 2012
+# Start of session at: Sun Mar 03 10:12:35 2013
+# Process ID: 2784
+# Log file: G:/Dropbox/Hobby/Programme/FPGA/Vier_Bit_ALU/planAhead_run_1/planAhead.log
+# Journal file: G:/Dropbox/Hobby/Programme/FPGA/Vier_Bit_ALU/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source G:/Dropbox/Hobby/Programme/FPGA/Vier_Bit_ALU/pa.fromNetlist.tcl
+startgroup
+set_property package_pin P4 [get_ports F0]
+endgroup
+undo
+startgroup
+set_property package_pin P12 [get_ports F1]
+endgroup
+startgroup
+set_property package_pin P71 [get_ports {A[0]}]
+endgroup
+startgroup
+set_property package_pin P70 [get_ports {A[1]}]
+endgroup
+startgroup
+set_property package_pin P68 [get_ports {A[2]}]
+endgroup
+startgroup
+set_property package_pin P67 [get_ports {A[3]}]
+endgroup
+save_constraints

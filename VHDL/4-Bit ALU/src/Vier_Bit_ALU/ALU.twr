@@ -1,0 +1,105 @@
+--------------------------------------------------------------------------------
+Release 14.4 Trace  (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+G:\Xilinx\14.4\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 4
+-n 3 -fastpaths -xml ALU.twx ALU.ncd -o ALU.twr ALU.pcf -ucf ALU.ucf
+
+Design file:              ALU.ncd
+Physical constraint file: ALU.pcf
+Device,package,speed:     xc3s250e,vq100,-4 (PRODUCTION 1.27 2012-12-04)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+A<0>           |Carryflag      |    9.975|
+A<0>           |Q<0>           |    8.641|
+A<0>           |Q<1>           |    9.392|
+A<0>           |Q<2>           |   11.209|
+A<0>           |Q<3>           |   11.638|
+A<1>           |Carryflag      |   11.311|
+A<1>           |Q<1>           |   10.947|
+A<1>           |Q<2>           |   12.545|
+A<1>           |Q<3>           |   12.974|
+A<2>           |Carryflag      |    9.416|
+A<2>           |Q<2>           |   10.419|
+A<2>           |Q<3>           |   11.079|
+A<3>           |Carryflag      |    8.243|
+A<3>           |Q<3>           |   10.551|
+B<0>           |Carryflag      |    9.082|
+B<0>           |Q<0>           |    9.182|
+B<0>           |Q<1>           |   10.200|
+B<0>           |Q<2>           |   10.316|
+B<0>           |Q<3>           |   10.745|
+B<1>           |Carryflag      |   10.916|
+B<1>           |Q<1>           |   10.590|
+B<1>           |Q<2>           |   12.150|
+B<1>           |Q<3>           |   12.579|
+B<2>           |Carryflag      |    8.700|
+B<2>           |Q<2>           |   10.496|
+B<2>           |Q<3>           |   10.363|
+B<3>           |Carryflag      |    7.980|
+B<3>           |Q<3>           |    9.860|
+F0             |Q<0>           |    9.315|
+F0             |Q<1>           |    9.434|
+F0             |Q<2>           |    9.611|
+F0             |Q<3>           |    9.867|
+F1             |Q<0>           |    8.652|
+F1             |Q<1>           |    8.795|
+F1             |Q<2>           |    9.288|
+F1             |Q<3>           |    9.037|
+F2             |Carryflag      |   12.171|
+F2             |Q<0>           |   10.011|
+F2             |Q<1>           |   11.780|
+F2             |Q<2>           |   13.405|
+F2             |Q<3>           |   13.834|
+F3             |Carryflag      |   11.475|
+F3             |Q<0>           |    8.773|
+F3             |Q<1>           |   11.142|
+F3             |Q<2>           |   12.709|
+F3             |Q<3>           |   13.138|
+---------------+---------------+---------+
+
+
+Analysis completed Sun Mar 03 10:22:41 2013 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 157 MB
+
+
+

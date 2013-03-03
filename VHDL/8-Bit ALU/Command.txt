@@ -1,0 +1,9 @@
+F3	F2	F1	F0	Command
+0	0	0	0	0			
+0	0	0	1	A		
+0	1	0	0	A and B		
+0	1	0	1	A or B		
+0	1	1	0	A xor B			
+0	1	1	1	A + B		
+1	0	0	1	not A		
+1	1	1	1	B - A		

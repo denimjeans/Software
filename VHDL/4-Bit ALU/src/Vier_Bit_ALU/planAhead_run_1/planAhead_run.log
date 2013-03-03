@@ -1,0 +1,116 @@
+
+****** PlanAhead v14.4 (64-bit)
+  **** Build 222254 by xbuild on Tue Dec 18 05:21:09 MST 2012
+    ** Copyright 1986-1999, 2001-2012 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from G:/Xilinx/14.4/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [G:/Xilinx/14.4/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [G:/Xilinx/14.4/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source G:/Dropbox/Hobby/Programme/FPGA/Vier_Bit_ALU/pa.fromNetlist.tcl
+# create_project -name Vier_Bit_ALU -dir "G:/Dropbox/Hobby/Programme/FPGA/Vier_Bit_ALU/planAhead_run_1" -part xc3s250evq100-4
+create_project: Time (s): elapsed = 00:00:05 . Memory (MB): peak = 420.398 ; gain = 69.176
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "G:/Dropbox/Hobby/Programme/FPGA/Vier_Bit_ALU/ALU.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {G:/Dropbox/Hobby/Programme/FPGA/Vier_Bit_ALU} }
+# set_param project.pinAheadLayout  yes
+# set_property target_constrs_file "ALU.ucf" [current_fileset -constrset]
+Adding file 'G:/Dropbox/Hobby/Programme/FPGA/Vier_Bit_ALU/ALU.ucf' to fileset 'constrs_1'
+# add_files [list {ALU.ucf}] -fileset [get_property constrset [current_run]]
+# link_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to project part: xc3s250evq100-4
+Release 14.4 - ngc2edif P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Reading design ALU.ngc ...
+WARNING:NetListWriters:298 - No output is written to ALU.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file ALU.edif ...
+ngc2edif: Total memory usage is 79640 kilobytes
+
+Parsing EDIF File [./planAhead_run_1/Vier_Bit_ALU.data/cache/ALU_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_1/Vier_Bit_ALU.data/cache/ALU_ngc_zx.edif]
+INFO: [Designutils 20-910] Reading macro library G:/Xilinx/14.4/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn
+Parsing EDIF File [G:/Xilinx/14.4/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn]
+Finished Parsing EDIF File [G:/Xilinx/14.4/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn]
+Loading clock regions from G:/Xilinx/14.4/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/xc3s250e/ClockRegion.xml
+Loading clock buffers from G:/Xilinx/14.4/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/xc3s250e/ClockBuffers.xml
+Loading package from G:/Xilinx/14.4/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/xc3s250e/vq100/Package.xml
+Loading io standards from G:/Xilinx/14.4/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/IOStandards.xml
+INFO: [Device 21-19] Loading pkg sso from G:/Xilinx/14.4/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/xc3s250e/vq100/SSORules.xml
+Loading list of drcs for the architecture : G:/Xilinx/14.4/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/spartan3e/drc.xml
+INFO: [Timing 38-77] Reading timing library G:/Xilinx/14.4/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/spartan3e-4.lib.
+INFO: [Timing 38-34] Done reading timing library G:/Xilinx/14.4/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/spartan3e-4.lib.
+Parsing UCF File [G:/Dropbox/Hobby/Programme/FPGA/Vier_Bit_ALU/ALU.ucf]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'Q[4]' [G:/Dropbox/Hobby/Programme/FPGA/Vier_Bit_ALU/ALU.ucf:43]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'Q[5]' [G:/Dropbox/Hobby/Programme/FPGA/Vier_Bit_ALU/ALU.ucf:44]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'Q[6]' [G:/Dropbox/Hobby/Programme/FPGA/Vier_Bit_ALU/ALU.ucf:45]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'Q[7]' [G:/Dropbox/Hobby/Programme/FPGA/Vier_Bit_ALU/ALU.ucf:46]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'B[7]' [G:/Dropbox/Hobby/Programme/FPGA/Vier_Bit_ALU/ALU.ucf:49]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'B[6]' [G:/Dropbox/Hobby/Programme/FPGA/Vier_Bit_ALU/ALU.ucf:50]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'B[5]' [G:/Dropbox/Hobby/Programme/FPGA/Vier_Bit_ALU/ALU.ucf:51]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'B[4]' [G:/Dropbox/Hobby/Programme/FPGA/Vier_Bit_ALU/ALU.ucf:52]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'A[7]' [G:/Dropbox/Hobby/Programme/FPGA/Vier_Bit_ALU/ALU.ucf:53]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'A[6]' [G:/Dropbox/Hobby/Programme/FPGA/Vier_Bit_ALU/ALU.ucf:54]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'A[5]' [G:/Dropbox/Hobby/Programme/FPGA/Vier_Bit_ALU/ALU.ucf:55]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'A[4]' [G:/Dropbox/Hobby/Programme/FPGA/Vier_Bit_ALU/ALU.ucf:56]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'Q[7]' [G:/Dropbox/Hobby/Programme/FPGA/Vier_Bit_ALU/ALU.ucf:57]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'Q[6]' [G:/Dropbox/Hobby/Programme/FPGA/Vier_Bit_ALU/ALU.ucf:58]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'Q[5]' [G:/Dropbox/Hobby/Programme/FPGA/Vier_Bit_ALU/ALU.ucf:59]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'Q[4]' [G:/Dropbox/Hobby/Programme/FPGA/Vier_Bit_ALU/ALU.ucf:60]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'B[7]' [G:/Dropbox/Hobby/Programme/FPGA/Vier_Bit_ALU/ALU.ucf:61]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'B[6]' [G:/Dropbox/Hobby/Programme/FPGA/Vier_Bit_ALU/ALU.ucf:62]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'B[5]' [G:/Dropbox/Hobby/Programme/FPGA/Vier_Bit_ALU/ALU.ucf:63]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'B[4]' [G:/Dropbox/Hobby/Programme/FPGA/Vier_Bit_ALU/ALU.ucf:64]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'B[4]' [G:/Dropbox/Hobby/Programme/FPGA/Vier_Bit_ALU/ALU.ucf:66]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'B[5]' [G:/Dropbox/Hobby/Programme/FPGA/Vier_Bit_ALU/ALU.ucf:67]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'B[6]' [G:/Dropbox/Hobby/Programme/FPGA/Vier_Bit_ALU/ALU.ucf:68]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'B[7]' [G:/Dropbox/Hobby/Programme/FPGA/Vier_Bit_ALU/ALU.ucf:69]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'A[4]' [G:/Dropbox/Hobby/Programme/FPGA/Vier_Bit_ALU/ALU.ucf:74]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'A[5]' [G:/Dropbox/Hobby/Programme/FPGA/Vier_Bit_ALU/ALU.ucf:75]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'A[6]' [G:/Dropbox/Hobby/Programme/FPGA/Vier_Bit_ALU/ALU.ucf:76]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'A[7]' [G:/Dropbox/Hobby/Programme/FPGA/Vier_Bit_ALU/ALU.ucf:77]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'A[7]' [G:/Dropbox/Hobby/Programme/FPGA/Vier_Bit_ALU/ALU.ucf:103]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'A[6]' [G:/Dropbox/Hobby/Programme/FPGA/Vier_Bit_ALU/ALU.ucf:104]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'A[5]' [G:/Dropbox/Hobby/Programme/FPGA/Vier_Bit_ALU/ALU.ucf:105]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'A[4]' [G:/Dropbox/Hobby/Programme/FPGA/Vier_Bit_ALU/ALU.ucf:106]
+Finished Parsing UCF File [G:/Dropbox/Hobby/Programme/FPGA/Vier_Bit_ALU/ALU.ucf]
+INFO: [Designutils 20-20] Invalid constraints found, use command 'write_ucf -constraints invalid <file>' to save all the invalid constraints to a file
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Phase 0 | Netlist Checksum: 6f180b99
+link_design: Time (s): elapsed = 00:00:15 . Memory (MB): peak = 536.238 ; gain = 108.934
+startgroup
+set_property package_pin P4 [get_ports F0]
+endgroup
+undo
+INFO: [Common 17-17] undo 'endgroup'
+INFO: [Common 17-17] undo 'set_property package_pin P4 [get_ports F0]'
+INFO: [Common 17-17] undo 'startgroup'
+startgroup
+set_property package_pin P12 [get_ports F1]
+endgroup
+startgroup
+set_property package_pin P71 [get_ports {A[0]}]
+endgroup
+startgroup
+set_property package_pin P70 [get_ports {A[1]}]
+endgroup
+startgroup
+set_property package_pin P68 [get_ports {A[2]}]
+endgroup
+startgroup
+set_property package_pin P67 [get_ports {A[3]}]
+endgroup
+save_constraints
+exit
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Sun Mar 03 10:16:37 2013...
+INFO: [Common 17-83] Releasing license: PlanAhead
