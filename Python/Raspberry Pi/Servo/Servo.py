@@ -25,7 +25,7 @@ while True:
 		# Generate PWM with 10% Dutycycle (2ms)
 		Servo.start(10)
 		for Counter in range(int(Schritte)):
-			time.sleep(0.01)
+			time.sleep(0.001)
 	
 		# PWM stop
 		Servo.stop()
@@ -49,7 +49,7 @@ while True:
 		# Generate PWM with 10% Dutycycle (1ms)
 		Servo.start(5)
 		for Counter in range(int(Schritte)):
-			time.sleep(0.01)
+			time.sleep(0.001)
 		
 		# Stop PWM
 		Servo.stop()
