@@ -8,5 +8,13 @@ Copy the "ID.txt" File to the given path and replace the Example with your Data.
 
 This program use the Hardware UART of the Raspberry Pi.
 
-NOTE: You have to install python-dev and python-serial for this Program.
+NOTE: You have to install python-dev and python-serial for this Program and you have to deactivate the UART Login-Prompt. 
+For this change the Line
 
+	#Spawn a getty on Raspberry Pi serial line
+	T0:23:respawn:/sbin/getty -L ttyAMA0 115200 vt10
+
+in /etc/inittab to
+
+	#Spawn a getty on Raspberry Pi serial line
+	#T0:23:respawn:/sbin/getty -L ttyAMA0 115200 vt10
